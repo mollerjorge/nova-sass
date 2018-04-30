@@ -1,0 +1,25 @@
+{
+  "name": "nova-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mollerjorge/nova-sass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mollerjorge/nova-sass/issues"
+  },
+  "homepage": "https://github.com/mollerjorge/nova-sass#readme"
+}

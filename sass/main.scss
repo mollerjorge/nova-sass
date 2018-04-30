@@ -1,0 +1,23 @@
+// bulma
+@import "node_modules/bulma/sass/utilities/all";
+@import "node_modules/bulma/sass/base/all";
+@import "node_modules/bulma/sass/grid/all";
+@import "node_modules/bulma/sass/layout/all";
+@import "node_modules/bulma/sass/elements/all";
+
+// abstract
+@import "abstract/variables";
+@import "abstract/mixins";
+
+
+// base
+@import "base/base";
+@import "base/utilities";
+
+// components
+@import "components/form";
+@import "components/card";
+
+// objects 
+@import "objects/input";
+

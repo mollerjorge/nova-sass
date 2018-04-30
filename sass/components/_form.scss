@@ -1,0 +1,116 @@
+.form {
+  &__group {
+    position: relative;
+    display: flex;
+
+    &.has-error small {
+      color: $color-danger;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &:has(small) {
+      background: red;
+    }
+
+    small {
+      font-size: 2rem;
+    }
+
+    &--has-error .form__control{
+      border: 1px solid $color-danger !important;
+    }
+
+    &--has-error .form__input span,
+    &--has-error small {
+      color: $color-danger !important;
+    }
+  }
+
+  &__control {
+    display: block;
+    border: 0.16rem solid $color-grey-3;
+    border-radius: 0.5rem;
+    padding: 0.3rem 2.5rem;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    font-size: 2.2rem;
+    
+
+    &::placeholder {
+      color: $color-grey-3;
+    }
+
+        
+
+    &:focus {
+      border: 0.16rem solid $color-grey-6;
+      outline: none;
+    }
+
+    &:focus ~ span {
+      color: $color-grey-6;
+    }
+
+    &--icon {
+      text-indent: 2rem;
+    }
+
+    &--icon.u-center-text {
+      text-indent: 0rem;
+    }
+  }
+
+  .flex-column {
+    & label {
+      align-self: flex-start;
+      flex-basis: auto;
+      margin-bottom: .5rem;
+    }
+  }
+
+  &__input {
+    position: relative;
+    align-self: center;
+    width: 100%;
+
+
+    span {
+      @include inputIcon;
+    }
+  
+  }
+
+  &__label {
+    display: inline-block;
+    align-self: center;
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    flex-basis: 30%;
+    text-align: right;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $color-grey-6;
+    letter-spacing: .1rem;
+
+
+    &--big {
+      flex-basis: 50%;
+    }
+  }
+
+  .required {
+    &:after {
+      content: "*";
+      color: $color-danger;
+      position: absolute;
+      right: 1rem;
+      top: .5rem;
+      font-size: 2rem;
+    }
+  }
+  
+}
+

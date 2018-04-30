@@ -1,0 +1,27 @@
+// Gradients
+
+@mixin primaryGradientBG {
+  background: linear-gradient(
+    to right bottom,
+    $color-primary-0,
+    $color-primary-1
+  );
+}
+
+@mixin secondaryGradientBG {
+  background: linear-gradient(
+    to right bottom,
+    $color-secondary-0,
+    $color-secondary-1
+  );
+}
+
+@mixin inputIcon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translate(0%, -50%);
+  font-size: 4rem;
+  color: $color-grey-2;
+  transition: all 0.3s ease-in-out;
+}
