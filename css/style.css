@@ -4855,7 +4855,7 @@ a.tag:hover {
   box-sizing: border-box; }
 
 html {
-  font-size: 35%; }
+  font-size: 62.5%; }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -4863,6 +4863,27 @@ body {
   box-sizing: border-box;
   line-height: 1.7;
   background: #F0F3F6; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: 100; }
+
+h1 {
+  font-size: 4.4rem; }
+
+h2 {
+  font-size: 2.6rem; }
+
+h3 {
+  font-size: 1.8rem; }
+
+h4 {
+  font-size: 1.2rem; }
+
+h5 {
+  font-size: 1rem; }
+
+p {
+  font-size: 1.2rem; }
 
 .flex-column {
   flex-direction: column; }
@@ -4891,6 +4912,21 @@ body {
 .u-left-text {
   text-align: left !important; }
 
+.text-black {
+  color: #202224; }
+
+.text-success {
+  color: #1DE9B6; }
+
+.text-warning {
+  color: #f8c51c; }
+
+.text-danger {
+  color: #fa2f31; }
+
+.text-info {
+  color: #04A9F5; }
+
 .form__group {
   position: relative;
   display: flex; }
@@ -4901,7 +4937,7 @@ body {
   .form__group:has(small) {
     background: red; }
   .form__group small {
-    font-size: 2rem; }
+    font-size: 1.2rem; }
   .form__group--has-error .form__control {
     border: 1px solid #fa2f31 !important; }
   .form__group--has-error .form__input span,
@@ -4910,16 +4946,16 @@ body {
 
 .form__control {
   display: block;
-  border: 0.16rem solid #C6CACF;
+  border: 0.05rem solid #C6CACF;
   border-radius: 0.5rem;
   padding: 0.3rem 2.5rem;
   width: 100%;
   transition: all 0.3s ease-in-out;
-  font-size: 2.2rem; }
+  font-size: 1.2rem; }
   .form__control::placeholder {
     color: #C6CACF; }
   .form__control:focus {
-    border: 0.16rem solid #474B4F;
+    border: 0.05rem solid #474B4F;
     outline: none; }
   .form__control:focus ~ span {
     color: #474B4F; }
@@ -4942,14 +4978,14 @@ body {
     top: 50%;
     left: 1rem;
     transform: translate(0%, -50%);
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: #EBEBEB;
     transition: all 0.3s ease-in-out; }
 
 .form__label {
   display: inline-block;
   align-self: center;
-  font-size: 1.8rem;
+  font-size: 1rem;
   margin-right: 1rem;
   flex-basis: 30%;
   text-align: right;
@@ -4966,7 +5002,7 @@ body {
   position: absolute;
   right: 1rem;
   top: 0.5rem;
-  font-size: 2rem; }
+  font-size: 1.2rem; }
 
 .form__checkbox-input {
   display: none; }
@@ -4984,7 +5020,8 @@ body {
 
 .form__checkbox-label {
   padding: 0 3rem;
-  position: relative; }
+  position: relative;
+  font-size: 1.2rem; }
 
 .form__checkbox-button {
   width: 2.2rem;
@@ -5014,7 +5051,8 @@ body {
 
 .form__radio-label {
   padding: 0 3rem;
-  position: relative; }
+  position: relative;
+  font-size: 1.2rem; }
 
 .form__radio-button {
   width: 2.5rem;
@@ -5049,7 +5087,7 @@ body {
     width: 100%;
     margin-top: 1rem; }
   .card-title {
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 600; }
   .card-content {
@@ -5069,7 +5107,7 @@ input {
   color: #ffffff;
   text-transform: uppercase;
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: .25rem;
   letter-spacing: 0.1rem;
   padding: 1.5rem 3rem;
   position: relative;
@@ -5105,7 +5143,7 @@ input {
   .btn span:not(:first-child) {
     vertical-align: super; }
   .btn span:first-child {
-    font-size: 3rem; }
+    font-size: 2rem; }
   .btn--default {
     color: #474B4F;
     border: 1px solid #C6CACF; }
