@@ -19,7 +19,7 @@
       font-size: 2rem;
     }
 
-    &--has-error .form__control{
+    &--has-error .form__control {
       border: 1px solid $color-danger !important;
     }
 
@@ -37,13 +37,10 @@
     width: 100%;
     transition: all 0.3s ease-in-out;
     font-size: 2.2rem;
-    
 
     &::placeholder {
       color: $color-grey-3;
     }
-
-        
 
     &:focus {
       border: 0.16rem solid $color-grey-6;
@@ -67,7 +64,7 @@
     & label {
       align-self: flex-start;
       flex-basis: auto;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -76,11 +73,9 @@
     align-self: center;
     width: 100%;
 
-
     span {
       @include inputIcon;
     }
-  
   }
 
   &__label {
@@ -93,8 +88,7 @@
     font-weight: 400;
     text-transform: uppercase;
     color: $color-grey-6;
-    letter-spacing: .1rem;
-
+    letter-spacing: 0.1rem;
 
     &--big {
       flex-basis: 50%;
@@ -107,10 +101,104 @@
       color: $color-danger;
       position: absolute;
       right: 1rem;
-      top: .5rem;
+      top: 0.5rem;
       font-size: 2rem;
     }
   }
-  
-}
 
+  // Checkbox
+  &__checkbox-input {
+    display: none;
+
+    &:checked + label > span {
+      width: 2.2rem;
+      height: 2.2rem;
+      border: 0rem;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-primary-0,
+        $color-primary-1
+      );
+
+      &:after {
+        background-image: url(icons/icon-checkmark.svg);
+        opacity: 1;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: .6rem .6rem;
+      }
+    }
+  }
+
+  &__checkbox-label {
+    padding: 0 3rem;
+    position: relative;
+  }
+
+  &__checkbox-button {
+    width: 2.2rem;
+    height: 2.2rem;
+    position: absolute;
+    border-radius: .3rem;
+    border: 0.2rem solid $color-primary-0;
+    display: inline-block;
+    left: 0;
+    top: -0.5rem;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 2.2rem;
+      height: 2.2rem;
+      position: absolute;
+      top: -0.2rem;
+      left: -0.2rem;
+      border-radius: 0.5rem;
+      opacity: 0;
+      background-size: cover;
+    }
+  }
+
+  // Radio
+  &__radio-input {
+    display: none;
+
+    &:checked + label > span:after {
+      opacity: 1;
+    }
+  }
+
+  &__radio-label {
+    padding: 0 3rem;
+    position: relative;
+  }
+
+  &__radio-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    border-radius: 100px;
+    border: 0.2rem solid $color-primary-0;
+    display: inline-block;
+    left: 0;
+    top: -0.5rem;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      background: linear-gradient(
+        to right bottom,
+        $color-primary-0,
+        $color-primary-1
+      );
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      top: .6rem;
+      left: .6rem;
+      border-radius: 10rem;
+      opacity: 0;
+      
+    }
+  }
+}
