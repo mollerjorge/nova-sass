@@ -3,11 +3,14 @@
 $color-primary-0: #1DE9B6;
 $color-primary-1: #1DC5E9;
 $color-secondary-0: #A389D4;
-$color-secondary-0: #899FD4;
+$color-secondary-1: #899FD4;
 
-$color-danger: #fa2f31;
-$color-info: #009ff3;
-$color-warning: #f6ba29;
+$color-danger-0: #fa2f31;
+$color-danger-1: #fa5457;
+$color-info-0: #04A9F5;
+$color-info-1: #049DF5;
+$color-warning-0: #f8c51c;
+$color-warning-1: #f8ab1c;
 
 
 // Greyscale
@@ -20,3 +23,6 @@ $color-grey-5: #6F7E79;
 $color-grey-6: #474B4F;
 $color-grey-7: #393C40;
 $color-grey-8: #202224;
+
+// Shadows
+$shadow-button: .5rem .5rem 1.5rem 0rem rgba( #000000,.2);

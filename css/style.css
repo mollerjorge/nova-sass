@@ -4876,6 +4876,15 @@ body {
 .u-mb-large {
   margin-bottom: 6rem !important; }
 
+.u-mt-small {
+  margin-top: 1.5rem !important; }
+
+.u-mt-medium {
+  margin-top: 3rem !important; }
+
+.u-mt-large {
+  margin-top: 6rem !important; }
+
 .u-center-text {
   text-align: center; }
 
@@ -5052,3 +5061,161 @@ input {
     height: 5rem; }
   input .input-sm {
     height: 2.5rem; }
+
+.btn {
+  border: 0rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  padding: 1.5rem 3rem;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.2);
+  transition: all .3s ease-in-out;
+  /* Begin Icons */
+  /* End Icons */ }
+  .btn:focus, .btn:active {
+    outline: none; }
+  .btn:hover:enabled:before {
+    opacity: 1; }
+  .btn:before {
+    border-radius: inherit;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity 0.45s; }
+  .btn--block {
+    width: 100%; }
+  .btn--sm {
+    padding: 1rem 2rem; }
+  .btn--lg {
+    padding: 2rem 4rem; }
+  .btn--rounded {
+    border-radius: 10rem; }
+  .btn span:not(:first-child) {
+    vertical-align: super; }
+  .btn span:first-child {
+    font-size: 3rem; }
+  .btn--default {
+    color: #474B4F;
+    border: 1px solid #C6CACF; }
+    .btn--default:active:before {
+      background: linear-gradient(to left, #f2f2f2, #dee0e3); }
+    .btn--default:disabled {
+      background: linear-gradient(to left, white, white);
+      box-shadow: none;
+      opacity: .5; }
+    .btn--default:before {
+      background: linear-gradient(to left, white, white); }
+    .btn--default-flat {
+      background: linear-gradient(to left, #ffffff, #ffffff);
+      box-shadow: none;
+      color: #6F7E79;
+      border: 1px solid #C6CACF; }
+      .btn--default-flat:hover {
+        background: linear-gradient(to left, white, white); }
+      .btn--default-flat:active:before {
+        background: linear-gradient(to left, #f2f2f2, #f2f2f2); }
+      .btn--default-flat:disabled {
+        background: linear-gradient(to left, white, white);
+        opacity: .5; }
+  .btn--primary {
+    background: linear-gradient(to left, #1DE9B6, #1DC5E9); }
+    .btn--primary:active:before {
+      background: linear-gradient(to left, #15d8a7, #15b5d8); }
+    .btn--primary:disabled {
+      background: linear-gradient(to left, #a8f7e3, #a8e9f7);
+      box-shadow: none; }
+    .btn--primary:before {
+      background: linear-gradient(to left, #7af2d4, #7addf2); }
+    .btn--primary-flat {
+      background: linear-gradient(to left, #1DE9B6, #1DE9B6); }
+      .btn--primary-flat:hover {
+        background: linear-gradient(to left, #7af2d4, #7af2d4); }
+      .btn--primary-flat:active:before {
+        background: linear-gradient(to left, #15d8a7, #15d8a7); }
+      .btn--primary-flat:disabled {
+        background: linear-gradient(to left, #a8f7e3, #a8f7e3);
+        box-shadow: none; }
+  .btn--secondary {
+    background: linear-gradient(to left, #A389D4, #899FD4); }
+    .btn--secondary:active:before {
+      background: linear-gradient(to left, #9476cd, #7690cd); }
+    .btn--secondary:disabled {
+      background: linear-gradient(to left, #cfc1e8, #c1cde8);
+      box-shadow: none; }
+    .btn--secondary:before {
+      background: linear-gradient(to left, #ddd4ef, #d4dcef); }
+    .btn--secondary-flat {
+      background: linear-gradient(to left, #A389D4, #A389D4); }
+      .btn--secondary-flat:hover {
+        background: linear-gradient(to left, #ddd4ef, #ddd4ef); }
+      .btn--secondary-flat:active:before {
+        background: linear-gradient(to left, #9476cd, #9476cd); }
+      .btn--secondary-flat:disabled {
+        background: linear-gradient(to left, #cfc1e8, #cfc1e8);
+        box-shadow: none; }
+  .btn--danger {
+    background: linear-gradient(to left, #fa2f31, #fa5457); }
+    .btn--danger:active:before {
+      background: linear-gradient(to left, #f91618, #f93b3f); }
+    .btn--danger:disabled {
+      background: linear-gradient(to left, #fec4c5, #fee9e9);
+      box-shadow: none; }
+    .btn--danger:before {
+      background: linear-gradient(to left, #fc9394, #fdb7b8); }
+    .btn--danger-flat {
+      background: linear-gradient(to left, #fa2f31, #fa2f31); }
+      .btn--danger-flat:hover {
+        background: linear-gradient(to left, #fc9394, #fc9394); }
+      .btn--danger-flat:active:before {
+        background: linear-gradient(to left, #f91618, #f91618); }
+      .btn--danger-flat:disabled {
+        background: linear-gradient(to left, #fec4c5, #fec4c5);
+        box-shadow: none; }
+  .btn--warning {
+    background: linear-gradient(to left, #f8c51c, #f8ab1c); }
+    .btn--warning:active:before {
+      background: linear-gradient(to left, #f3bc07, #f3a107); }
+    .btn--warning:disabled {
+      background: linear-gradient(to left, #fdebb0, #fde2b0);
+      box-shadow: none; }
+    .btn--warning:before {
+      background: linear-gradient(to left, #fbde7f, #fbd07f); }
+    .btn--warning-flat {
+      background: linear-gradient(to left, #f8c51c, #f8c51c); }
+      .btn--warning-flat:hover {
+        background: linear-gradient(to left, #fbde7f, #fbde7f); }
+      .btn--warning-flat:active:before {
+        background: linear-gradient(to left, #f3bc07, #f3bc07); }
+      .btn--warning-flat:disabled {
+        background: linear-gradient(to left, #fdebb0, #fdebb0);
+        box-shadow: none; }
+  .btn--info {
+    background: linear-gradient(to left, #04A9F5, #049DF5); }
+    .btn--info:active:before {
+      background: linear-gradient(to left, #0498dc, #048ddc); }
+    .btn--info:disabled {
+      background: linear-gradient(to left, #95dcfd, #95d7fd);
+      box-shadow: none; }
+    .btn--info:before {
+      background: linear-gradient(to left, #63ccfc, #63c4fc); }
+    .btn--info-flat {
+      background: linear-gradient(to left, #04A9F5, #04A9F5); }
+      .btn--info-flat:hover {
+        background: linear-gradient(to left, #63ccfc, #63ccfc); }
+      .btn--info-flat:active:before {
+        background: linear-gradient(to left, #0498dc, #0498dc); }
+      .btn--info-flat:disabled {
+        background: linear-gradient(to left, #95dcfd, #95dcfd);
+        box-shadow: none; }

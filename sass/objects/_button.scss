@@ -1,0 +1,300 @@
+.btn {
+  border: 0rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: $color-grey-0;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  padding: 1.5rem 3rem;
+  position: relative;
+  z-index: 100;
+  box-shadow: $shadow-button;
+  transition: all .3s ease-in-out;
+  
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:hover:enabled {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:before {
+    border-radius: inherit;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity 0.45s;
+    
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &--sm {
+    padding: 1rem 2rem;
+  }
+
+  &--lg {
+    padding: 2rem 4rem;
+  }
+
+  &--rounded {
+    border-radius: 10rem;
+  }
+
+  /* Begin Icons */
+  & span:not(:first-child) {
+    vertical-align: super;
+  }
+
+  span:first-child {
+    font-size: 3rem;
+  }
+  /* End Icons */
+
+  &--default {
+    color: $color-grey-6;
+    border: 1px solid $color-grey-3;
+
+    &:active {
+      &:before {
+        @include buttonBackground(darken($color-grey-0, 5%), darken($color-grey-1, 5%))
+      }
+    }
+
+    &:disabled {
+      @include buttonBackground(lighten($color-grey-0, 30%), lighten($color-grey-1, 30%));
+      box-shadow: none;
+      opacity: .5;
+    }
+
+    &:before {
+      @include buttonBackground(lighten($color-grey-0, 20%), lighten($color-grey-1, 20%));
+    }
+
+    &-flat {
+      @include buttonBackground($color-grey-0, $color-grey-0);
+      box-shadow: none;
+      color: $color-grey-5;
+      border: 1px solid $color-grey-3;
+
+      &:hover {
+        @include buttonBackground(lighten($color-grey-0, 20%), lighten($color-grey-0, 20%));
+      }
+
+      &:active {
+        &:before {
+          @include buttonBackground(darken($color-grey-0, 5%), darken($color-grey-0, 5%))
+        }
+      }
+
+      &:disabled {
+        @include buttonBackground(lighten($color-grey-0, 30%), lighten($color-grey-0, 30%));
+        opacity: .5;
+      }
+
+    }
+  }
+
+  &--primary {
+    @include buttonBackground($color-primary-0, $color-primary-1);
+
+    &:active {
+      &:before {
+        @include buttonBackground(darken($color-primary-0, 5%), darken($color-primary-1, 5%))
+      }
+    }
+
+    &:disabled {
+      @include buttonBackground(lighten($color-primary-0, 30%), lighten($color-primary-1, 30%));
+      box-shadow: none;
+    }
+
+    &:before {
+      @include buttonBackground(lighten($color-primary-0, 20%), lighten($color-primary-1, 20%));
+    }
+
+    &-flat {
+      @include buttonBackground($color-primary-0, $color-primary-0);
+
+      &:hover {
+        @include buttonBackground(lighten($color-primary-0, 20%), lighten($color-primary-0, 20%));
+      }
+
+      &:active {
+        &:before {
+          @include buttonBackground(darken($color-primary-0, 5%), darken($color-primary-0, 5%))
+        }
+      }
+
+      &:disabled {
+        @include buttonBackground(lighten($color-primary-0, 30%), lighten($color-primary-0, 30%));
+        box-shadow: none;
+      }
+    }
+  }
+  &--secondary {
+    @include buttonBackground($color-secondary-0, $color-secondary-1);
+
+    &:active {
+      &:before {
+        @include buttonBackground(darken($color-secondary-0, 5%), darken($color-secondary-1, 5%))
+      }
+    }
+
+    &:disabled {
+      @include buttonBackground(lighten($color-secondary-0, 15%), lighten($color-secondary-1, 15%));
+      box-shadow: none;
+    }
+
+    &:before {
+      @include buttonBackground(lighten($color-secondary-0, 20%), lighten($color-secondary-1, 20%));
+    }
+
+    &-flat {
+      @include buttonBackground($color-secondary-0, $color-secondary-0);
+
+      &:hover {
+        @include buttonBackground(lighten($color-secondary-0, 20%), lighten($color-secondary-0, 20%));
+      }
+
+      &:active {
+        &:before {
+          @include buttonBackground(darken($color-secondary-0, 5%), darken($color-secondary-0, 5%))
+        }
+      }
+
+      &:disabled {
+        @include buttonBackground(lighten($color-secondary-0, 15%), lighten($color-secondary-0, 15%));
+        box-shadow: none;
+      }
+    }
+  }
+  &--danger {
+    @include buttonBackground($color-danger-0, $color-danger-1);
+
+    &:active {
+      &:before {
+        @include buttonBackground(darken($color-danger-0, 5%), darken($color-danger-1, 5%))
+      }
+    }
+
+    &:disabled {
+      @include buttonBackground(lighten($color-danger-0, 30%), lighten($color-danger-1, 30%));
+      box-shadow: none;
+    }
+
+    &:before {
+      @include buttonBackground(lighten($color-danger-0, 20%), lighten($color-danger-1, 20%));
+    }
+
+    &-flat {
+      @include buttonBackground($color-danger-0, $color-danger-0);
+
+      &:hover {
+        @include buttonBackground(lighten($color-danger-0, 20%), lighten($color-danger-0, 20%));
+      }
+
+      &:active {
+        &:before {
+          @include buttonBackground(darken($color-danger-0, 5%), darken($color-danger-0, 5%))
+        }
+      }
+
+      &:disabled {
+        @include buttonBackground(lighten($color-danger-0, 30%), lighten($color-danger-0, 30%));
+        box-shadow: none;
+      }
+    }
+  }
+  &--warning {
+    @include buttonBackground($color-warning-0, $color-warning-1);
+
+    &:active {
+      &:before {
+        @include buttonBackground(darken($color-warning-0, 5%), darken($color-warning-1, 5%))
+      }
+    }
+
+    &:disabled {
+      @include buttonBackground(lighten($color-warning-0, 30%), lighten($color-warning-1, 30%));
+      box-shadow: none;
+    }
+
+    &:before {
+      @include buttonBackground(lighten($color-warning-0, 20%), lighten($color-warning-1, 20%));
+    }
+
+    &-flat {
+      @include buttonBackground($color-warning-0, $color-warning-0);
+
+      &:hover {
+        @include buttonBackground(lighten($color-warning-0, 20%), lighten($color-warning-0, 20%));
+      }
+
+      &:active {
+        &:before {
+          @include buttonBackground(darken($color-warning-0, 5%), darken($color-warning-0, 5%))
+        }
+      }
+
+      &:disabled {
+        @include buttonBackground(lighten($color-warning-0, 30%), lighten($color-warning-0, 30%));
+        box-shadow: none;
+      }
+    }
+  }
+  &--info {
+    @include buttonBackground($color-info-0, $color-info-1);
+
+    &:active {
+      &:before {
+        @include buttonBackground(darken($color-info-0, 5%), darken($color-info-1, 5%))
+      }
+    }
+
+    &:disabled {
+      @include buttonBackground(lighten($color-info-0, 30%), lighten($color-info-1, 30%));
+      box-shadow: none;
+    }
+
+    &:before {
+      @include buttonBackground(lighten($color-info-0, 20%), lighten($color-info-1, 20%));
+    }
+
+    &-flat {
+      @include buttonBackground($color-info-0, $color-info-0);
+
+      &:hover {
+        @include buttonBackground(lighten($color-info-0, 20%), lighten($color-info-0, 20%));
+      }
+
+      &:active {
+        &:before {
+          @include buttonBackground(darken($color-info-0, 5%), darken($color-info-0, 5%))
+        }
+      }
+
+      &:disabled {
+        @include buttonBackground(lighten($color-info-0, 30%), lighten($color-info-0, 30%));
+        box-shadow: none;
+      }
+    }
+  }
+
+
+}

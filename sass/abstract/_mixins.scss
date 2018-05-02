@@ -25,3 +25,13 @@
   color: $color-grey-2;
   transition: all 0.3s ease-in-out;
 }
+
+
+@mixin buttonBackground($color-1, $color-2) {
+  background: linear-gradient(
+          to left,
+          $color-1,
+          $color-2
+        );
+        
+}

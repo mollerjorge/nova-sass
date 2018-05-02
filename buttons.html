@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <style>
+    .button-style-list {
+      list-style: none;
+
+    }
+
+    .button-style-list li {
+      margin-bottom: 10px;
+    }
+
+    .button-style-list li:before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Primary Button</div>
+
+          </div>
+          <div class="card-content">
+            <button class="btn btn--primary">Primary</button>
+            <button class="btn btn--primary-flat  ">Primary Flat</button>
+            <div class="u-mt-small">
+              <button class="btn btn--primary" disabled>Primary</button>
+              <button class="btn btn--primary-flat" disabled>Primary Flat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Secondary Button</div>
+
+          </div>
+          <div class="card-content">
+            <button class="btn btn--secondary">Secondary</button>
+            <button class="btn btn--secondary-flat ">Secondary</button>
+            <div class="u-mt-small">
+              <button class="btn btn--secondary" disabled>Secondary</button>
+              <button class="btn btn--secondary-flat" disabled>Secondary Flat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Danger Button</div>
+
+          </div>
+          <div class="card-content">
+            <button class="btn btn--danger">Danger</button>
+            <button class="btn btn--danger-flat">Danger</button>
+            <div class="u-mt-small">
+              <button class="btn btn--danger" disabled>danger</button>
+              <button class="btn btn--danger-flat" disabled>danger Flat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Warning Button</div>
+
+          </div>
+          <div class="card-content">
+            <button class="btn btn--warning">Warning</button>
+            <button class="btn btn--warning-flat">Warning</button>
+            <div class="u-mt-small">
+              <button class="btn btn--warning" disabled>warning</button>
+              <button class="btn btn--warning-flat" disabled>warning Flat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Info Button</div>
+
+          </div>
+          <div class="card-content">
+            <button class="btn btn--info">Info</button>
+            <button class="btn btn--info-flat">Info</button>
+            <div class="u-mt-small">
+              <button class="btn btn--info" disabled>info</button>
+              <button class="btn btn--info-flat" disabled>info Flat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">default Button</div>
+
+          </div>
+          <div class="card-content" style="background: #f7f7f7">
+            <button class="btn btn--default">default</button>
+            <button class="btn btn--default-flat">default</button>
+            <div class="u-mt-small">
+              <button class="btn btn--default" disabled>default</button>
+              <button class="btn btn--default-flat" disabled>default Flat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">BLOCK BUTTONS (FULL WIDTH)</div>
+          </div>
+          <div class="card-content">
+            <button class="btn btn--primary btn--block">Block Button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Sizes</div>
+          </div>
+          <div class="card-content">
+            <button class="btn btn--primary btn--sm u-mb-small">Small Button</button>
+            <br>
+            <button class="btn btn--primary u-mb-small">Default Button</button>
+            <br>
+            <button class="btn btn--primary btn--lg">Large Button</button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Icons</div>
+          </div>
+          <div class="card-content">
+            <button class="btn btn--primary u-mb-small">
+              <span class="pe-7s-map"></span>
+              <span>Icon Button</span>
+            </button>
+            <br>
+            <button class="btn btn--secondary u-mb-small">
+                <span class="pe-7s-user"></span>
+                <span>Icon Button</span>
+              </button>
+              <br>
+              <button class="btn btn--warning u-mb-small">
+                  <span class="pe-7s-check"></span>
+                  <span>Icon Button</span>
+                </button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Rounded</div>
+            </div>
+            <div class="card-content">
+              <button class="btn btn--rounded btn--primary u-mb-small">
+                <span class="pe-7s-map"></span>
+                <span>Rounded Button</span>
+              </button>
+              <br>
+              <button class="btn btn--rounded btn--secondary u-mb-small">
+                  <span class="pe-7s-user"></span>
+                  <span>Rounded Button</span>
+                </button>
+                <br>
+                <button class="btn btn--rounded btn--warning u-mb-small">
+                    <span class="pe-7s-check"></span>
+                    <span>Rounded Button</span>
+                  </button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

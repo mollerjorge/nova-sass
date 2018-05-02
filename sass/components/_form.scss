@@ -4,7 +4,7 @@
     display: flex;
 
     &.has-error small {
-      color: $color-danger;
+      color: $color-danger-0;
     }
 
     &:not(:last-child) {
@@ -20,12 +20,12 @@
     }
 
     &--has-error .form__control {
-      border: 1px solid $color-danger !important;
+      border: 1px solid $color-danger-0 !important;
     }
 
     &--has-error .form__input span,
     &--has-error small {
-      color: $color-danger !important;
+      color: $color-danger-0 !important;
     }
   }
 
@@ -98,7 +98,7 @@
   .required {
     &:after {
       content: "*";
-      color: $color-danger;
+      color: $color-danger-0;
       position: absolute;
       right: 1rem;
       top: 0.5rem;
