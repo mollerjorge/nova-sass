@@ -9,10 +9,10 @@
   letter-spacing: 0.1rem;
   padding: 1.5rem 3rem;
   position: relative;
-  z-index: 100;
+  z-index: 1;
   box-shadow: $shadow-button;
   transition: all .3s ease-in-out;
-  
+  overflow: visible;
 
   &:focus,
   &:active {

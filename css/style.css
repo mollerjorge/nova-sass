@@ -4883,7 +4883,8 @@ h5 {
   font-size: 1rem; }
 
 p {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  letter-spacing: .02rem; }
 
 .flex-column {
   flex-direction: column; }
@@ -5093,6 +5094,157 @@ p {
   .card-content {
     padding: 2rem; }
 
+.alert {
+  padding: 1rem 2rem;
+  position: relative;
+  border-radius: .3rem; }
+  .alert--danger {
+    background: linear-gradient(to left, #fb484a, #fb484a); }
+  .alert--warning {
+    background: linear-gradient(to left, #17b3fb, #17b3fb); }
+  .alert--info {
+    background: linear-gradient(to left, #f9cb35, #f9cb35); }
+  .alert--success {
+    background: linear-gradient(to left, #34ebbe, #34ebbe); }
+  .alert[class*='transparent'],
+  .alert[class*='transparent'] p,
+  .alert[class*='transparent'] span {
+    color: #474B4F;
+    background: transparent; }
+  .alert--transparent-danger {
+    border: 0.1rem solid #fa2f31; }
+    .alert--transparent-danger strong {
+      color: #fa2f31 !important; }
+  .alert--transparent-warning {
+    border: 0.1rem solid #f8c51c; }
+    .alert--transparent-warning strong {
+      color: #f8c51c !important; }
+  .alert--transparent-info {
+    border: 0.1rem solid #04A9F5; }
+    .alert--transparent-info strong {
+      color: #04A9F5 !important; }
+  .alert--transparent-success {
+    border: 0.1rem solid #1DE9B6; }
+    .alert--transparent-success strong {
+      color: #1DE9B6 !important; }
+  .alert__button {
+    position: absolute;
+    top: 0.1rem;
+    right: 0.1rem;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 2rem; }
+    .alert__button span {
+      font-weight: 700;
+      color: #ffffff; }
+  .alert strong {
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    color: #ffffff; }
+  .alert p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400; }
+
+.label {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-weight: 700;
+  border-radius: .3rem;
+  width: fit-content;
+  padding: .2rem 1rem;
+  display: inline-block; }
+  .label--success {
+    background: #1DE9B6; }
+  .label--info {
+    background: #04A9F5; }
+  .label--warning {
+    background: #f8c51c; }
+  .label--danger {
+    background: #fa2f31; }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; }
+  .tooltip:hover {
+    z-index: 10; }
+  .tooltip__text {
+    visibility: hidden;
+    opacity: 0;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-weight: 400;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out; }
+    .tooltip__text--left {
+      top: 50%;
+      right: 105%;
+      transform: translate(0%, -50%); }
+    .tooltip__text--right {
+      top: 50%;
+      left: 105%;
+      transform: translate(0%, -50%); }
+    .tooltip__text--top {
+      width: 120px;
+      bottom: 140%;
+      left: 50%;
+      margin-left: -60px; }
+    .tooltip__text--bottom {
+      width: 120px;
+      top: 130%;
+      left: 50%;
+      margin-left: -60px; }
+    .tooltip__text--bottom:after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent black transparent; }
+    .tooltip__text--top:after {
+      content: " ";
+      position: absolute;
+      top: 100%;
+      /* At the bottom of the tooltip */
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent; }
+    .tooltip__text--left:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent transparent black; }
+    .tooltip__text--right:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -8%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent transparent black;
+      transform: rotate(180deg); }
+  .tooltip:hover .tooltip__text {
+    visibility: visible;
+    opacity: 1; }
+
 input {
   height: 4rem; }
   input .input-lg {
@@ -5111,9 +5263,10 @@ input {
   letter-spacing: 0.1rem;
   padding: 1.5rem 3rem;
   position: relative;
-  z-index: 100;
+  z-index: 1;
   box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.2);
   transition: all .3s ease-in-out;
+  overflow: visible;
   /* Begin Icons */
   /* End Icons */ }
   .btn:focus, .btn:active {

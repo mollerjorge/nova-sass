@@ -33,5 +33,12 @@
           $color-1,
           $color-2
         );
-        
+}
+
+@mixin alertBackground($color-1, $color-2) {
+  background: linear-gradient(
+          to left,
+          $color-1,
+          $color-2
+        );
 }

@@ -1,0 +1,84 @@
+.alert {
+  padding: 1rem 2rem;
+  position: relative;
+  border-radius: .3rem;
+  &--danger {
+    @include alertBackground( lighten( $color-danger-0, 5%), lighten(  $color-danger-0, 5%));
+  }
+
+  &--warning {
+    @include alertBackground( lighten( $color-info-0, 5%), lighten(  $color-info-0, 5%));
+  }
+
+  &--info {
+    @include alertBackground( lighten( $color-warning-0, 5%), lighten(  $color-warning-0, 5%));
+  }
+
+  &--success {
+    @include alertBackground( lighten( $color-primary-0, 5%), lighten(  $color-primary-0, 5%));
+  }
+
+  &[class*='transparent'],
+  &[class*='transparent'] p,
+  &[class*='transparent'] span {
+    color: $color-grey-6;
+    background: transparent;
+
+  }
+
+  &--transparent-danger {
+    border: .1rem solid $color-danger-0; 
+    
+    strong {
+      color: $color-danger-0 !important;
+    }
+  }
+  &--transparent-warning {
+    border: .1rem solid $color-warning-0; 
+
+    strong {
+      color: $color-warning-0 !important;
+    }
+  }
+  &--transparent-info {
+    border: .1rem solid $color-info-0; 
+
+    strong {
+      color: $color-info-0 !important;
+    }
+  }
+  &--transparent-success {
+    border: .1rem solid $color-primary-0; 
+
+    strong {
+      color: $color-primary-0 !important;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0.1rem;
+    right: 0.1rem;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+
+    span {
+      font-weight: 700;
+      color: $color-grey-0;
+    }
+  }
+
+  strong {
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    color: $color-grey-0;
+  }
+
+  p {
+    display: inline-block;
+    color: $color-grey-0;
+    font-weight: 400;
+  }
+}

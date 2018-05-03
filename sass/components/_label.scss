@@ -1,0 +1,27 @@
+.label {
+
+  color: $color-grey-0;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-weight: 700;
+  border-radius: .3rem;
+  width: fit-content;
+  padding: .2rem 1rem;
+  display: inline-block;
+
+  &--success {
+    background: $color-primary-0;
+  }
+
+  &--info {
+    background: $color-info-0;
+  }
+
+  &--warning {
+    background: $color-warning-0;
+  }
+
+  &--danger {
+    background: $color-danger-0;
+  }
+}
