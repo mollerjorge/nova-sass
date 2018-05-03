@@ -5558,6 +5558,41 @@ p {
 .tabs.is-toggle-rounded li > a span {
   margin-right: 1rem; }
 
+.accordion {
+  display: flex;
+  flex-direction: column; }
+  .accordion__section {
+    display: block;
+    background: #ffffff;
+    margin-bottom: 0.5rem; }
+    .accordion__section-header {
+      padding: 1rem 2rem; }
+    .accordion__section-title {
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #474B4F;
+      width: 100%;
+      display: inline-block; }
+      .accordion__section-title a {
+        color: inherit;
+        position: relative;
+        display: block;
+        letter-spacing: .1rem; }
+      .accordion__section-title a:after {
+        content: "\2295";
+        font-size: 2.3rem;
+        font-family: "Pe-icon-7-stroke";
+        display: inline-block;
+        position: absolute;
+        right: 0.2rem;
+        top: -1rem; }
+    .accordion__section-content {
+      padding: 1rem 2rem;
+      display: none; }
+      .accordion__section-content--show {
+        display: block; }
+
 input {
   height: 4rem; }
   input .input-lg {
