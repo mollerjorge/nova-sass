@@ -4,6 +4,7 @@
 @import "node_modules/bulma/sass/grid/all";
 @import "node_modules/bulma/sass/layout/all";
 @import "node_modules/bulma/sass/elements/all";
+@import "node_modules/bulma/sass/components/tabs";
 
 // abstract
 @import "abstract/variables";
@@ -22,6 +23,7 @@
 @import "components/label";
 @import "components/tooltip";
 @import "components/modal";
+@import "components/tab";
 
 
 // objects 
