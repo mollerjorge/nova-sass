@@ -3,19 +3,19 @@
   position: relative;
   border-radius: .3rem;
   &--danger {
-    @include alertBackground( lighten( $color-danger-0, 5%), lighten(  $color-danger-0, 5%));
+    @include gradientBackground( lighten( $color-danger-0, 5%), lighten(  $color-danger-0, 5%));
   }
 
   &--warning {
-    @include alertBackground( lighten( $color-info-0, 5%), lighten(  $color-info-0, 5%));
+    @include gradientBackground( lighten( $color-info-0, 5%), lighten(  $color-info-0, 5%));
   }
 
   &--info {
-    @include alertBackground( lighten( $color-warning-0, 5%), lighten(  $color-warning-0, 5%));
+    @include gradientBackground( lighten( $color-warning-0, 5%), lighten(  $color-warning-0, 5%));
   }
 
   &--success {
-    @include alertBackground( lighten( $color-primary-0, 5%), lighten(  $color-primary-0, 5%));
+    @include gradientBackground( lighten( $color-primary-0, 5%), lighten(  $color-primary-0, 5%));
   }
 
   &[class*='transparent'],

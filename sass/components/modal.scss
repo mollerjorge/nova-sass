@@ -1,0 +1,158 @@
+%icon-feedback {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 10rem;
+  width: 10rem;
+  margin: auto;
+}
+
+.modal {
+  position: absolute;
+
+  background: $color-grey-0;
+  border-radius: 0.3rem;
+  padding: 3rem 4rem;
+  z-index: 100;
+
+  @include respond(phone) {
+    min-width: 80%;
+    padding: 3rem;
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba($color: $color-grey-8, $alpha: 0.6);
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    display: none;
+  }
+
+  &__header {
+    padding-bottom: 2rem;
+
+    p {
+      color: $color-grey-5;
+      font-weight: 400;
+    }
+  }
+
+  &__title {
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    outline: none;
+    border: none;
+
+    span {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__content {
+    padding: 2rem 0;
+  }
+
+  &__footer {
+    text-align: right;
+  }
+
+  // Modifiers
+
+  &--default {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--stick-up {
+    left: 0;
+    top: 0;
+    border-radius: 0rem;
+  }
+
+  &--stick-down {
+    left: 0;
+    bottom: 0;
+    border-radius: 0rem;
+  }
+
+  &--stick-right {
+    right: 0;
+    top: 0;
+    height: 100%;
+    max-width: 40%;
+    border-radius: 0rem;
+  }
+
+  &--stick-left {
+    left: 0;
+    top: 0;
+    height: 100%;
+    max-width: 40%;
+    border-radius: 0rem;
+  }
+
+  
+
+  &--success {
+    @include modalFeedbackStyles;
+    
+    @include gradientBackground(
+      $color-primary-0,
+      $color-primary-1,
+      to top left
+    );
+    
+    .icon-checkmark {
+      @extend %icon-feedback;
+      background-image: url(icons/icon-success-checkmark.svg);
+    }
+  }
+
+  &--danger {
+    @include modalFeedbackStyles;
+
+    @include gradientBackground(
+      $color-danger-0,
+      $color-danger-1,
+      to top left
+    );
+
+    .icon-checkmark {
+      @extend %icon-feedback;
+      background-image: url(icons/icon-danger-cross.svg);
+    }
+  }
+
+  &--warning {
+    @include modalFeedbackStyles;
+
+    @include gradientBackground(
+      $color-warning-0,
+      $color-warning-2,
+      to top left
+    );
+
+    .icon-checkmark {
+      @extend %icon-feedback;
+      background-image: url(icons/icon-warning.svg);
+    }
+  }
+}
+
+
+
+.is-visible {
+  display: block;
+  opacity: 1;
+}

@@ -9,10 +9,13 @@
   letter-spacing: 0.1rem;
   padding: 1.5rem 3rem;
   position: relative;
-  z-index: 1;
   box-shadow: $shadow-button;
   transition: all .3s ease-in-out;
   overflow: visible;
+
+  @include respond(phone) {
+    padding: 1.3rem 2rem;
+  }
 
   &:focus,
   &:active {
@@ -66,44 +69,52 @@
   }
   /* End Icons */
 
+  &--transparent {
+    color: $color-grey-0;
+    border: 1px solid $color-grey-0;
+    border-radius: .3rem;
+    background: transparent;
+    box-shadow: none;
+  }
+
   &--default {
     color: $color-grey-6;
-    border: 1px solid $color-grey-3;
+    //border: 1px solid $color-grey-3;
 
     &:active {
       &:before {
-        @include buttonBackground(darken($color-grey-0, 5%), darken($color-grey-1, 5%))
+        @include gradientBackground(darken($color-grey-0, 5%), darken($color-grey-1, 5%))
       }
     }
 
     &:disabled {
-      @include buttonBackground(lighten($color-grey-0, 30%), lighten($color-grey-1, 30%));
+      @include gradientBackground(lighten($color-grey-0, 30%), lighten($color-grey-1, 30%));
       box-shadow: none;
       opacity: .5;
     }
 
     &:before {
-      @include buttonBackground(lighten($color-grey-0, 20%), lighten($color-grey-1, 20%));
+      @include gradientBackground(lighten($color-grey-0, 20%), lighten($color-grey-1, 20%));
     }
 
     &-flat {
-      @include buttonBackground($color-grey-0, $color-grey-0);
+      @include gradientBackground($color-grey-0, $color-grey-0);
       box-shadow: none;
       color: $color-grey-5;
       border: 1px solid $color-grey-3;
 
       &:hover {
-        @include buttonBackground(lighten($color-grey-0, 20%), lighten($color-grey-0, 20%));
+        @include gradientBackground(lighten($color-grey-0, 20%), lighten($color-grey-0, 20%));
       }
 
       &:active {
         &:before {
-          @include buttonBackground(darken($color-grey-0, 5%), darken($color-grey-0, 5%))
+          @include gradientBackground(darken($color-grey-0, 5%), darken($color-grey-0, 5%))
         }
       }
 
       &:disabled {
-        @include buttonBackground(lighten($color-grey-0, 30%), lighten($color-grey-0, 30%));
+        @include gradientBackground(lighten($color-grey-0, 30%), lighten($color-grey-0, 30%));
         opacity: .5;
       }
 
@@ -111,186 +122,186 @@
   }
 
   &--primary {
-    @include buttonBackground($color-primary-0, $color-primary-1);
+    @include gradientBackground($color-primary-0, $color-primary-1);
 
     &:active {
       &:before {
-        @include buttonBackground(darken($color-primary-0, 5%), darken($color-primary-1, 5%))
+        @include gradientBackground(darken($color-primary-0, 5%), darken($color-primary-1, 5%))
       }
     }
 
     &:disabled {
-      @include buttonBackground(lighten($color-primary-0, 30%), lighten($color-primary-1, 30%));
+      @include gradientBackground(lighten($color-primary-0, 30%), lighten($color-primary-1, 30%));
       box-shadow: none;
     }
 
     &:before {
-      @include buttonBackground(lighten($color-primary-0, 20%), lighten($color-primary-1, 20%));
+      @include gradientBackground(lighten($color-primary-0, 20%), lighten($color-primary-1, 20%));
     }
 
     &-flat {
-      @include buttonBackground($color-primary-0, $color-primary-0);
+      @include gradientBackground($color-primary-0, $color-primary-0);
 
       &:hover {
-        @include buttonBackground(lighten($color-primary-0, 20%), lighten($color-primary-0, 20%));
+        @include gradientBackground(lighten($color-primary-0, 20%), lighten($color-primary-0, 20%));
       }
 
       &:active {
         &:before {
-          @include buttonBackground(darken($color-primary-0, 5%), darken($color-primary-0, 5%))
+          @include gradientBackground(darken($color-primary-0, 5%), darken($color-primary-0, 5%))
         }
       }
 
       &:disabled {
-        @include buttonBackground(lighten($color-primary-0, 30%), lighten($color-primary-0, 30%));
+        @include gradientBackground(lighten($color-primary-0, 30%), lighten($color-primary-0, 30%));
         box-shadow: none;
       }
     }
   }
   &--secondary {
-    @include buttonBackground($color-secondary-0, $color-secondary-1);
+    @include gradientBackground($color-secondary-0, $color-secondary-1);
 
     &:active {
       &:before {
-        @include buttonBackground(darken($color-secondary-0, 5%), darken($color-secondary-1, 5%))
+        @include gradientBackground(darken($color-secondary-0, 5%), darken($color-secondary-1, 5%))
       }
     }
 
     &:disabled {
-      @include buttonBackground(lighten($color-secondary-0, 15%), lighten($color-secondary-1, 15%));
+      @include gradientBackground(lighten($color-secondary-0, 15%), lighten($color-secondary-1, 15%));
       box-shadow: none;
     }
 
     &:before {
-      @include buttonBackground(lighten($color-secondary-0, 20%), lighten($color-secondary-1, 20%));
+      @include gradientBackground(lighten($color-secondary-0, 20%), lighten($color-secondary-1, 20%));
     }
 
     &-flat {
-      @include buttonBackground($color-secondary-0, $color-secondary-0);
+      @include gradientBackground($color-secondary-0, $color-secondary-0);
 
       &:hover {
-        @include buttonBackground(lighten($color-secondary-0, 20%), lighten($color-secondary-0, 20%));
+        @include gradientBackground(lighten($color-secondary-0, 20%), lighten($color-secondary-0, 20%));
       }
 
       &:active {
         &:before {
-          @include buttonBackground(darken($color-secondary-0, 5%), darken($color-secondary-0, 5%))
+          @include gradientBackground(darken($color-secondary-0, 5%), darken($color-secondary-0, 5%))
         }
       }
 
       &:disabled {
-        @include buttonBackground(lighten($color-secondary-0, 15%), lighten($color-secondary-0, 15%));
+        @include gradientBackground(lighten($color-secondary-0, 15%), lighten($color-secondary-0, 15%));
         box-shadow: none;
       }
     }
   }
   &--danger {
-    @include buttonBackground($color-danger-0, $color-danger-1);
+    @include gradientBackground($color-danger-0, $color-danger-1);
 
     &:active {
       &:before {
-        @include buttonBackground(darken($color-danger-0, 5%), darken($color-danger-1, 5%))
+        @include gradientBackground(darken($color-danger-0, 5%), darken($color-danger-1, 5%))
       }
     }
 
     &:disabled {
-      @include buttonBackground(lighten($color-danger-0, 30%), lighten($color-danger-1, 30%));
+      @include gradientBackground(lighten($color-danger-0, 30%), lighten($color-danger-1, 30%));
       box-shadow: none;
     }
 
     &:before {
-      @include buttonBackground(lighten($color-danger-0, 20%), lighten($color-danger-1, 20%));
+      @include gradientBackground(lighten($color-danger-0, 20%), lighten($color-danger-1, 20%));
     }
 
     &-flat {
-      @include buttonBackground($color-danger-0, $color-danger-0);
+      @include gradientBackground($color-danger-0, $color-danger-0);
 
       &:hover {
-        @include buttonBackground(lighten($color-danger-0, 20%), lighten($color-danger-0, 20%));
+        @include gradientBackground(lighten($color-danger-0, 20%), lighten($color-danger-0, 20%));
       }
 
       &:active {
         &:before {
-          @include buttonBackground(darken($color-danger-0, 5%), darken($color-danger-0, 5%))
+          @include gradientBackground(darken($color-danger-0, 5%), darken($color-danger-0, 5%))
         }
       }
 
       &:disabled {
-        @include buttonBackground(lighten($color-danger-0, 30%), lighten($color-danger-0, 30%));
+        @include gradientBackground(lighten($color-danger-0, 30%), lighten($color-danger-0, 30%));
         box-shadow: none;
       }
     }
   }
   &--warning {
-    @include buttonBackground($color-warning-0, $color-warning-1);
+    @include gradientBackground($color-warning-0, $color-warning-1);
 
     &:active {
       &:before {
-        @include buttonBackground(darken($color-warning-0, 5%), darken($color-warning-1, 5%))
+        @include gradientBackground(darken($color-warning-0, 5%), darken($color-warning-1, 5%))
       }
     }
 
     &:disabled {
-      @include buttonBackground(lighten($color-warning-0, 30%), lighten($color-warning-1, 30%));
+      @include gradientBackground(lighten($color-warning-0, 30%), lighten($color-warning-1, 30%));
       box-shadow: none;
     }
 
     &:before {
-      @include buttonBackground(lighten($color-warning-0, 20%), lighten($color-warning-1, 20%));
+      @include gradientBackground(lighten($color-warning-0, 20%), lighten($color-warning-1, 20%));
     }
 
     &-flat {
-      @include buttonBackground($color-warning-0, $color-warning-0);
+      @include gradientBackground($color-warning-0, $color-warning-0);
 
       &:hover {
-        @include buttonBackground(lighten($color-warning-0, 20%), lighten($color-warning-0, 20%));
+        @include gradientBackground(lighten($color-warning-0, 20%), lighten($color-warning-0, 20%));
       }
 
       &:active {
         &:before {
-          @include buttonBackground(darken($color-warning-0, 5%), darken($color-warning-0, 5%))
+          @include gradientBackground(darken($color-warning-0, 5%), darken($color-warning-0, 5%))
         }
       }
 
       &:disabled {
-        @include buttonBackground(lighten($color-warning-0, 30%), lighten($color-warning-0, 30%));
+        @include gradientBackground(lighten($color-warning-0, 30%), lighten($color-warning-0, 30%));
         box-shadow: none;
       }
     }
   }
   &--info {
-    @include buttonBackground($color-info-0, $color-info-1);
+    @include gradientBackground($color-info-0, $color-info-1);
 
     &:active {
       &:before {
-        @include buttonBackground(darken($color-info-0, 5%), darken($color-info-1, 5%))
+        @include gradientBackground(darken($color-info-0, 5%), darken($color-info-1, 5%))
       }
     }
 
     &:disabled {
-      @include buttonBackground(lighten($color-info-0, 30%), lighten($color-info-1, 30%));
+      @include gradientBackground(lighten($color-info-0, 30%), lighten($color-info-1, 30%));
       box-shadow: none;
     }
 
     &:before {
-      @include buttonBackground(lighten($color-info-0, 20%), lighten($color-info-1, 20%));
+      @include gradientBackground(lighten($color-info-0, 20%), lighten($color-info-1, 20%));
     }
 
     &-flat {
-      @include buttonBackground($color-info-0, $color-info-0);
+      @include gradientBackground($color-info-0, $color-info-0);
 
       &:hover {
-        @include buttonBackground(lighten($color-info-0, 20%), lighten($color-info-0, 20%));
+        @include gradientBackground(lighten($color-info-0, 20%), lighten($color-info-0, 20%));
       }
 
       &:active {
         &:before {
-          @include buttonBackground(darken($color-info-0, 5%), darken($color-info-0, 5%))
+          @include gradientBackground(darken($color-info-0, 5%), darken($color-info-0, 5%))
         }
       }
 
       &:disabled {
-        @include buttonBackground(lighten($color-info-0, 30%), lighten($color-info-0, 30%));
+        @include gradientBackground(lighten($color-info-0, 30%), lighten($color-info-0, 30%));
         box-shadow: none;
       }
     }
