@@ -5026,7 +5026,9 @@ p {
       opacity: 1;
       background-size: 70%;
       background-repeat: no-repeat;
-      background-position: .6rem .6rem; }
+      background-position: 0.6rem 0.6rem; }
+  .form__checkbox-input:checked + label {
+    color: #1DE9B6; }
 
 .form__checkbox-label {
   padding: 0 3rem;
@@ -5037,11 +5039,11 @@ p {
   width: 2.2rem;
   height: 2.2rem;
   position: absolute;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   border: 0.2rem solid #1DE9B6;
   display: inline-block;
   left: 0;
-  top: -0.5rem; }
+  top: -.1rem; }
   .form__checkbox-button:after {
     content: "";
     display: inline-block;
@@ -5058,6 +5060,8 @@ p {
   display: none; }
   .form__radio-input:checked + label > span:after {
     opacity: 1; }
+  .form__radio-input:checked + label {
+    color: #1DE9B6; }
 
 .form__radio-label {
   padding: 0 3rem;
@@ -5080,10 +5084,35 @@ p {
     width: 1rem;
     height: 1rem;
     position: absolute;
-    top: .6rem;
-    left: .6rem;
+    top: 0.6rem;
+    left: 0.5rem;
     border-radius: 10rem;
     opacity: 0; }
+
+.form__switch {
+  display: inline-block;
+  position: relative;
+  background: #ECEDEF;
+  border-radius: 10rem; }
+  .form__switch-button {
+    transition: all 0.3s ease-in-out;
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 2px 24px 2px 2px;
+    background-color: #ffffff;
+    border-radius: 1rem; }
+
+.form__input-switch {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+  .form__input-switch:checked + span {
+    margin: 2px 2px 2px 24px;
+    background: linear-gradient(to left, #1DE9B6, #1DC5E9); }
 
 .card {
   padding: 2rem;
