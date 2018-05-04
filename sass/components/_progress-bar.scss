@@ -1,0 +1,97 @@
+progress[value] {
+  height: .6rem;
+
+  &::-webkit-progress-bar {
+    background-color: $color-grey-2;
+    border-radius: 2px;
+    
+  }
+
+  &::-webkit-progress-value {
+    @include gradientBackground($color-primary-0, $color-primary-1);
+    border-radius: 2px;
+    box-shadow: $shadow-pb;
+  }
+}
+
+.progress {
+
+  &--legend {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  &--legend:after {
+    content: attr(data-value) '%';
+    position: absolute;
+    right: 0;
+  }
+
+  &--secondary {
+    &::-webkit-progress-value {
+      background: linear-gradient(
+        to left,
+        $color-secondary-0,
+        $color-secondary-1
+      ) !important;
+    }
+  }
+  &--danger {
+    &::-webkit-progress-value {
+      background: linear-gradient(
+        to left,
+        $color-danger-0,
+        $color-danger-1
+      ) !important;
+    }
+  }
+  &--warning {
+    &::-webkit-progress-value {
+      background: linear-gradient(
+        to left,
+        $color-warning-0,
+        $color-warning-1
+      ) !important;
+    }
+  }
+  &--info {
+    &::-webkit-progress-value {
+      background: linear-gradient(
+        to left,
+        $color-info-0,
+        $color-info-1
+      ) !important;
+    }
+  }
+
+  &--striped-info {
+    &::-webkit-progress-value {
+     @include stripedProgressBar($color-info-0, $color-info-1);
+    }
+  }
+
+  &--striped-success {
+    &::-webkit-progress-value {
+     @include stripedProgressBar($color-primary-0, $color-primary-1);
+    }
+  }
+
+  &--striped-secondary {
+    &::-webkit-progress-value {
+     @include stripedProgressBar($color-secondary-0, $color-secondary-1);
+    }
+  }
+
+  &--striped-warning {
+    &::-webkit-progress-value {
+     @include stripedProgressBar($color-warning-0, $color-warning-1);
+    }
+  }
+
+  &--striped-danger {
+    &::-webkit-progress-value {
+     @include stripedProgressBar($color-danger-0, $color-danger-1);
+    }
+  }
+}
+

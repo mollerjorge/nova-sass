@@ -1,3 +1,6 @@
+/*
+  Media Query Mixin
+*/
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -4953,9 +4956,6 @@ a.tag:hover {
   .tabs.is-large {
     font-size: 1.5rem; }
 
-/*
-  Media Query Mixin
-*/
 *,
 *::after,
 *::before {
@@ -5592,6 +5592,62 @@ p {
       display: none; }
       .accordion__section-content--show {
         display: block; }
+
+progress[value] {
+  height: .6rem; }
+  progress[value]::-webkit-progress-bar {
+    background-color: #EBEBEB;
+    border-radius: 2px; }
+  progress[value]::-webkit-progress-value {
+    background: linear-gradient(to left, #1DE9B6, #1DC5E9);
+    border-radius: 2px;
+    box-shadow: 0.5rem 0.7rem 2rem 0rem rgba(0, 0, 0, 0.2); }
+
+.progress--legend {
+  position: relative;
+  margin-bottom: 1rem; }
+
+.progress--legend:after {
+  content: attr(data-value) "%";
+  position: absolute;
+  right: 0; }
+
+.progress--secondary::-webkit-progress-value {
+  background: linear-gradient(to left, #A389D4, #899FD4) !important; }
+
+.progress--danger::-webkit-progress-value {
+  background: linear-gradient(to left, #fa2f31, #fa5457) !important; }
+
+.progress--warning::-webkit-progress-value {
+  background: linear-gradient(to left, #f8c51c, #f8ab1c) !important; }
+
+.progress--info::-webkit-progress-value {
+  background: linear-gradient(to left, #04A9F5, #049DF5) !important; }
+
+.progress--striped-info::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #04A9F5, #049DF5) !important;
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
+
+.progress--striped-success::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #1DE9B6, #1DC5E9) !important;
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
+
+.progress--striped-secondary::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #A389D4, #899FD4) !important;
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
+
+.progress--striped-warning::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #f8c51c, #f8ab1c) !important;
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
+
+.progress--striped-danger::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #fa2f31, #fa5457) !important;
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
 
 input {
   height: 4rem; }
