@@ -1,0 +1,156 @@
+.side-bar {
+  width: 280px;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: auto;
+  flex-direction: column;
+  transform: translate(-18.7rem);
+  transition: all 0.1s linear;
+
+  @include respond(phone) {
+    transform: translate(-30rem);
+  }
+
+  &:hover {
+    transform: translateX(0rem);
+  }
+
+  &__header {
+    flex-basis: 10%;
+    background: $color-sb-header;
+    display: flex;
+    padding: 2rem 3rem;
+    justify-content: space-between;
+    &-logo {
+      height: 100%;
+    }
+
+    &-button {
+      align-self: center;
+      > span {
+        font-size: 2.2rem;
+        color: $color-primary-0;
+      }
+    }
+  }
+
+  &__menu {
+    flex-basis: 90%;
+    background: $color-sb-menu;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    // Custom Scrollbar
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #000000;
+      border: 0.05rem solid $color-grey-7;
+      border-radius: 10px;
+    }
+
+    &-items {
+      margin-top: 2rem;
+
+      & li {
+        display: flex;
+        margin-bottom: 1rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      &-link {
+        font-size: 1.4rem;
+        color: $color-sb-link;
+        flex-basis: 60%;
+        align-self: center;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        padding-left: 10%;
+
+        &:hover {
+          color: $color-grey-0;
+
+          + span > i {
+            color: $color-grey-0;
+          }
+
+          > i {
+            color: $color-grey-0;
+          }
+        }
+
+        .caret {
+          font-size: 2rem;
+          color: $color-sb-link;
+          vertical-align: middle;
+          position: absolute;
+          right: 2rem;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+
+      &-link.active + span {
+        @include gradientBackground($color-primary-0, $color-primary-1, 45deg);
+
+        i {
+          color: $color-grey-0;
+        }
+      }
+
+      &-link.active {
+        color: $color-grey-0;
+
+        ~ ul {
+          display: block;
+        }
+
+        .caret {
+          color: $color-grey-0;
+          transform: rotate(-90deg);
+        }
+      }
+
+      &-icon {
+        font-size: 2rem;
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        background: $color-sb-header;
+
+        margin-right: 10%;
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $color-sb-link;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__sub-menu {
+    background: $color-sb-header;
+    padding: 2rem 3rem;
+    flex-basis: 100%;
+    margin-top: 1rem;
+    display: none;
+  }
+}
+
+.visible {
+  transform: translateX(0rem);
+}
