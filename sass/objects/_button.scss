@@ -5,21 +5,25 @@
   color: $color-grey-0;
   text-transform: uppercase;
   display: inline-block;
-  font-size: .25rem;
+  font-size: 0.25rem;
   letter-spacing: 0.1rem;
   padding: 1.5rem 3rem;
   position: relative;
   box-shadow: $shadow-button;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   overflow: visible;
 
   @include respond(phone) {
-    padding: 1.3rem 2rem;
+    padding: 1.6rem 2rem;
   }
 
   &:focus,
   &:active {
     outline: none;
+  }
+
+  &:active {
+    transform: translateY(0.5rem);
   }
 
   &:hover:enabled {
@@ -28,19 +32,8 @@
     }
   }
 
-  &:before {
-    border-radius: inherit;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    width: 100%;
-    z-index: -100;
-    transition: opacity 0.45s;
-    
+  &:hover {
+    background-position: right center;
   }
 
   &--block {
@@ -72,7 +65,7 @@
   &--transparent {
     color: $color-grey-0;
     border: 1px solid $color-grey-0;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     background: transparent;
     box-shadow: none;
   }
@@ -81,21 +74,18 @@
     color: $color-grey-6;
     //border: 1px solid $color-grey-3;
 
-    &:active {
-      &:before {
-        @include gradientBackground(darken($color-grey-0, 5%), darken($color-grey-1, 5%))
-      }
-    }
+    
 
     &:disabled {
-      @include gradientBackground(lighten($color-grey-0, 30%), lighten($color-grey-1, 30%));
+      @include gradientBackground(
+        lighten($color-grey-0, 30%),
+        lighten($color-grey-1, 30%)
+      );
       box-shadow: none;
-      opacity: .5;
+      opacity: 0.5;
     }
 
-    &:before {
-      @include gradientBackground(lighten($color-grey-0, 20%), lighten($color-grey-1, 20%));
-    }
+    
 
     &-flat {
       @include gradientBackground($color-grey-0, $color-grey-0);
@@ -104,208 +94,248 @@
       border: 1px solid $color-grey-3;
 
       &:hover {
-        @include gradientBackground(lighten($color-grey-0, 20%), lighten($color-grey-0, 20%));
+        @include gradientBackground(
+          lighten($color-grey-0, 20%),
+          lighten($color-grey-0, 20%)
+        );
       }
 
       &:active {
         &:before {
-          @include gradientBackground(darken($color-grey-0, 5%), darken($color-grey-0, 5%))
+          @include gradientBackground(
+            darken($color-grey-0, 5%),
+            darken($color-grey-0, 5%)
+          );
         }
       }
 
       &:disabled {
-        @include gradientBackground(lighten($color-grey-0, 30%), lighten($color-grey-0, 30%));
-        opacity: .5;
+        @include gradientBackground(
+          lighten($color-grey-0, 30%),
+          lighten($color-grey-0, 30%)
+        );
+        opacity: 0.5;
       }
-
     }
   }
 
   &--primary {
-    @include gradientBackground($color-primary-0, $color-primary-1);
-
-    &:active {
-      &:before {
-        @include gradientBackground(darken($color-primary-0, 5%), darken($color-primary-1, 5%))
-      }
-    }
+    background-image: linear-gradient(
+      to right,
+      $color-primary-0 0%,
+      $color-primary-1 51%,
+      $color-primary-0 100%
+    );
+    background-size: 200% auto;
 
     &:disabled {
-      @include gradientBackground(lighten($color-primary-0, 30%), lighten($color-primary-1, 30%));
+      @include gradientBackground(
+        lighten($color-primary-0, 30%),
+        lighten($color-primary-1, 30%)
+      );
       box-shadow: none;
-    }
-
-    &:before {
-      @include gradientBackground(lighten($color-primary-0, 20%), lighten($color-primary-1, 20%));
     }
 
     &-flat {
       @include gradientBackground($color-primary-0, $color-primary-0);
 
       &:hover {
-        @include gradientBackground(lighten($color-primary-0, 20%), lighten($color-primary-0, 20%));
-      }
-
-      &:active {
-        &:before {
-          @include gradientBackground(darken($color-primary-0, 5%), darken($color-primary-0, 5%))
-        }
+        @include gradientBackground(
+          lighten($color-primary-0, 20%),
+          lighten($color-primary-0, 20%)
+        );
       }
 
       &:disabled {
-        @include gradientBackground(lighten($color-primary-0, 30%), lighten($color-primary-0, 30%));
+        @include gradientBackground(
+          lighten($color-primary-0, 30%),
+          lighten($color-primary-0, 30%)
+        );
         box-shadow: none;
       }
     }
   }
   &--secondary {
-    @include gradientBackground($color-secondary-0, $color-secondary-1);
-
-    &:active {
-      &:before {
-        @include gradientBackground(darken($color-secondary-0, 5%), darken($color-secondary-1, 5%))
-      }
-    }
+    background-image: linear-gradient(
+      to right,
+      $color-secondary-0 0%,
+      $color-secondary-1 51%,
+      $color-secondary-0 100%
+    );
+    background-size: 200% auto;
 
     &:disabled {
-      @include gradientBackground(lighten($color-secondary-0, 15%), lighten($color-secondary-1, 15%));
+      @include gradientBackground(
+        lighten($color-secondary-0, 15%),
+        lighten($color-secondary-1, 15%)
+      );
       box-shadow: none;
-    }
-
-    &:before {
-      @include gradientBackground(lighten($color-secondary-0, 20%), lighten($color-secondary-1, 20%));
     }
 
     &-flat {
       @include gradientBackground($color-secondary-0, $color-secondary-0);
 
       &:hover {
-        @include gradientBackground(lighten($color-secondary-0, 20%), lighten($color-secondary-0, 20%));
+        @include gradientBackground(
+          lighten($color-secondary-0, 20%),
+          lighten($color-secondary-0, 20%)
+        );
       }
 
       &:active {
         &:before {
-          @include gradientBackground(darken($color-secondary-0, 5%), darken($color-secondary-0, 5%))
+          @include gradientBackground(
+            darken($color-secondary-0, 5%),
+            darken($color-secondary-0, 5%)
+          );
         }
       }
 
       &:disabled {
-        @include gradientBackground(lighten($color-secondary-0, 15%), lighten($color-secondary-0, 15%));
+        @include gradientBackground(
+          lighten($color-secondary-0, 15%),
+          lighten($color-secondary-0, 15%)
+        );
         box-shadow: none;
       }
     }
   }
   &--danger {
-    @include gradientBackground($color-danger-0, $color-danger-1);
+    background-image: linear-gradient(
+      to right,
+      $color-danger-0 0%,
+      $color-danger-1 51%,
+      $color-danger-0 100%
+    );
+    background-size: 200% auto;
 
-    &:active {
-      &:before {
-        @include gradientBackground(darken($color-danger-0, 5%), darken($color-danger-1, 5%))
-      }
-    }
 
     &:disabled {
-      @include gradientBackground(lighten($color-danger-0, 30%), lighten($color-danger-1, 30%));
+      @include gradientBackground(
+        lighten($color-danger-0, 30%),
+        lighten($color-danger-1, 30%)
+      );
       box-shadow: none;
-    }
-
-    &:before {
-      @include gradientBackground(lighten($color-danger-0, 20%), lighten($color-danger-1, 20%));
     }
 
     &-flat {
       @include gradientBackground($color-danger-0, $color-danger-0);
 
       &:hover {
-        @include gradientBackground(lighten($color-danger-0, 20%), lighten($color-danger-0, 20%));
+        @include gradientBackground(
+          lighten($color-danger-0, 20%),
+          lighten($color-danger-0, 20%)
+        );
       }
 
       &:active {
         &:before {
-          @include gradientBackground(darken($color-danger-0, 5%), darken($color-danger-0, 5%))
+          @include gradientBackground(
+            darken($color-danger-0, 5%),
+            darken($color-danger-0, 5%)
+          );
         }
       }
 
       &:disabled {
-        @include gradientBackground(lighten($color-danger-0, 30%), lighten($color-danger-0, 30%));
+        @include gradientBackground(
+          lighten($color-danger-0, 30%),
+          lighten($color-danger-0, 30%)
+        );
         box-shadow: none;
       }
     }
   }
   &--warning {
-    @include gradientBackground($color-warning-0, $color-warning-1);
-
-    &:active {
-      &:before {
-        @include gradientBackground(darken($color-warning-0, 5%), darken($color-warning-1, 5%))
-      }
-    }
+    background-image: linear-gradient(
+      to right,
+      $color-warning-0 0%,
+      $color-warning-1 51%,
+      $color-warning-0 100%
+    );
+    background-size: 200% auto;
 
     &:disabled {
-      @include gradientBackground(lighten($color-warning-0, 30%), lighten($color-warning-1, 30%));
+      @include gradientBackground(
+        lighten($color-warning-0, 30%),
+        lighten($color-warning-1, 30%)
+      );
       box-shadow: none;
-    }
-
-    &:before {
-      @include gradientBackground(lighten($color-warning-0, 20%), lighten($color-warning-1, 20%));
     }
 
     &-flat {
       @include gradientBackground($color-warning-0, $color-warning-0);
 
       &:hover {
-        @include gradientBackground(lighten($color-warning-0, 20%), lighten($color-warning-0, 20%));
+        @include gradientBackground(
+          lighten($color-warning-0, 20%),
+          lighten($color-warning-0, 20%)
+        );
       }
 
       &:active {
         &:before {
-          @include gradientBackground(darken($color-warning-0, 5%), darken($color-warning-0, 5%))
+          @include gradientBackground(
+            darken($color-warning-0, 5%),
+            darken($color-warning-0, 5%)
+          );
         }
       }
 
       &:disabled {
-        @include gradientBackground(lighten($color-warning-0, 30%), lighten($color-warning-0, 30%));
+        @include gradientBackground(
+          lighten($color-warning-0, 30%),
+          lighten($color-warning-0, 30%)
+        );
         box-shadow: none;
       }
     }
   }
   &--info {
-    @include gradientBackground($color-info-0, $color-info-1);
+    background-image: linear-gradient(
+      to right,
+      $color-info-0 0%,
+      $color-info-1 51%,
+      $color-info-0 100%
+    );
+    background-size: 200% auto;
 
-    &:active {
-      &:before {
-        @include gradientBackground(darken($color-info-0, 5%), darken($color-info-1, 5%))
-      }
-    }
 
     &:disabled {
-      @include gradientBackground(lighten($color-info-0, 30%), lighten($color-info-1, 30%));
+      @include gradientBackground(
+        lighten($color-info-0, 30%),
+        lighten($color-info-1, 30%)
+      );
       box-shadow: none;
     }
 
-    &:before {
-      @include gradientBackground(lighten($color-info-0, 20%), lighten($color-info-1, 20%));
-    }
 
     &-flat {
       @include gradientBackground($color-info-0, $color-info-0);
 
       &:hover {
-        @include gradientBackground(lighten($color-info-0, 20%), lighten($color-info-0, 20%));
+        @include gradientBackground(
+          lighten($color-info-0, 20%),
+          lighten($color-info-0, 20%)
+        );
       }
 
       &:active {
         &:before {
-          @include gradientBackground(darken($color-info-0, 5%), darken($color-info-0, 5%))
+          @include gradientBackground(
+            darken($color-info-0, 5%),
+            darken($color-info-0, 5%)
+          );
         }
       }
 
       &:disabled {
-        @include gradientBackground(lighten($color-info-0, 30%), lighten($color-info-0, 30%));
+        @include gradientBackground(
+          lighten($color-info-0, 30%),
+          lighten($color-info-0, 30%)
+        );
         box-shadow: none;
       }
     }
   }
-
-
 }

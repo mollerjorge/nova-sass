@@ -1,8 +1,15 @@
 input {
   height: 4rem;
+  
+
+  @include respond(phone) {
+    height: 5rem;
+  }
 
   .input-lg {
     height: 5rem;
+
+    
   }
 
   .input-sm {

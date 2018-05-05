@@ -9,14 +9,11 @@
 html {
   font-size: 62.5%;
 
-  @include respond(phone) {
-    font-size: 50%;
-  }
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   box-sizing: border-box;
   line-height: 1.7;
   background: #F0F3F6;
@@ -45,4 +42,9 @@ h5 {
 p {
   font-size: 1.2rem;
   letter-spacing: .02rem;
+}
+
+b {
+  font-weight: 500;
+  color: $color-grey-6;
 }
