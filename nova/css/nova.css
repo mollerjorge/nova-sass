@@ -4971,7 +4971,7 @@ body {
   font-weight: 300;
   box-sizing: border-box;
   line-height: 1.7;
-  background: #F0F3F6; }
+  background: #EBEBEB; }
 
 h1, h2, h3, h4, h5 {
   font-weight: 100; }
@@ -4998,6 +4998,11 @@ p {
 b {
   font-weight: 500;
   color: #474B4F; }
+
+.page-container {
+  width: 100%;
+  height: 100vh;
+  padding-left: 7rem; }
 
 .flex-column {
   flex-direction: column; }
@@ -5659,8 +5664,9 @@ progress[value] {
   bottom: 0;
   right: auto;
   flex-direction: column;
-  transform: translate(-18.7rem);
-  transition: all 0.1s linear; }
+  transform: translate(-21rem);
+  transition: all 0.2s ease-in-out;
+  z-index: 1000; }
   @media (max-width: 37.5em) {
     .side-bar {
       transform: translate(-30rem); } }
@@ -5668,7 +5674,7 @@ progress[value] {
     transform: translateX(0rem); }
   .side-bar__header {
     flex-basis: 10%;
-    background: #22262E;
+    background: #21252d;
     display: flex;
     padding: 2rem 3rem;
     justify-content: space-between; }
@@ -5681,19 +5687,9 @@ progress[value] {
         color: #1DE9B6; }
   .side-bar__menu {
     flex-basis: 90%;
-    background: #262A34;
+    background: #2b303b;
     overflow-y: auto;
-    overflow-x: hidden;
-    /* Track */
-    /* Handle */ }
-    .side-bar__menu::-webkit-scrollbar {
-      width: 0.8rem; }
-    .side-bar__menu::-webkit-scrollbar-track {
-      background: transparent; }
-    .side-bar__menu::-webkit-scrollbar-thumb {
-      background: #000000;
-      border: 0.05rem solid #393C40;
-      border-radius: 10px; }
+    overflow-x: hidden; }
     .side-bar__menu-items {
       margin-top: 2rem; }
       .side-bar__menu-items li {
@@ -5738,8 +5734,8 @@ progress[value] {
         width: 4rem;
         height: 4rem;
         position: relative;
-        background: #22262E;
-        margin-right: 10%; }
+        background: #21252d;
+        margin-right: 1.4rem; }
         .side-bar__menu-items-icon i {
           position: absolute;
           top: 50%;
@@ -5748,7 +5744,7 @@ progress[value] {
           color: #788195;
           transition: all 0.2s ease-in-out; }
   .side-bar__sub-menu {
-    background: #22262E;
+    background: #21252d;
     padding: 2rem 3rem;
     flex-basis: 100%;
     margin-top: 1rem;
@@ -5757,6 +5753,137 @@ progress[value] {
 .visible {
   transform: translateX(0rem); }
 
+.badge {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 10rem;
+  display: flex; }
+  .badge span {
+    align-self: center;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: "Roboto", sans-serif; }
+
+.success {
+  background: linear-gradient(#1DE9B6, #1DC5E9); }
+
+.info {
+  background: linear-gradient(#04A9F5, #049DF5); }
+
+.warning {
+  background: linear-gradient(#f8c51c, #f8ab1c); }
+
+.danger {
+  background: linear-gradient(#fa2f31, #fa5457); }
+
+.nav {
+  display: flex;
+  background: red;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1rem 2rem 1rem 10rem;
+  height: 6rem;
+  width: 100%;
+  z-index: 800;
+  background: #ffffff;
+  justify-content: space-between; }
+  @media (max-width: 56.25em) {
+    .nav {
+      padding: 1rem 2rem 1rem 1rem; } }
+  .nav__menu {
+    flex-basis: 10%;
+    font-size: 3rem;
+    display: none; }
+    @media (max-width: 56.25em) {
+      .nav__menu {
+        margin-right: 2rem;
+        display: block; } }
+    .nav__menu-icon span {
+      width: 75%;
+      height: .2rem;
+      background: #AAAEB3;
+      display: block;
+      margin-bottom: 0.4rem;
+      margin: auto; }
+    .nav__menu-icon:before, .nav__menu-icon:after {
+      content: "";
+      width: 75%;
+      height: 0.2rem;
+      background: #AAAEB3;
+      display: block;
+      margin: auto; }
+    .nav__menu-icon:before {
+      margin-bottom: 0.4rem; }
+    .nav__menu-icon:after {
+      margin-top: 0.4rem; }
+  .nav__logo img {
+    height: 3rem;
+    padding-right: 3rem;
+    border-right: 0.1rem solid #ECEDEF; }
+  .nav__profile {
+    display: flex; }
+    .nav__profile-user {
+      display: flex; }
+      @media (max-width: 56.25em) {
+        .nav__profile-user {
+          display: none; } }
+      .nav__profile-user > * {
+        align-self: center; }
+    .nav__profile-shape {
+      clip-path: circle(30% at center); }
+    .nav__profile-link {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #6F7E79;
+      letter-spacing: 0.08rem; }
+    .nav__profile img {
+      height: 5rem; }
+    .nav__profile-notifications {
+      display: flex; }
+    .nav__profile-icon {
+      padding: 3rem;
+      font-size: 2rem;
+      border-left: 0.1rem solid #ECEDEF;
+      position: relative; }
+      .nav__profile-icon:last-child {
+        border-right: 0.1rem solid #ECEDEF; }
+      @media (max-width: 56.25em) {
+        .nav__profile-icon {
+          padding: 1.5rem;
+          border: none;
+          border-right: none !important; } }
+      .nav__profile-icon > span {
+        color: #6F7E79;
+        position: relative; }
+      .nav__profile-icon .badge > span {
+        color: #ffffff; }
+  .nav > * {
+    align-self: center; }
+  .nav__search-box {
+    flex-basis: 25%; }
+    @media (max-width: 56.25em) {
+      .nav__search-box {
+        display: none; } }
+    .nav__search-box input {
+      border: none;
+      border-radius: 0rem;
+      border-bottom: 0.1rem solid #C6CACF;
+      transition: all 0.2s ease-in-out; }
+      .nav__search-box input:focus {
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 0.1rem solid #6F7E79; }
+    .nav__search-box span {
+      color: #C6CACF; }
+
 .login {
   display: flex;
   height: 100vh; }
@@ -5764,7 +5891,7 @@ progress[value] {
     flex-basis: 60%;
     background: red;
     position: relative;
-    background: linear-gradient(to top right, rgba(29, 233, 182, 0.6), rgba(29, 197, 233, 0.6)), url("../assets/img/login-bg.jpg");
+    background: linear-gradient(to top right, rgba(29, 233, 182, 0.6), rgba(29, 197, 233, 0.6)), url("../img/login-bg.jpg");
     background-size: cover; }
     @media (max-width: 37.5em) {
       .login__bg {

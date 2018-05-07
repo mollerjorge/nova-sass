@@ -1,0 +1,156 @@
+.nav {
+  display: flex;
+  background: red;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 1rem 2rem 1rem 10rem;
+  height: 6rem;
+  width: 100%;
+  z-index: 800;
+  background: $color-grey-0;
+  justify-content: space-between;
+
+  @include respond(tab-port) {
+    padding: 1rem 2rem 1rem 1rem;
+  }
+
+  &__menu {
+    flex-basis: 10%;
+    font-size: 3rem;
+    display: none;
+
+    @include respond(tab-port) {
+      margin-right: 2rem;
+      display: block;
+    }
+
+    &-icon {
+      span {
+        width: 75%;
+        height: .2rem;
+        background: $color-grey-4;
+        display: block;
+        margin-bottom: 0.4rem;
+        margin: auto;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        width: 75%;
+        height: 0.2rem;
+        background: $color-grey-4;
+        display: block;
+        margin: auto;
+      }
+
+      &:before {
+        margin-bottom: 0.4rem;
+      }
+
+      &:after {
+        margin-top: 0.4rem;
+      }
+    }
+  }
+
+  &__logo {
+    img {
+      height: 3rem;
+      padding-right: 3rem;
+      border-right: 0.1rem solid $color-grey-1;
+    }
+  }
+
+  &__profile {
+    display: flex;
+
+    &-user {
+      display: flex;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+
+      > * {
+        align-self: center;
+      }
+    }
+
+    &-shape {
+      clip-path: circle(30% at center);
+    }
+
+    &-link {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: $color-grey-5;
+      letter-spacing: 0.08rem;
+    }
+
+    img {
+      height: 5rem;
+    }
+
+    &-notifications {
+      display: flex;
+    }
+
+    &-icon {
+      padding: 3rem;
+      font-size: 2rem;
+      border-left: 0.1rem solid $color-grey-1;
+      position: relative;
+
+      &:last-child {
+        border-right: 0.1rem solid $color-grey-1;
+      }
+
+      @include respond(tab-port) {
+        padding: 1.5rem;
+        border: none;
+        border-right: none !important;
+      }
+
+      > span {
+        color: $color-grey-5;
+        position: relative;
+      }
+
+      .badge > span {
+        color: $color-grey-0;
+      }
+    }
+  }
+
+  > * {
+    align-self: center;
+  }
+
+  &__search-box {
+    flex-basis: 25%;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    input {
+      border: none;
+      border-radius: 0rem;
+      border-bottom: 0.1rem solid $color-grey-3;
+      transition: all 0.2s ease-in-out;
+
+      &:focus {
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 0.1rem solid $color-grey-5;
+      }
+    }
+
+    span {
+      color: $color-grey-3;
+    }
+  }
+}

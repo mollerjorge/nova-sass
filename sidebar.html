@@ -4,19 +4,19 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
+  <link rel="stylesheet" href="nova/css/nova.css">
+  <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css" >
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
 
 </head>
 
 <body>
-  <div class="side-bar visible">
+  <div class="side-bar">
     <div class="side-bar__header">
-      <img src="assets/img/nova-logo.svg" class="side-bar__header-logo" />
+      <img src="nova/img/nova-logo.svg" class="side-bar__header-logo" />
       <div class="side-bar__header-button">
-        <span class="pe-7s-angle-left-circle"></span>
+        <!-- <span class="pe-7s-angle-left-circle"></span> -->
       </div>
     </div>
 
@@ -30,7 +30,7 @@
           </span>
         </li>
         <li>
-          <a href="" class="side-bar__menu-items-link active">Profile
+          <a href="" class="side-bar__menu-items-link ">Profile
 
 
             <i class="pe-7s-angle-left caret"></i>
@@ -140,6 +140,61 @@
     </div>
   </div>
 
+  <div class="page-container">
+
+    <nav class="nav">
+
+      <div class="nav__menu">
+        <div class="nav__menu-icon">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="nav__logo">
+        <img src="./nova/img/nova-logo.svg" alt="logo nova nav" />
+      </div>
+
+      <div class="nav__search-box">
+        <form class="form" action="">
+          <div class="form--group">
+            <div class="form__input">
+              <input type="text" placeholder="Begin typing to search anything!" class="form__control form__control--icon search">
+              <span class="pe-7s-search"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="nav__profile">
+        <div class="nav__profile-notifications">
+          <div class="nav__profile-icon">
+            <span class="pe-7s-bell"></span>
+          </div>
+          <div class="nav__profile-icon">
+            <span class="pe-7s-mail"></span>
+          </div>
+          <div class="nav__profile-icon">
+
+            <span class="pe-7s-drawer">
+              <div class="badge danger">
+                <span>4</span>
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <div class="nav__profile-user">
+
+          <figure class="nav__profile-shape">
+
+            <img src="./nova/img/profile-woman.jpg" alt="profile picture" />
+          </figure>
+          <a class="nav__profile-link" href="#"> John Smith</a>
+          <span class="pe-7s-angle-down"></span>
+        </div>
+      </div>
+    </nav>
+  </div>
 
 
 </body>

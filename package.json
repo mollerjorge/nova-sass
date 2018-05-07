@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss nova/css/nova.css -w"
   },
   "repository": {
     "type": "git",
