@@ -10,6 +10,8 @@
   z-index: 800;
   background: $color-grey-0;
   justify-content: space-between;
+  border-bottom: .1rem solid rgba(230,230,230,.7);
+  overflow: hidden;
 
   @include respond(tab-port) {
     padding: 1rem 2rem 1rem 1rem;

@@ -3,6 +3,11 @@
   padding: 2rem;
   background: #ffffff;
   margin-bottom: 1rem;
+  border: .1rem solid rgba(230,230,230,.7);
+
+  &-full-height {
+    height: 100%;
+  }
 
   &-header {
     &:after {
@@ -26,3 +31,4 @@
   }
 
 }
+

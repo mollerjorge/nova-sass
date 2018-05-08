@@ -1,4 +1,4 @@
-.side-bar {
+.sidebar {
   width: 280px;
   display: flex;
   position: fixed;
@@ -10,6 +10,23 @@
   transform: translate(-21rem);
   transition: all 0.2s ease-in-out;
   z-index: 1000;
+
+  &-toggle {
+    display: none;
+
+    &:checked ~ label {
+      > span {
+        width: 100%;
+        background: $color-primary-0;
+      }
+
+      &:after,
+      &:before {
+        width: 100%;
+        background: $color-primary-0;
+      }
+    }
+  }
 
   @include respond(phone) {
     transform: translate(-30rem);
@@ -23,17 +40,56 @@
     flex-basis: 10%;
     background: $color-sb-header;
     display: flex;
-    padding: 2rem 3rem;
+    padding: 2rem 2rem 2rem 3rem;
     justify-content: space-between;
     &-logo {
       height: 100%;
     }
 
     &-button {
-      align-self: center;
+      width: 13%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      cursor: pointer;
+      
+
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 0.1rem;
+        background: $color-grey-5;
+        width: 60%;
+        transition: all .3s ease-in-out;
+      }
+
+      &:after {
+        content: "";
+        display: inline-block;
+        height: 0.1rem;
+        background: $color-grey-5;
+        width: 30%;
+        transition: all .3s ease-in-out;
+      }
+
       > span {
-        font-size: 2.2rem;
-        color: $color-primary-0;
+        content: "";
+        display: inline-block;
+        height: 0.1rem;
+        background: $color-grey-5;
+        width: 90%;
+        transition: all .3s ease-in-out;
+      }
+
+      &:hover > * {
+        width: 100%;
+      }
+
+      &:hover {
+        &:after,
+        &:before {
+          width: 100%;
+        }
       }
     }
   }
@@ -43,8 +99,6 @@
     background: $color-sb-menu;
     overflow-y: auto;
     overflow-x: hidden;
-
-  
 
     &-items {
       margin-top: 2rem;
@@ -58,17 +112,22 @@
 
       &-link {
         font-size: 1.4rem;
+        letter-spacing: 0.01em;
         color: $color-sb-link;
-        flex-basis: 60%;
+        flex-basis: 100%;
         align-self: center;
         transition: all 0.2s ease-in-out;
         position: relative;
         padding-left: 10%;
+        -webkit-font-smoothing: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
         &:hover {
           color: $color-grey-0;
 
-          + span > i {
+          span > i {
             color: $color-grey-0;
           }
 
@@ -81,13 +140,11 @@
           font-size: 2rem;
           color: $color-sb-link;
           vertical-align: middle;
-          position: absolute;
-          right: 2rem;
           transition: all 0.2s ease-in-out;
         }
       }
 
-      &-link.active + span {
+      &-link.active > span {
         @include gradientBackground($color-primary-0, $color-primary-1, 45deg);
 
         i {
@@ -130,13 +187,27 @@
 
   &__sub-menu {
     background: $color-sb-header;
-    padding: 2rem 3rem;
+    padding: 2rem 0rem;
     flex-basis: 100%;
     margin-top: 1rem;
     display: none;
+
+    li > a > span {
+      background: $color-sb-menu;
+      text-align: center;
+      font-size: 1.4rem;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
-.visible {
+.sidebar.visible {
   transform: translateX(0rem);
+}
+
+.sidebar.visible ~ .page-container {
+  padding-left: 27rem;
 }

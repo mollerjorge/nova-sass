@@ -11,7 +11,6 @@
 @import "node_modules/bulma/sass/elements/all";
 @import "node_modules/bulma/sass/components/tabs";
 
-
 // base
 @import "base/base";
 @import "base/utilities";
@@ -37,5 +36,6 @@
 // objects 
 @import "objects/input";
 @import "objects/button";
+@import "objects/breadcrumbs";
 
 
