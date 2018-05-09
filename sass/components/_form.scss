@@ -38,6 +38,11 @@
     transition: all 0.3s ease-in-out;
     font-size: 1.2rem;
 
+    &:disabled {
+      background: $color-grey-1;
+      border: none;
+    }
+
     &::placeholder {
       color: $color-grey-3;
     }
@@ -75,6 +80,10 @@
 
     span {
       @include inputIcon;
+    }
+
+    &-wrp {
+      width: 100%;
     }
   }
 
@@ -120,6 +129,19 @@
         $color-primary-1
       );
 
+      &.cb-danger { 
+        @include gradientBackground($color-danger-0, $color-danger-1);
+      }
+      &.cb-info { 
+        @include gradientBackground($color-info-0, $color-info-1);
+      }
+      &.cb-warning { 
+        @include gradientBackground($color-warning-0, $color-warning-1);
+      }
+      &.cb-secondary { 
+        @include gradientBackground($color-secondary-0, $color-secondary-1);
+      }
+
       &:after {
         background-image: url(icons/icon-checkmark.svg);
         opacity: 1;
@@ -129,18 +151,16 @@
       }
     }
 
-    &:checked + label {
-      color: $color-primary-0;
-    }
+    
   }
 
-  &__checkbox-label {
+  &__cl {
     padding: 0 3rem;
     position: relative;
     font-size: 1.2rem;
   }
 
-  &__checkbox-button {
+  &__cb {
     width: 2.2rem;
     height: 2.2rem;
     position: absolute;
@@ -149,6 +169,8 @@
     display: inline-block;
     left: 0;
     top: -.1rem;
+
+    
 
     &:after {
       content: "";
@@ -201,10 +223,10 @@
         $color-primary-0,
         $color-primary-1
       );
-      width: 1rem;
-      height: 1rem;
+      width: 1.1rem;
+      height: 1.1rem;
       position: absolute;
-      top: 0.6rem;
+      top: 0.5rem;
       left: 0.5rem;
       border-radius: 10rem;
       opacity: 0;
@@ -242,3 +264,4 @@
     }
   }
 }
+

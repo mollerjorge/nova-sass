@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="nova/css/nova.css">
+  <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="vendor/css/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" href="vendor/css/dropzone.css">
+</head>
+
+<body>
+
+  <div class="sidebar"></div>
+
+  <div class="page-container">
+
+    <div class="page-container__wrapper">
+
+
+
+      <ul class="breadcrumbs">
+        <li>
+          <a href="index.html">
+            <span class="pe-7s-home"></span>
+          </a>
+
+        </li>
+        <li>
+          <a href="form-elements.html">
+            Form
+          </a>
+        </li>
+        <li>
+          <a href="form-elements.html">
+            Form Elements
+          </a>
+        </li>
+      </ul>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card card-full-height">
+            <div class="card-header">
+              <div class="card-title">Block Form with labels align right</div>
+            </div>
+
+            <div class="card-content">
+              <form action="" class="form">
+                <div class="form__group ">
+                  <div class="form__label u-mb-small">First Name</div>
+                  <div class="form__input-wrp">
+                    <div class="form__input required">
+                      <input type="text" placeholder="Please type your first name" class="form__control form__control--icon u-center-text">
+                      <span class="pe-7s-user"></span>
+                    </div>
+
+                    <small>First name is a required field</small>
+                  </div>
+                </div>
+
+                <div class="form__group form__group--has-error">
+                  <div class="form__label u-mb-small u-center-text">Last Name</div>
+                  <div class="form__input-wrp">
+                    <div class="form__input required">
+                      <input type="text" class="form__control form__control--icon" placeholder="Please type your last name" />
+                      <span class="pe-7s-user"></span>
+                    </div>
+                    <small>There seems to be an error with this field</small>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <div class="form__label">Company</div>
+                  <div class="form__input">
+                    <input type="text" class="form__control form__control--icon" placeholder="Please type the name of the company" />
+                    <span class="pe-7s-portfolio"></span>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <div class="form__label">Email</div>
+                  <div class="form__input">
+                    <input type="text" class="form__control form__control--icon" placeholder="Please type your email" />
+                    <span class="pe-7s-mail"></span>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <div class="form__label">Email</div>
+                  <div class="form__input">
+                    <input disabled="disabled" type="text" class="form__control form__control--icon" placeholder="Please type your email" />
+                    <span class="pe-7s-mail"></span>
+                  </div>
+                </div>
+                <div class="form__group u-fe">
+
+                  <div class="btn btn--primary">Submit Form</div>
+
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card card-full-height">
+            <div class="card-header">
+              <div class="card-title">Inline form</div>
+            </div>
+
+            <div class="card-content">
+              <form action="" class="form ">
+                <div class="columns">
+                  <div class="column">
+                    <div class="form__group">
+                      <div class="form__label u-mb-small">Name</div>
+                      <div class="form__input-wrp">
+                        <div class="form__input required">
+                          <input type="text" class="form__control form__control--icon" placeholder="Type your name" />
+                          <span class="pe-7s-user"></span>
+                        </div>
+                        <small>As always... the name is required</small>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="form__group form__group--has-error">
+                      <div class="form__label u-mb-small">Surname</div>
+                      <div class="form__input-wrp">
+                        <div class="form__input required">
+                          <input type="text" class="form__control form__control--icon" placeholder="Type your name" />
+                          <span class="pe-7s-user"></span>
+                        </div>
+                        <small>Ooops,there is something wrong</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <div class="form__group">
+                      <div class="form__label">Location</div>
+                      <div class="form__input">
+                        <input type="text" class="form__control form__control--icon" placeholder="Type your name" />
+                        <span class="pe-7s-map-marker"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="form__group">
+                      <div class="form__label">Telephone</div>
+                      <div class="form__input">
+                        <input type="text" class="form__control form__control--icon" placeholder="Type your name" />
+                        <span class="pe-7s-phone"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Label Alignment</div>
+            </div>
+
+            <div class="card-content">
+              <form action="" class="form">
+                <div class="form__group ">
+                  <div class="form__label u-left-text u-mb-small">Left </div>
+                  <div class="form__input-wrp">
+                    <div class="form__input required">
+                      <input type="text" placeholder="Please type your first name" class="form__control form__control--icon u-center-text">
+                      <span class="pe-7s-user"></span>
+                    </div>
+
+                    <small>First name is a required field</small>
+                  </div>
+                </div>
+
+                <div class="form__group form__group--has-error">
+                  <div class="form__label u-mb-small">Right </div>
+                  <div class="form__input-wrp">
+                    <div class="form__input required">
+                      <input type="text" class="form__control form__control--icon" placeholder="Please type your last name" />
+                      <span class="pe-7s-user"></span>
+                    </div>
+                    <small>There seems to be an error with this field</small>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <div class="form__label u-center-text">Center </div>
+                  <div class="form__input">
+                    <input type="text" class="form__control form__control--icon" placeholder="Please type the name of the company" />
+                    <span class="pe-7s-portfolio"></span>
+                  </div>
+                </div>
+
+                <div class="form__group u-fe">
+
+                  <div class="btn btn--secondary">Submit Form</div>
+
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+        <div class="column">
+          <div class="card card-full-height">
+            <div class="card-header">
+              <div class="card-title">Block Form</div>
+            </div>
+            <div class="card-content">
+              <form class="form" action="">
+                <div class="form__group flex-column">
+                  <label class="form__label" for="name">Name</label>
+                  <div class="form__input">
+                    <input type="text" placeholder="Name" class="form__control form__control--icon">
+                    <span class="pe-7s-user"></span>
+                  </div>
+                </div>
+
+                <div class="form__group flex-column">
+                  <label class="form__label" for="name">Surname</label>
+                  <div class="form__input">
+                    <input type="text" placeholder="Name" class="form__control form__control--icon">
+                    <span class="pe-7s-user"></span>
+                  </div>
+                </div>
+                <div class="form__group flex-column ">
+                  <label class="form__label" for="name">Location and region</label>
+                  <div class="form__input-wrp">
+                    <div class="form__input">
+                      <input type="text" placeholder="Name" class="form__control form__control--icon ">
+                      <span class="pe-7s-map-marker"></span>
+                    </div>
+                    <small>this is a helper text for the input</small>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card card-full-height">
+            <div class="card-header">
+              <div class="card-title">Input sizes</div>
+            </div>
+            <div class="card-content">
+              <form action="" class="form">
+
+                <div class="form__group">
+                  <div class="form__label u-center-text">Small </div>
+                  <div class="form__input ">
+                    <input type="text" class="form__control form__control--icon u-height-small" placeholder="Please type the name of the company"
+                    />
+                    <span class="pe-7s-portfolio"></span>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <div class="form__label u-center-text">Default </div>
+                  <div class="form__input">
+                    <input type="text" class="form__control form__control--icon" placeholder="Please type the name of the company" />
+                    <span class="pe-7s-portfolio"></span>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <div class="form__label u-center-text">Big </div>
+                  <div class="form__input ">
+                    <input type="text" class="form__control form__control--icon u-height-tall" placeholder="Please type the name of the company"
+                    />
+                    <span class="pe-7s-portfolio"></span>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card card-full-height">
+            <div class="card-header">
+              <div class="card-title">Checkbox</div>
+            </div>
+            <div class="card-content">
+              <form action="" class="form">
+                <div class="form__group">
+                  <input type="checkbox" id="olderThan18" class="form__checkbox-input" checked>
+                  <label for="olderThan18" class="form__cl">
+                    <span class="form__cb "></span>
+
+                    Older than 18</label>
+                </div>
+
+                <div class="form__group">
+                  <input type="checkbox" id="checkme" class="form__checkbox-input" checked>
+                  <label for="checkme" class="form__cl">
+                    <span class="form__cb cb-info"></span>
+
+                    Check me!</label>
+                </div>
+
+                <div class="form__group">
+                  <input type="checkbox" id="danger" class="form__checkbox-input" checked>
+                  <label for="danger" class="form__cl">
+                    <span class="form__cb cb-danger"></span>
+
+                    Check me !</label>
+                </div>
+
+                <div class="form__group">
+                  <input type="checkbox" id="whatabout" class="form__checkbox-input" checked>
+                  <label for="whatabout" class="form__cl">
+                    <span class="form__cb cb-warning"></span>
+
+                    What about a warning checkbox?</label>
+                </div>
+
+                <div class="form__group">
+                  <input type="checkbox" id="secondary" class="form__checkbox-input" checked>
+                  <label for="secondary" class="form__cl">
+                    <span class="form__cb cb-secondary"></span>
+
+                    and a secondary?</label>
+                </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                Radio inputs
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="u-mb-small">
+                <p>Plase select your country</p>
+              </div>
+              <div class="form__group">
+                <input type="radio" id="uruguay" name="country" class="form__radio-input">
+                <label for="uruguay" class="form__radio-label">
+                  <span class="form__radio-button"></span>
+
+                  Uruguay</label>
+              </div>
+              <div class="form__group">
+                <input type="radio" id="argentina" name="country" class="form__radio-input">
+                <label for="argentina" class="form__radio-label">
+                  <span class="form__radio-button"></span>
+
+                  Argentina</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Switch input</div>
+            </div>
+            <div class="card-content">
+              <div class="form__group">
+                <p style="margin-right: 1rem;" for="switch1"> Turn push notifications</p>
+                <span class="form__switch">
+                  <input id="switch1" type="checkbox" class="form__input-switch" checked>
+
+                  <span class="form__switch-button"></span>
+                </span>
+              </div>
+
+              <div class="form__group">
+                <span class="form__switch">
+                  <input type="checkbox" class="form__input-switch">
+
+                  <span class="form__switch-button"></span>
+                </span>
+              </div>
+
+              <div class="form__group">
+                <span class="form__switch">
+                  <input type="checkbox" class="form__input-switch">
+
+                  <span class="form__switch-button"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Simple Selects</div>
+            </div>
+            <div class="card-content">
+              <label for="countrySelect">Select your country</label>
+              <select id="countrySelect" class="js-example-basic-single" name="state">
+                <option value="AL">Alabama</option>
+                <option value="AL">New York</option>
+                <option value="AL">Texas</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Multiple Selects</div>
+            </div>
+            <div class="card-content">
+              <label for="m-select">Select your country</label>
+              <select multiple="multiple" id="m-select" class="js-example-basic-single" name="state">
+                <option value="AL">Alabama</option>
+                <option value="AL">New York</option>
+                <option value="AL">Texas</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Select Groups</div>
+            </div>
+            <div class="card-content">
+              <label for="m-select-group">Select your favourite food or drink</label>
+              <select id="m-select-group" class="js-example-basic-single" name="state">
+                <optgroup label="Drinks">
+                  <option value="AL">Cola</option>
+                  <option value="AL">Mojito</option>
+                  <option value="AL">Scotch</option>
+                  <option value="WY">Monster</option>
+                </optgroup>
+                <optgroup label="Foods"></optgroup>
+                  <option value="AL">Spaguetti</option>
+                  <option value="AL">Meat</option>
+                  <option value="AL">Fries</option>
+                  <option value="WY">Chocolate</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Range Datepicker</div>
+            </div>
+
+            <div class="card-content">
+                <input class="form__control" type="text" name="simple-datepicker"/>
+              </div>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-header">
+                  <div class="card-title">Simple Datepicker</div>
+                </div>
+    
+                <div class="card-content">
+                    <input class="form__control" type="text" name="dates"/>
+                  </div>
+              </div>
+        </div>
+        <div class="column">
+            
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Dropzone</div>
+            </div>
+            <div class="card-content">
+                <form action="https://reqres.in/api/users" class="dropzone">
+                  <div class="fallback">
+                    <input name="file" type="file" multiple />
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="column"></div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+
+
+  <script src="vendor/js/jquery-3.3.1.min.js"></script>
+  <script src="nova/js/nova.js"></script>
+  <script src="vendor/js/select2.min.js"></script>
+  <script src="nova/js/select2.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="nova/js/datepicker.js"></script>
+  <script src="vendor/js/dropzone.js"></script>
+</body>
+
+</html>

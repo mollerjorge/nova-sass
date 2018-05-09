@@ -1,0 +1,96 @@
+.select2 {
+  width: 100% !important;
+  outline: none !important;
+  border: none !important;
+
+  &-results {
+    font-size: 1.3rem;
+  }
+
+  &-selection {
+    min-height: 4rem !important;
+    background-image: linear-gradient($color-grey-0, $color-grey-0) !important;
+    font-size: 1.3rem;
+
+    &__rendered {
+      height: 4rem !important;
+      vertical-align: middle;
+      display: table-cell !important;
+      
+    }
+
+    &__arrow {
+      height: 3.8rem !important;
+      vertical-align: middle;
+      display: table-cell !important;
+    }
+  }
+}
+
+.select2-selection--single:focus {
+  border: .08rem solid $color-grey-3 !important;
+}
+
+.select2-container--classic
+  .select2-results__option--highlighted[aria-selected] {
+  background-color: $color-grey-3 !important;
+  color: $color-grey-6 !important;
+}
+
+.select2-container--classic.select2-container--open .select2-selection--single {
+  border: .08rem solid $color-grey-3 !important;
+}
+
+.select2-container--classic .select2-selection--multiple:focus {
+  border: .08rem solid $color-grey-3 !important;
+}
+
+.select2-container--classic.select2-container--open
+  .select2-selection--multiple {
+  border: .08rem solid $color-grey-3 !important;
+}
+
+.select2-container--classic.select2-container--open .select2-dropdown {
+  border-color: $color-grey-3 !important;
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__arrow {
+  background-image: none !important;
+  background: $color-grey-0 !important;
+}
+
+
+
+.select2-container--classic .select2-selection--multiple .select2-selection__choice {
+  background: $color-ms-bg !important;
+  border: 1px solid $color-ms-bg !important;
+  color: $color-grey-0 !important;
+  border-radius: 4px;
+  cursor: default;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 0 5px;
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__choice__remove {
+  color: $color-grey-0 !important;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+.select2-search__field {
+  height: 3rem !important;
+}
+
+.select2-container--classic .select2-results__option--highlighted[aria-selected] {
+  background-color: $color-grey-1 !important;
+  
+}
+
+.select2-search__field {
+  width: 100% !important;
+}
+

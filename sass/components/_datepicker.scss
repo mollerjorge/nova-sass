@@ -1,0 +1,57 @@
+.drp-buttons {
+  .btn-primary {
+    background: $color-primary-0;
+    
+    
+  }
+
+  .btn-default {
+    color: $color-grey-4;
+  }
+
+  button {
+    padding: 1rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+.daterangepicker  {
+  padding: 1rem !important;
+
+  .calendar-table {
+    td {
+      font-family: "Roboto", sans-serif;
+      width: 4rem !important;
+      height: 3rem !important;
+    }
+  }
+
+  
+
+  td.active {
+    background: linear-gradient($color-primary-0, $color-primary-1) !important;
+    box-shadow: $shadow-button;
+  }
+
+  td.in-range {
+    background: lighten($color-primary-0, 50%);
+    
+    border: none !important;
+  }
+
+  
+  
+  td.end-date {
+    border-radius: 0 2rem 2rem 0rem !important; 
+    background: linear-gradient($color-primary-0, $color-primary-1) !important;
+    
+  }
+  td.start-date {
+    border-radius: 2rem 0 0 2rem !important;  
+  }
+
+  td.start-date.end-date {
+    border-radius: 2rem!important;  
+  }
+  
+}

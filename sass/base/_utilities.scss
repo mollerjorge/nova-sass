@@ -3,6 +3,14 @@
   flex-direction: column;
 }
 
+.u-height-small {
+  height: 3rem;
+}
+
+.u-height-tall {
+  height: 5rem;
+}
+
 .u-mb-small {
   margin-bottom: 1.5rem !important;
 }
@@ -27,11 +35,27 @@
 }
 
 .u-center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-left-text {
   text-align: left !important;
+}
+
+.u-right-text {
+  text-align: right !important;
+}
+
+.u-fe {
+  justify-content: flex-end;
+}
+
+.u-c {
+  justify-content: center;
+}
+
+.u-st {
+  justify-content: flex-start;
 }
 
 .u-p-small {

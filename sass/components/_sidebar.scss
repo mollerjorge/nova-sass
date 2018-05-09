@@ -156,7 +156,9 @@
         color: $color-grey-0;
 
         ~ ul {
-          display: block;
+          margin-top: 1rem;
+          padding: 2rem 0rem;
+          max-height: 800px;
         }
 
         .caret {
@@ -186,11 +188,11 @@
   }
 
   &__sub-menu {
-    background: $color-sb-header;
-    padding: 2rem 0rem;
+    background: $color-sb-header;    
     flex-basis: 100%;
-    margin-top: 1rem;
-    display: none;
+    max-height: 0;
+    transition: all 0.3s linear;
+    overflow: hidden;
 
     li > a > span {
       background: $color-sb-menu;
