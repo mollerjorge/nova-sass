@@ -20,14 +20,14 @@
 }
 
 .success {
-  background: linear-gradient($color-primary-0, $color-primary-1);
+  background: linear-gradient($color-primary-0, $color-primary-1) !important;
 }
 .info {
-  background: linear-gradient($color-info-0, $color-info-1);
+  background: linear-gradient($color-info-0, $color-info-1) !important;
 }
 .warning {
-  background: linear-gradient($color-warning-0, $color-warning-1);
+  background: linear-gradient($color-warning-0, $color-warning-1) !important;
 }
 .danger {
-  background: linear-gradient($color-danger-0, $color-danger-1);
+  background: linear-gradient($color-danger-0, $color-danger-1) !important;
 }

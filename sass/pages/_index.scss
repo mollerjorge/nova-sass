@@ -1,0 +1,57 @@
+/* Use this selector to override the line style on a given series */
+.ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: $color-primary-0 !important;
+  /* Control the thikness of your lines */
+  stroke-width: .2rem;
+  
+}
+
+/* Use this selector to override the line style on a given series */
+.ct-series-b .ct-line {
+  /* Set the colour of this series line */
+  stroke: $color-secondary-0 !important;
+  /* Control the thikness of your lines */
+  stroke-width: .2rem;
+  
+}
+
+
+/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+.ct-series-a .ct-point {
+  /* Colour of your points */
+  stroke: $color-primary-0 !important;
+  
+}
+.ct-series-a  .ct-area {
+  fill: $color-primary-0 !important;
+}
+
+/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+.ct-series-b .ct-point {
+  /* Colour of your points */
+  stroke: $color-secondary-0 !important;
+  /* Size of your points */
+}
+.ct-series-b .ct-area {
+  fill: $color-secondary-0 !important;
+}
+
+.ct-chart-2 .ct-labels span {
+  color: $color-grey-0;
+  
+}
+
+.ct-chart-2 .ct-labels {
+  transform: translateY(2rem);
+}
+
+.ct-chart-2  .ct-line,
+.ct-chart-2 .ct-point {
+  stroke: $color-grey-0 !important;
+  box-shadow:  2rem 2rem 2rem;
+}
+
+.gradient-graph > * {
+  margin-top: 1rem;
+}

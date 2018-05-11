@@ -1,0 +1,56 @@
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  &__bars-wrp {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__percentage {
+    margin-bottom: 2rem;
+  }
+
+  &__bar {
+    width: 1.3rem;
+    height: 15rem;
+    box-shadow: $shadow-pb;
+    margin-bottom: 1rem;
+  }
+
+  &__legend {
+    margin-bottom: 2rem;
+  }
+
+  &__footer {
+    border-top: 0.1rem solid $color-grey-2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+
+    &-legend {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .circle {
+        border-radius: 10rem;
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+  }
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}

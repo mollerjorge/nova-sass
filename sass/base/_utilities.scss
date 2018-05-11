@@ -78,3 +78,53 @@
   color: $color-info-0;
 }
 
+// Colors
+.u-primary-color {
+  color: $color-primary-0 !important;
+}
+.u-secondary-color {
+  color: $color-secondary-0 !important;
+}
+.u-danger-color {
+  color: $color-danger-0 !important;
+}
+.u-warning-color {
+  color: $color-warning-0 !important;
+}
+.u-info-color {
+  color: $color-info-0 !important;
+}
+
+// BG colors
+.u-primary-bg {
+  background-color: $color-primary-0 !important;
+}
+.u-secondary-bg {
+  background-color: $color-secondary-0 !important;
+}
+.u-danger-bg {
+  background-color: $color-danger-0 !important;
+}
+.u-warning-bg {
+  background-color: $color-warning-0 !important;
+}
+.u-info-bg {
+  background-color: $color-info-0 !important;
+}
+
+// BG Gradients
+.u-primary-bg-g {
+  background: linear-gradient(-45deg, $color-primary-0, $color-primary-1) !important;
+}
+.u-secondary-bg-g {
+  background: linear-gradient(-45deg, $color-secondary-0, $color-secondary-1) !important;
+}
+.u-danger-bg-g {
+  background: linear-gradient(-45deg, $color-danger-0, $color-danger-1) !important;
+}
+.u-warning-bg-g {
+  background: linear-gradient(-45deg, $color-warning-0, $color-warning-1) !important;
+}
+.u-info-bg-g {
+  background: linear-gradient(-45deg, $color-info-0, $color-info-1) !important;
+}

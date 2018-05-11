@@ -21,7 +21,7 @@
   Nova.prototype.initSidebar = function() {
     
     // Handler for hamburger menu in sidebar that toggles the visible class 
-    $(".sidebar__header-button").click(function() {
+    $(".sidebar__header-button, .nav__menu-icon").click(function() {
       $(".sidebar").toggleClass("visible");
     });
 

@@ -1,0 +1,26 @@
+.svcs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__left-wrp {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 5rem;
+      color: $color-primary-0;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2rem;
+    }
+  }
+
+  span {
+    flex-basis: 20%;
+  }
+}

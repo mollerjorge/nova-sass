@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="nova/css/nova.css">
+  <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"> x
+
+</head>
+
+<body>
+
+  <div class="sidebar"></div>
+
+  <div class="page-container">
+
+    <div class="page-container__wrapper">
+
+      <div class="columns">
+
+
+        <div class="column is-two-thirds" style="flex-direction: column">
+
+          <div class="svc-wrp">
+
+            <div class="svc">
+              <div class="svc__header">
+                <div class="svc__header-title">Daily Sales</div>
+                <div class="svc__header-icon">
+                  <i class="pe-7s-edit"></i>
+                </div>
+              </div>
+              <div class="svc__content">
+
+                <div class="svc__content-value-wrp">
+                  <div class="svc__content-icon">
+                    <img src="nova/css/icons/arrow-up.svg" alt="arrow up icon">
+                  </div>
+                  <span class="svc__content-value">
+                    $ 249.79
+                  </span>
+                </div>
+                <div class="svc__content-percentage">
+                  % 80
+                </div>
+              </div>
+              <div class="svc__footer">
+                <progress id="dsales" class="progress" value="80" max="100"></progress>
+              </div>
+            </div>
+
+            <div class="svc">
+              <div class="svc__header">
+                <div class="svc__header-title">Monthly Sales</div>
+                <div class="svc__header-icon">
+                  <i class="pe-7s-edit"></i>
+                </div>
+              </div>
+              <div class="svc__content">
+
+                <div class="svc__content-value-wrp">
+                  <div class="svc__content-icon">
+                    <img src="nova/css/icons/arrow-down.svg" alt="arrow up icon">
+                  </div>
+                  <span class="svc__content-value">
+                    $ 203.79
+                  </span>
+                </div>
+                <div class="svc__content-percentage">
+                  % 38
+                </div>
+              </div>
+              <div class="svc__footer">
+                <progress class="progress" value="38" max="100"></progress>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns">
+            <div class="column">
+              <div class="dcard">
+                <div class="dcard__header">
+                  <div class="dcard__header-wrp" style="display: flex; flex-basis: 80%">
+                    <div class="dcard__header-title" style="flex-basis: 30%">Statistics</div>
+                    <div style="display: flex; justify-content: space-around; flex-basis: 70%">
+                      <span>All Time</span>
+                      <span>This Year</span>
+                      <span>This Week</span>
+                      <span>Today</span>
+                      <button class="btn btn--primary btn--rounded btn--sm" style="padding: 1rem 1rem 2rem; height: 1.5rem;">filters</button>
+                    </div>
+                  </div>
+                  <div class="dcard__header-icon">
+                    <i class="pe-7s-edit"></i>
+                  </div>
+
+                </div>
+
+                <div class="dcard__content">
+                  <div class="ct-chart ct-major-twelfth"></div>
+                </div>
+                <div class="dcard__footer">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+
+            <div class="column">
+
+              <div class="img-card card-full-height" style="flex: 1">
+                <div class="img-card__header">
+
+                </div>
+                <div class="img-card__content">
+                  <h2>Daily Reports</h2>
+                  <p>The daily reports are ready for download</p>
+                </div>
+                <div class="img-card__footer">
+                  <button class="btn btn--primary">Download</button>
+                  <button class="btn btn--default">View online</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="dcard success card-full-height" style="color: white; flex: 1;">
+                <div class="dcard__header">
+                  <div class="dcard__header-title">
+                    Earnings
+                  </div>
+                  <div class="dcard__header-icon">
+                    <i class="pe-7s-edit"></i>
+                  </div>
+
+                </div>
+
+                <div class="dcard__content gradient-graph">
+                  <div class="tabs " style="color: white">
+                    <ul>
+                      <li>
+                        <a>
+                          All Time</a>
+                      </li>
+                      <li class="is-active">
+                        <a style="color: white">
+                          This Week</a>
+                      </li>
+                      <li>
+                        <a>
+                          Today</a>
+                      </li>
+                    </ul>
+
+                  </div>
+
+                  <div>
+                    <h1>359,245
+                      <img src="nova/css/icons/arrow-up-white.svg" alt="arrow up icon" style="height: 3rem">
+                    </h1>
+
+                  </div>
+
+                  <div class="gradient-graph ct-chart-2 "></div>
+
+                </div>
+                <div class="dcard__footer">
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns">
+
+            <div class="column">
+              <div class="dcard u-secondary-bg-g" style="color: white; ">
+                <div class="svcs">
+                  <div class="svcs__left-wrp">
+                    <span class="pe-7s-sun" style="color: white"></span>
+                    <div class="svcs__left-wrp-content">
+                      <h2>25 F</h2>
+                      <p>Sunny</p>
+                    </div>
+                  </div>
+                  <span style="font-size: 2.3rem" class="pe-7s-edit"></span>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="dcard ">
+                <div class="svcs">
+                  <div class="svcs__left-wrp">
+                    <button class="btn btn__rounded">
+                      <span class="pe-7s-car"></span>
+                    </button>
+                    <div class="svcs__left-wrp-content">
+                      <h2>253</h2>
+                      <p>Total ideas</p>
+                    </div>
+                  </div>
+                  <span style="font-size: 2.3rem" class="pe-7s-edit"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="reviews">
+            <div class="reviews__header">
+              <div class="reviews__header-title">Reviews</div>
+              <div class="svc__header-icon">
+                <i class="pe-7s-edit"></i>
+              </div>
+            </div>
+            <div class="reviews__content">
+              <div class="reviews__content-header">
+                <div class="reviews__content-title">
+                  Negative
+                </div>
+                <div class="reviews__content-title">
+                  Positive
+                </div>
+              </div>
+              <div class="reviews__content-graph">
+                <div id="positive">
+
+                </div>
+                <div id="negative">
+
+                </div>
+              </div>
+              <div class="reviews__content-legend">
+                <div class="positive-legend">
+                  <h2>70%</h2>
+                  <span>510 reviews</span>
+                </div>
+                <div class="negative-legend">
+                  <h2>40%</h2>
+                  <span>210 reviews</span>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__footer">
+              <button class="btn btn--primary btn--block btn--lg">View all reviews</button>
+            </div>
+          </div>
+
+          <div class="dcard">
+            <div class="svcs">
+              <div class="svcs__left-wrp">
+                <span class="pe-7s-light"></span>
+                <div class="svcs__left-wrp-content">
+                  <h2>253</h2>
+                  <p>Total ideas</p>
+                </div>
+              </div>
+              <span style="font-size: 2.3rem" class="pe-7s-edit"></span>
+            </div>
+          </div>
+
+          <div class="dcard">
+            <div class="svcs">
+              <div class="svcs__left-wrp">
+                <span class="pe-7s-map u-secondary-color"></span>
+                <div class="svcs__left-wrp-content">
+                  <h2>26</h2>
+                  <p>Locations</p>
+                </div>
+              </div>
+              <span style="font-size: 2.3rem" class="pe-7s-edit"></span>
+            </div>
+          </div>
+
+          <div class="dcard" >
+            <div class="dcard__header">
+              <div class="dcard__header-title">New Statistics</div>
+              <div class="dcard__header-icon">
+                <i class="pe-7s-edit"></i>
+              </div>
+            </div>
+
+            <div class="dcard__content">
+              <div class="bar-chart">
+                <div class="bar-chart__bars-wrp">
+                  <div class="bar">
+                    <div class="bar-chart__percentage">
+                      <p>50%</p>
+                    </div>
+                    <div class="bar-chart__bar u-primary-bg-g">
+
+                    </div>
+                    <div class="bar-chart__legend">
+                      sports
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <div class="bar-chart__percentage">
+                      <p>50%</p>
+                    </div>
+                    <div class="bar-chart__bar u-secondary-bg-g">
+
+                    </div>
+                    <div class="bar-chart__legend">
+                      sports
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <div class="bar-chart__percentage">
+                      <p>50%</p>
+                    </div>
+                    <div class="bar-chart__bar u-info-bg">
+
+                    </div>
+                    <div class="bar-chart__legend">
+                      sports
+                    </div>
+                  </div>
+                  <div class="bar">
+                    <div class="bar-chart__percentage">
+                      <p>50%</p>
+                    </div>
+                    <div class="bar-chart__bar u-warning-bg">
+
+                    </div>
+                    <div class="bar-chart__legend">
+                      sports
+                    </div>
+                  </div>
+
+                </div>
+                <div class="bar-chart__footer">
+                  <div class="bar-chart__footer-legend">
+                    <span class="circle u-primary-bg-g"></span>
+                    <h2>45</h2>
+                    <p>sports</p>
+                  </div>
+                  <div class="bar-chart__footer-legend">
+                    <span class="circle u-secondary-bg-g"></span>
+                    <h2>45</h2>
+                    <p>sports</p>
+                  </div>
+                  <div class="bar-chart__footer-legend">
+                    <span class="circle u-info-bg-g"></span>
+                    <h2>45</h2>
+                    <p>sports</p>
+                  </div>
+                  <div class="bar-chart__footer-legend">
+                    <span class="circle u-warning-bg-g"></span>
+                    <h2>45</h2>
+                    <p>sports</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  </div>
+
+
+
+
+  <script src="vendor/js/jquery-3.3.1.min.js"></script>
+  <script src="vendor/js/snap.svg-min.js"></script>
+  <script src="nova/js/moodChart.js"></script>
+  <script>
+    var moodChartPositive = new MoodChart({ id: "positive", percentage: 70 });
+    var moodChartNegative = new MoodChart({ id: "negative", fillColor: "#fa2f31", faceType: "sad", percentage: 40 });
+
+  </script>
+  <script src="nova/js/nova.js"></script>
+  <script src="nova/js/initCharts.js"></script>
+
+  <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+</body>
+
+</html>

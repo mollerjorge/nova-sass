@@ -4967,7 +4967,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
@@ -5006,6 +5006,9 @@ b {
   min-height: 100vh;
   padding-left: 7rem;
   transition: all .15s ease-in-out; }
+  @media (max-width: 37.5em) {
+    .page-container {
+      padding-left: 0rem; } }
   .page-container__wrapper {
     padding: 8.5rem 2.5rem; }
 
@@ -5078,6 +5081,51 @@ table th {
 
 .text-info {
   color: #04A9F5; }
+
+.u-primary-color {
+  color: #1DE9B6 !important; }
+
+.u-secondary-color {
+  color: #A389D4 !important; }
+
+.u-danger-color {
+  color: #fa2f31 !important; }
+
+.u-warning-color {
+  color: #f8c51c !important; }
+
+.u-info-color {
+  color: #04A9F5 !important; }
+
+.u-primary-bg {
+  background-color: #1DE9B6 !important; }
+
+.u-secondary-bg {
+  background-color: #A389D4 !important; }
+
+.u-danger-bg {
+  background-color: #fa2f31 !important; }
+
+.u-warning-bg {
+  background-color: #f8c51c !important; }
+
+.u-info-bg {
+  background-color: #04A9F5 !important; }
+
+.u-primary-bg-g {
+  background: linear-gradient(-45deg, #1DE9B6, #1DC5E9) !important; }
+
+.u-secondary-bg-g {
+  background: linear-gradient(-45deg, #A389D4, #899FD4) !important; }
+
+.u-danger-bg-g {
+  background: linear-gradient(-45deg, #fa2f31, #fa5457) !important; }
+
+.u-warning-bg-g {
+  background: linear-gradient(-45deg, #f8c51c, #f8ab1c) !important; }
+
+.u-info-bg-g {
+  background: linear-gradient(-45deg, #04A9F5, #049DF5) !important; }
 
 .semi-bold {
   font-weight: 400; }
@@ -5574,9 +5622,11 @@ table th {
   overflow: visible;
   display: flex;
   flex-direction: column;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  color: #202224; }
   .tabs:not(.is-toggle) a {
-    border: none; }
+    border: none;
+    color: inherit; }
     .tabs:not(.is-toggle) a span {
       margin-right: 1rem; }
   .tabs:not(.is-toggle) li.is-active > a {
@@ -5656,51 +5706,57 @@ progress[value] {
     border-radius: 2px;
     box-shadow: 0.5rem 0.7rem 2rem 0rem rgba(0, 0, 0, 0.2); }
 
-.progress--legend {
-  position: relative;
-  margin-bottom: 1rem; }
+.progress {
+  box-shadow: 0.5rem 1rem 2rem 0px rgba(32, 34, 36, 0.3); }
+  .progress--legend {
+    position: relative;
+    margin-bottom: 1rem; }
+  .progress--legend:after {
+    content: attr(data-value) "%";
+    position: absolute;
+    right: 0; }
+  .progress--secondary::-webkit-progress-value {
+    background: linear-gradient(to left, #A389D4, #899FD4) !important; }
+  .progress--danger::-webkit-progress-value {
+    background: linear-gradient(to left, #fa2f31, #fa5457) !important; }
+  .progress--warning::-webkit-progress-value {
+    background: linear-gradient(to left, #f8c51c, #f8ab1c) !important; }
+  .progress--info::-webkit-progress-value {
+    background: linear-gradient(to left, #04A9F5, #049DF5) !important; }
+  .progress--striped-info::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #04A9F5, #049DF5) !important;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100% !important; }
+  .progress--striped-success::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #1DE9B6, #1DC5E9) !important;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100% !important; }
+  .progress--striped-secondary::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #A389D4, #899FD4) !important;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100% !important; }
+  .progress--striped-warning::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #f8c51c, #f8ab1c) !important;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100% !important; }
+  .progress--striped-danger::-webkit-progress-value {
+    background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #fa2f31, #fa5457) !important;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100% !important; }
 
-.progress--legend:after {
-  content: attr(data-value) "%";
-  position: absolute;
-  right: 0; }
+.progress::-webkit-progress-value {
+  border-radius: 50px;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+  background: -webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, red, #ba7448);
+  background-size: 25px 14px, 100% 100%, 100% 100%;
+  /*This sets up the animation */
+  -webkit-animation: move 5s linear 0 infinite; }
 
-.progress--secondary::-webkit-progress-value {
-  background: linear-gradient(to left, #A389D4, #899FD4) !important; }
-
-.progress--danger::-webkit-progress-value {
-  background: linear-gradient(to left, #fa2f31, #fa5457) !important; }
-
-.progress--warning::-webkit-progress-value {
-  background: linear-gradient(to left, #f8c51c, #f8ab1c) !important; }
-
-.progress--info::-webkit-progress-value {
-  background: linear-gradient(to left, #04A9F5, #049DF5) !important; }
-
-.progress--striped-info::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #04A9F5, #049DF5) !important;
-  border-radius: 2px;
-  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
-
-.progress--striped-success::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #1DE9B6, #1DC5E9) !important;
-  border-radius: 2px;
-  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
-
-.progress--striped-secondary::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #A389D4, #899FD4) !important;
-  border-radius: 2px;
-  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
-
-.progress--striped-warning::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #f8c51c, #f8ab1c) !important;
-  border-radius: 2px;
-  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
-
-.progress--striped-danger::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(left, #fa2f31, #fa5457) !important;
-  border-radius: 2px;
-  background-size: 35px 20px, 100% 100%, 100% 100% !important; }
+@-webkit-keyframes move {
+  0% {
+    background-position: 0px 0px, 0 0, 0 0; }
+  100% {
+    background-position: -100px 0px, 0 0, 0 0; } }
 
 .sidebar {
   width: 280px;
@@ -5714,6 +5770,9 @@ progress[value] {
   transform: translate(-21rem);
   transition: all 0.2s ease-in-out;
   z-index: 1000; }
+  @media (max-width: 37.5em) {
+    .sidebar.visible + .page-container > nav {
+      transform: translateX(28rem); } }
   .sidebar-toggle {
     display: none; }
     .sidebar-toggle:checked ~ label > span {
@@ -5741,6 +5800,9 @@ progress[value] {
       flex-direction: column;
       justify-content: space-around;
       cursor: pointer; }
+      @media (max-width: 37.5em) {
+        .sidebar__header-button {
+          visibility: hidden; } }
       .sidebar__header-button:before {
         content: "";
         display: inline-block;
@@ -5797,14 +5859,18 @@ progress[value] {
             color: #ffffff; }
           .sidebar__menu-items-link:hover > i {
             color: #ffffff; }
+        .sidebar__menu-items-link .caret-wrp {
+          flex: 1; }
+        .sidebar__menu-items-link .link-name {
+          flex: 2; }
         .sidebar__menu-items-link .caret {
           font-size: 2rem;
           color: #788195;
           vertical-align: middle;
           transition: all 0.2s ease-in-out; }
-      .sidebar__menu-items-link.active > span {
+      .sidebar__menu-items-link.active > span.sidebar__menu-items-icon {
         background: linear-gradient(45deg, #1DE9B6, #1DC5E9); }
-        .sidebar__menu-items-link.active > span i {
+        .sidebar__menu-items-link.active > span.sidebar__menu-items-icon i {
           color: #ffffff; }
       .sidebar__menu-items-link.active {
         color: #ffffff; }
@@ -5869,16 +5935,16 @@ progress[value] {
     font-family: "Roboto", sans-serif; }
 
 .success {
-  background: linear-gradient(#1DE9B6, #1DC5E9); }
+  background: linear-gradient(#1DE9B6, #1DC5E9) !important; }
 
 .info {
-  background: linear-gradient(#04A9F5, #049DF5); }
+  background: linear-gradient(#04A9F5, #049DF5) !important; }
 
 .warning {
-  background: linear-gradient(#f8c51c, #f8ab1c); }
+  background: linear-gradient(#f8c51c, #f8ab1c) !important; }
 
 .danger {
-  background: linear-gradient(#fa2f31, #fa5457); }
+  background: linear-gradient(#fa2f31, #fa5457) !important; }
 
 .nav {
   display: flex;
@@ -6112,6 +6178,227 @@ progress[value] {
   .dropzone .dz-error-message:after {
     border-bottom: 6px solid #fa2f31 !important; }
 
+.svc {
+  padding: 3rem;
+  background: #ffffff;
+  border: 0.1px solid #EBEBEB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-basis: 48%;
+  flex: 1; }
+  .svc-wrp {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem; }
+  .svc:not(:last-child) {
+    margin-right: 2%; }
+  @media (max-width: 37.5em) {
+    .svc {
+      flex-basis: 100%;
+      margin-bottom: 1rem; }
+      .svc:not(:last-child) {
+        margin-right: 0%; } }
+  .svc__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 2rem; }
+    .svc__header-title {
+      font-size: 1.8rem;
+      font-weight: 100;
+      color: #393C40; }
+    .svc__header-icon {
+      color: #C6CACF;
+      font-size: 3rem; }
+  .svc__content {
+    display: flex; }
+    .svc__content-icon {
+      font-size: 2rem;
+      color: #1DE9B6;
+      align-self: flex-start; }
+      .svc__content-icon img {
+        height: 3.2rem; }
+    .svc__content-value {
+      font-size: 1.8rem;
+      align-self: center;
+      margin-left: 2rem; }
+    .svc__content-value-wrp {
+      flex: 1;
+      display: flex; }
+    .svc__content-percentage {
+      font-size: 1.3rem;
+      color: #C6CACF;
+      align-self: center; }
+  .svc__footer {
+    padding-top: 2rem; }
+
+.reviews {
+  padding: 3rem;
+  background: #ffffff;
+  border: 0.1px solid #EBEBEB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
+  .reviews__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 2rem; }
+    .reviews__header-title {
+      font-size: 1.8rem;
+      font-weight: 100;
+      color: #393C40; }
+    .reviews__header-icon {
+      color: #C6CACF;
+      font-size: 3rem; }
+  .reviews__content {
+    padding: 0 2rem; }
+    .reviews__content-header {
+      display: flex;
+      justify-content: space-around; }
+    .reviews__content-title {
+      color: #C6CACF;
+      text-transform: uppercase;
+      letter-spacing: .3rem;
+      font-weight: 400; }
+    .reviews__content-graph {
+      display: flex;
+      justify-content: space-around; }
+    .reviews__content-legend {
+      display: flex;
+      justify-content: space-around; }
+  .reviews__footer {
+    padding: 2rem 0; }
+
+.positive-legend,
+.negative-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .positive-legend span,
+  .negative-legend span {
+    font-weight: 100;
+    color: #AAAEB3;
+    font-size: 1.3rem; }
+
+.dcard {
+  padding: 3rem;
+  background: #ffffff;
+  border: 0.1px solid #EBEBEB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 1rem 0;
+  color: #393C40;
+  flex: 1; }
+  .dcard:not(:first-child) {
+    margin-left: 1rem; }
+  .dcard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 2rem; }
+    .dcard__header-title {
+      font-size: 1.8rem;
+      font-weight: 100;
+      color: inherit; }
+    .dcard__header-icon {
+      color: inherit;
+      font-size: 3rem; }
+
+.img-card {
+  background: #ffffff;
+  border: 0.1px solid #EBEBEB;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  margin: 1rem 0rem 1rem 0rem;
+  flex: 1; }
+  @media (max-width: 56.25em) {
+    .img-card {
+      margin-right: 0rem; } }
+  .img-card:not(:first-child) {
+    margin-left: 1rem; }
+  .img-card__header {
+    background-image: url("../img/image-card-bg.jpg");
+    background-size: cover;
+    height: 20rem; }
+  .img-card__content {
+    padding: 3rem; }
+  .img-card__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem 3rem 3rem; }
+
+.gradient-graph.ct-chart-2 .ct-labels span {
+  color: white; }
+
+.ct-chart-2 .ct-line {
+  stroke: white !important; }
+
+.svcs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .svcs__left-wrp {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center; }
+    .svcs__left-wrp span {
+      font-size: 5rem;
+      color: #1DE9B6; }
+    .svcs__left-wrp-content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2rem; }
+  .svcs span {
+    flex-basis: 20%; }
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+  .bar-chart__bars-wrp {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around; }
+  .bar-chart__percentage {
+    margin-bottom: 2rem; }
+  .bar-chart__bar {
+    width: 1.3rem;
+    height: 15rem;
+    box-shadow: 0.5rem 0.7rem 2rem 0rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem; }
+  .bar-chart__legend {
+    margin-bottom: 2rem; }
+  .bar-chart__footer {
+    border-top: 0.1rem solid #EBEBEB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem; }
+    .bar-chart__footer-legend {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .bar-chart__footer-legend .circle {
+        border-radius: 10rem;
+        height: 1rem;
+        width: 1rem; }
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .login {
   display: flex;
   height: 100vh; }
@@ -6190,6 +6477,51 @@ progress[value] {
     stroke-dashoffset: 1000; }
   to {
     stroke-dashoffset: 0; } }
+
+/* Use this selector to override the line style on a given series */
+.ct-series-a .ct-line {
+  /* Set the colour of this series line */
+  stroke: #1DE9B6 !important;
+  /* Control the thikness of your lines */
+  stroke-width: .2rem; }
+
+/* Use this selector to override the line style on a given series */
+.ct-series-b .ct-line {
+  /* Set the colour of this series line */
+  stroke: #A389D4 !important;
+  /* Control the thikness of your lines */
+  stroke-width: .2rem; }
+
+/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+.ct-series-a .ct-point {
+  /* Colour of your points */
+  stroke: #1DE9B6 !important; }
+
+.ct-series-a .ct-area {
+  fill: #1DE9B6 !important; }
+
+/* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
+.ct-series-b .ct-point {
+  /* Colour of your points */
+  stroke: #A389D4 !important;
+  /* Size of your points */ }
+
+.ct-series-b .ct-area {
+  fill: #A389D4 !important; }
+
+.ct-chart-2 .ct-labels span {
+  color: #ffffff; }
+
+.ct-chart-2 .ct-labels {
+  transform: translateY(2rem); }
+
+.ct-chart-2 .ct-line,
+.ct-chart-2 .ct-point {
+  stroke: #ffffff !important;
+  box-shadow: 2rem 2rem 2rem; }
+
+.gradient-graph > * {
+  margin-top: 1rem; }
 
 input {
   height: 4rem; }

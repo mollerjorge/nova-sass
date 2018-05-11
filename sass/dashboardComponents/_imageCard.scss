@@ -1,0 +1,39 @@
+.img-card {
+  
+  background: $color-grey-0;
+  border: 0.1px solid $color-grey-2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  margin: 1rem 0rem 1rem 0rem;
+  
+  flex: 1;
+
+  @include respond(tab-port) {
+    margin-right: 0rem;
+  }
+
+  &:not(:first-child) {
+    margin-left: 1rem;
+  }
+
+
+  &__header {
+    background-image: url('../img/image-card-bg.jpg');
+    background-size: cover;
+    height: 20rem;
+  }
+
+  &__content {
+    padding: 3rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem 3rem 3rem;
+
+    
+  }
+}

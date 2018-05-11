@@ -40,8 +40,8 @@
 /*
   Media Query Mixin
 */
-
 @mixin respond($device) {
+
   @if $device == phone {
     @media (max-width: 37.5em) { @content; } // 600px
   }

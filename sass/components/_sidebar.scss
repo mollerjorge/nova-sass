@@ -11,6 +11,12 @@
   transition: all 0.2s ease-in-out;
   z-index: 1000;
 
+  @include respond(phone) {
+    &.visible + .page-container > nav {
+      transform: translateX(28rem);
+    }
+  }
+
   &-toggle {
     display: none;
 
@@ -53,6 +59,9 @@
       justify-content: space-around;
       cursor: pointer;
       
+      @include respond(phone) {
+        visibility: hidden;
+      }
 
       &:before {
         content: "";
@@ -136,6 +145,14 @@
           }
         }
 
+        .caret-wrp {
+          flex: 1;
+        }
+
+        .link-name {
+          flex: 2;
+        }
+
         .caret {
           font-size: 2rem;
           color: $color-sb-link;
@@ -144,7 +161,7 @@
         }
       }
 
-      &-link.active > span {
+      &-link.active > span.sidebar__menu-items-icon {
         @include gradientBackground($color-primary-0, $color-primary-1, 45deg);
 
         i {
