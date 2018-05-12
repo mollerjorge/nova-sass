@@ -24,7 +24,7 @@ $('document').ready(function() {
     activeNav.removeClass('active');
     activeNav.prev().addClass('active');
     activeNav.prev().removeClass('success');
-debugger;
+
     var targetForm = $(this).attr('data-target');
     $('form.active').animateCss('fadeOutRight', function() {
       $(targetForm).next().removeClass('active');
