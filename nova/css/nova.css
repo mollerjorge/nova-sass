@@ -5019,6 +5019,13 @@ table th {
   color: #C6CACF;
   font-weight: 100; }
 
+hr {
+  background-color: #EBEBEB;
+  border: none;
+  display: block;
+  height: .1rem;
+  margin: 1.5rem 0; }
+
 .flex-column {
   flex-direction: column; }
 
@@ -6178,6 +6185,110 @@ progress[value] {
   .dropzone .dz-error-message:after {
     border-bottom: 6px solid #fa2f31 !important; }
 
+.fw {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff; }
+  .fw__legends {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    margin-top: 2rem; }
+    .fw__legends h2 {
+      flex: 1;
+      text-align: center; }
+  .fw__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 3rem; }
+    .fw__nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      flex: 1; }
+      .fw__nav-item h2 {
+        color: #EBEBEB; }
+      .fw__nav-item:before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        left: 50%;
+        height: 0.1rem;
+        background: #C6CACF;
+        position: absolute;
+        top: -1rem;
+        transition: all .4s ease-in-out; }
+      .fw__nav-item:first-child:before {
+        width: 100%;
+        left: 50%; }
+      .fw__nav-item:last-child:before {
+        width: 0%; }
+    .fw__nav-bullet {
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 10rem;
+      background: #C6CACF;
+      z-index: 10;
+      position: absolute;
+      margin-top: -1.6rem;
+      transition: all .2s ease-in-out; }
+    .fw__nav-item.active .fw__nav-bullet {
+      width: 2rem;
+      height: 2rem;
+      background: linear-gradient(45deg, #A389D4, #899FD4);
+      position: absolute;
+      margin-top: -2rem; }
+    .fw__nav-item.active h2 {
+      color: #202224; }
+    .fw__nav-item.success:before {
+      background: #1DE9B6;
+      z-index: 10; }
+    .fw__nav-item.success .fw__nav-bullet {
+      background: linear-gradient(45deg, #1DE9B6, #1DC5E9); }
+  .fw__content {
+    padding: 5rem 10rem; }
+    .fw__content form {
+      opacity: 0;
+      max-height: 0; }
+    .fw__content form.active {
+      opacity: 1;
+      max-height: 100%; }
+
+.visa {
+  background: linear-gradient(to left, #A389D4, #899FD4);
+  width: 45rem;
+  height: 25rem;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; }
+  .visa-wrp {
+    display: flex;
+    justify-content: center; }
+  .visa-top {
+    display: flex;
+    justify-content: space-between; }
+    .visa-top img {
+      height: 2.5rem; }
+  .visa-card-number {
+    display: flex;
+    justify-content: center; }
+    .visa-card-number p {
+      font-size: 3rem;
+      letter-spacing: .25rem; }
+  .visa-bg-image {
+    position: absolute;
+    bottom: -4rem;
+    left: -5rem; }
+    .visa-bg-image img {
+      height: 20rem; }
+
 .svc {
   padding: 3rem;
   background: #ffffff;
@@ -6528,9 +6639,9 @@ input {
   @media (max-width: 37.5em) {
     input {
       height: 5rem; } }
-  input .input-lg {
+  input.input-lg {
     height: 5rem; }
-  input .input-sm {
+  input.input-sm {
     height: 2.5rem; }
 
 .btn {
@@ -6547,6 +6658,7 @@ input {
   box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
   overflow: visible;
+  text-align: center;
   /* Begin Icons */
   /* End Icons */ }
   @media (max-width: 37.5em) {
@@ -6559,7 +6671,8 @@ input {
   .btn:hover:enabled:before {
     opacity: 1; }
   .btn:hover {
-    background-position: right center; }
+    background-position: right center;
+    color: #ffffff; }
   .btn--block {
     width: 100%; }
   .btn--sm {
@@ -6590,7 +6703,8 @@ input {
       color: #6F7E79;
       border: 1px solid #C6CACF; }
       .btn--default-flat:hover {
-        background: linear-gradient(to left, white, white); }
+        background: linear-gradient(to left, white, white);
+        color: inherit; }
       .btn--default-flat:active:before {
         background: linear-gradient(to left, #f2f2f2, #f2f2f2); }
       .btn--default-flat:disabled {

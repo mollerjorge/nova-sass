@@ -12,6 +12,7 @@
   box-shadow: $shadow-button;
   transition: all 0.3s ease-in-out;
   overflow: visible;
+  text-align: center;
 
   @include respond(phone) {
     padding: 1.6rem 2rem;
@@ -34,6 +35,7 @@
 
   &:hover {
     background-position: right center;
+    color: $color-grey-0;
   }
 
   &--block {
@@ -98,6 +100,7 @@
           lighten($color-grey-0, 20%),
           lighten($color-grey-0, 20%)
         );
+        color: inherit;
       }
 
       &:active {

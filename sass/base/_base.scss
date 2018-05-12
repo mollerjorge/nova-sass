@@ -75,3 +75,11 @@ table th {
   color: $color-grey-3;
   font-weight: 100;
 }
+
+hr {
+  background-color: $color-grey-2;
+  border: none;
+  display: block;
+  height: .1rem;
+  margin: 1.5rem 0;
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="nova/css/nova.css">
+  <link rel="stylesheet" href="vendor/css/animate.css">
+  <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <title>Nova</title>
+</head>
+
+<body>
+
+
+  <div class="sidebar"></div>
+
+  <div class="page-container">
+
+    <div class="page-container__wrapper">
+
+
+
+      <ul class="breadcrumbs">
+        <li>
+          <a href="index.html">
+            <span class="pe-7s-home"></span>
+          </a>
+
+        </li>
+        <li>
+          <a href="formWizard.html">
+            Form
+          </a>
+        </li>
+        <li>
+          <a href="formWizard.html">
+            Form Wizard
+          </a>
+        </li>
+      </ul>
+
+
+      <div class="columns">
+        <div class="column">
+
+          <div class="fw">
+            <div class="fw__nav">
+              <div class="fw__nav-item active">
+                <span class="fw__nav-bullet "></span>
+
+              </div>
+
+              <div class="fw__nav-item ">
+                <span class="fw__nav-bullet "></span>
+
+              </div>
+
+              <div class="fw__nav-item ">
+                <span class="fw__nav-bullet"></span>
+
+              </div>
+
+
+            </div>
+
+            <div class="fw__legends">
+              <h2>Shipping</h2>
+              <h2>Payment</h2>
+              <h2>Confirmation</h2>
+            </div>
+
+            <div class="fw__content">
+              <form  id="form-shipping" action="" class="form active">
+
+                <form class="form" action="">
+                  <div class="columns">
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <label class="form__label" for="name">Name</label>
+                        <div class="form__input">
+                          <input type="text" placeholder="Please type your name" class="form__control form__control--icon input-lg">
+                          <span class="pe-7s-user"></span>
+                        </div>
+                      </div>
+
+                      
+                    </div>
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <label class="form__label" for="name">Last name</label>
+                        <div class="form__input">
+                          <input type="text" placeholder="Please type your lastname" class="form__control form__control--icon input-lg">
+                          <span class="pe-7s-user"></span>
+                        </div>
+                      </div>
+
+                      
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <div class="columns">
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <label class="form__label" for="name">Address</label>
+                        <div class="form__input">
+                          <input type="text" placeholder="Please type your address" class="form__control form__control--icon input-lg">
+                          <span class="pe-7s-user"></span>
+                        </div>
+                      </div>
+
+                      <div class="form__group flex-column">
+                        <label class="form__label" for="name">Country</label>
+                        <div class="form__input">
+                          <input type="text" placeholder="Please type your email" class="form__control form__control--icon input-lg">
+                          <span class="pe-7s-mail"></span>
+                        </div>
+                      </div>
+
+                      <div class="form__group flex-column">
+                        <input type="checkbox" id="olderThan18" class="form__checkbox-input" checked>
+                        <label for="olderThan18" class="form__cl">
+                          <span class="form__cb "></span>
+
+                          My shipping and billing address are the same</label>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <label class="form__label" for="name">City</label>
+                        <div class="form__input">
+                          <input type="text" placeholder="Please type your city" class="form__control form__control--icon input-lg">
+                          <span class="pe-7s-user"></span>
+                        </div>
+                      </div>
+
+                      <div class="form__group flex-column">
+                        <label class="form__label" for="name">ZIP code</label>
+                        <div class="form__input">
+                          <input type="text" placeholder="Please type your city ZIP code" class="form__control form__control--icon input-lg">
+                          <span class="pe-7s-phone"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="columns" style="margin-top: 3rem;">
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <button class="btn btn--default-flat btn--block prev">back to store</button>
+                      </div>
+
+
+                    </div>
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <button type="submit" data-target="#form-payment" class="btn btn--primary btn--block">Continue</button>
+                      </div>
+
+                      
+                    </div>
+                  </div>
+                </form>
+
+              </form>
+
+              <form  id="form-payment" action="" class="form">
+
+                <form class="form" action="">
+                  <div class="columns">
+                    <div class="column">
+
+
+                      <div class="visa-wrp">
+                        <div class="visa">
+
+                          <div class="visa-top">
+                            <h3>John Doe</h3>
+
+                            <img src="./nova/img/visa-logo-white.png" alt="visa logo white">
+                          </div>
+
+                          <p>
+                            <b style="color: white">VALID</b> 10/18</p>
+
+                          <div class="visa-card-number">
+                            <p>
+                              4298 2394 0192 7850
+                            </p>
+
+                          </div>
+                          <div class="visa-bg-image">
+                            <img src="nova/img/visa-logo-black.svg" alt="visa logo black">
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+                  <div class="columns" style="margin-top: 10rem;">
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <a data-target="#form-shipping" class="btn btn--default-flat btn--block prev">back to shipping</a>
+                      </div>
+
+
+                    </div>
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <button type="submit" data-target="#form-confirmation" class="btn btn--primary btn--block">Continue</button>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </form>
+
+              </form>
+
+              <form  id="form-confirmation" action="" class="form">
+
+                <form class="form" action="">
+                  <div class="columns">
+                    <div class="column u-center-text" >
+                      <h1>$ 891.38</h1>
+                      <h3>Your purchase is ready!
+                        <br>
+                        Please confirm to finish.
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div class="columns" style="margin-top: 10rem;">
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <a data-target="#form-payment" class="btn btn--default-flat btn--block prev">back to payment</a>
+                      </div>
+
+
+                    </div>
+                    <div class="column">
+                      <div class="form__group flex-column">
+                        <a target="#payment" class="btn btn--primary btn--block">Confirm</a>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </form>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="vendor/js/jquery-3.3.1.min.js"></script>
+  <script src="nova/js/nova.js"></script>
+  <script src="nova/js/initFormWizard.js"></script>
+</body>
+
+</html>
