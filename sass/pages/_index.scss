@@ -16,6 +16,24 @@
   
 }
 
+/* Use this selector to override the line style on a given series */
+.ct-series-c .ct-line {
+  /* Set the colour of this series line */
+  stroke: $color-danger-0 !important;
+  /* Control the thikness of your lines */
+  stroke-width: .2rem;
+  
+}
+
+/* Use this selector to override the line style on a given series */
+.ct-series-d .ct-line {
+  /* Set the colour of this series line */
+  stroke: $color-info-0 !important;
+  /* Control the thikness of your lines */
+  stroke-width: .2rem;
+  
+}
+
 
 /* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
 .ct-series-a .ct-point {
@@ -37,6 +55,24 @@
   fill: $color-secondary-0 !important;
 }
 
+.ct-series-c .ct-point {
+  /* Colour of your points */
+  stroke: $color-danger-0 !important;
+  /* Size of your points */
+}
+.ct-series-c .ct-area {
+  fill: $color-danger-0 !important;
+}
+
+.ct-series-d .ct-point {
+  /* Colour of your points */
+  stroke: $color-info-0 !important;
+  /* Size of your points */
+}
+.ct-series-d .ct-area {
+  fill: $color-info-0 !important;
+}
+
 .ct-chart-2 .ct-labels span {
   color: $color-grey-0;
   
@@ -54,4 +90,65 @@
 
 .gradient-graph > * {
   margin-top: 1rem;
+}
+
+.ct-series-a .ct-bar {
+  stroke: $color-secondary-0 !important;
+}
+.ct-series-b .ct-bar {
+  stroke: $color-primary-0 !important;
+}
+.ct-series-c .ct-bar {
+  stroke: $color-info-0 !important;
+}
+
+.ct-series-a .ct-slice-pie {
+  fill: $color-primary-0 !important;
+}
+
+.ct-series-b .ct-slice-pie {
+  fill: $color-secondary-0 !important;
+}
+
+.ct-series-c .ct-slice-pie {
+  fill: $color-info-0 !important;
+}
+
+.ct-series-d .ct-slice-pie {
+  fill: $color-danger-0 !important;
+}
+
+.ct-chart-10 .ct-label {
+    fill: rgba(0,0,0,.4);
+    color: rgba(0,0,0,.4);
+    font-size: 2.75rem;
+    line-height: 1;
+}
+
+.ct-series-a .ct-slice-donut  {
+  stroke: $color-primary-0 !important;
+}
+
+.ct-series-b .ct-slice-donut  {
+  stroke: $color-secondary-0 !important;
+}
+
+.ct-series-c .ct-slice-donut  {
+  stroke: $color-info-0 !important;
+}
+
+.ct-series-d .ct-slice-donut  {
+  stroke: $color-warning-0 !important;
+}
+
+.ct-series-e .ct-slice-donut  {
+  stroke: $color-danger-0 !important;
+}
+
+.ct-series-f .ct-slice-donut  {
+  stroke: $color-secondary-1 !important;
+}
+
+.ct-series-g .ct-slice-donut  {
+  stroke: $color-primary-1 !important;
 }

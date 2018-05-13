@@ -6603,6 +6603,20 @@ progress[value] {
   /* Control the thikness of your lines */
   stroke-width: .2rem; }
 
+/* Use this selector to override the line style on a given series */
+.ct-series-c .ct-line {
+  /* Set the colour of this series line */
+  stroke: #fa2f31 !important;
+  /* Control the thikness of your lines */
+  stroke-width: .2rem; }
+
+/* Use this selector to override the line style on a given series */
+.ct-series-d .ct-line {
+  /* Set the colour of this series line */
+  stroke: #04A9F5 !important;
+  /* Control the thikness of your lines */
+  stroke-width: .2rem; }
+
 /* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
 .ct-series-a .ct-point {
   /* Colour of your points */
@@ -6620,6 +6634,22 @@ progress[value] {
 .ct-series-b .ct-area {
   fill: #A389D4 !important; }
 
+.ct-series-c .ct-point {
+  /* Colour of your points */
+  stroke: #fa2f31 !important;
+  /* Size of your points */ }
+
+.ct-series-c .ct-area {
+  fill: #fa2f31 !important; }
+
+.ct-series-d .ct-point {
+  /* Colour of your points */
+  stroke: #04A9F5 !important;
+  /* Size of your points */ }
+
+.ct-series-d .ct-area {
+  fill: #04A9F5 !important; }
+
 .ct-chart-2 .ct-labels span {
   color: #ffffff; }
 
@@ -6633,6 +6663,54 @@ progress[value] {
 
 .gradient-graph > * {
   margin-top: 1rem; }
+
+.ct-series-a .ct-bar {
+  stroke: #A389D4 !important; }
+
+.ct-series-b .ct-bar {
+  stroke: #1DE9B6 !important; }
+
+.ct-series-c .ct-bar {
+  stroke: #04A9F5 !important; }
+
+.ct-series-a .ct-slice-pie {
+  fill: #1DE9B6 !important; }
+
+.ct-series-b .ct-slice-pie {
+  fill: #A389D4 !important; }
+
+.ct-series-c .ct-slice-pie {
+  fill: #04A9F5 !important; }
+
+.ct-series-d .ct-slice-pie {
+  fill: #fa2f31 !important; }
+
+.ct-chart-10 .ct-label {
+  fill: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 2.75rem;
+  line-height: 1; }
+
+.ct-series-a .ct-slice-donut {
+  stroke: #1DE9B6 !important; }
+
+.ct-series-b .ct-slice-donut {
+  stroke: #A389D4 !important; }
+
+.ct-series-c .ct-slice-donut {
+  stroke: #04A9F5 !important; }
+
+.ct-series-d .ct-slice-donut {
+  stroke: #f8c51c !important; }
+
+.ct-series-e .ct-slice-donut {
+  stroke: #fa2f31 !important; }
+
+.ct-series-f .ct-slice-donut {
+  stroke: #899FD4 !important; }
+
+.ct-series-g .ct-slice-donut {
+  stroke: #1DC5E9 !important; }
 
 input {
   height: 4rem; }
