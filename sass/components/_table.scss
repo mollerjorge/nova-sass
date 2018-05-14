@@ -1,0 +1,94 @@
+
+//  Row backgorund color and default padding and font size
+table.dataTable tbody th,
+table.dataTable tbody td,
+table.dataTable thead th,
+table.dataTable thead td {
+  padding: 2rem 1rem;
+  font-size: 1.3rem;
+  background-color: $color-grey-0;
+}
+
+// Header border bottom
+table.dataTable thead th {
+  border-bottom: $border-bottom-head;
+}
+
+// Background color for highlighting sorting column for odd rows
+table.dataTable.display tbody tr.odd > .sorting_1,
+table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+  background-color: #f7f7f7;
+}
+
+// Background color for highlighting sorting column for even rows
+table.dataTable.display tbody tr.even > .sorting_1,
+table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+  background-color: #f7f7f7;
+}
+
+// Backgorund image for header sorting indicator
+table.dataTable thead .sorting {
+  background-image: url("../img/table/sort_both.png");
+  background-size: 1.5rem;
+}
+
+// Backgorund image for header sorting asc indicator
+table.dataTable thead .sorting_asc {
+  background-image: url("../img/table/sort_asc.png");
+  background-size: 1.5rem;
+}
+
+// Backgorund image for header sorting desc indicator
+table.dataTable thead .sorting_desc {
+  background-image: url("../img/table/sort_desc.png");
+  background-size: 1.5rem;
+}
+
+// Background color when hovering a row
+table.dataTable.hover tbody tr:hover td,
+table.dataTable.display tbody tr:hover td {
+  background-color: $color-grey-1 !important;
+  cursor: pointer;
+}
+
+// Input styles for search input
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_filter input:focus {
+  border: none;
+  border-bottom: 0.1rem solid $color-grey-3;
+  height: 3rem;
+  outline: none;
+}
+
+// Styles for pagination buttons
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: transparent;
+  border: 1px solid $color-grey-3;
+  transition: all .3s ease-in-out;
+}
+
+// Styles when hovering pagination buttons
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: $color-grey-1;
+  color: $color-grey-6 !important;
+  border: 1px solid $color-grey-3;
+}
+
+
+
+td.details-control,
+td.details-control:focus {
+  background: url("../img/table/plus.png") no-repeat center center;
+  background-size: 3rem;
+  cursor: pointer;
+  outline: none;
+}
+
+tr.shown td.details-control,
+tr.shown td.details-control:focus {
+  background: url("../img/table/minus.png") no-repeat center center;
+  background-size: 3rem;
+  cursor: pointer;
+  outline: none;
+}

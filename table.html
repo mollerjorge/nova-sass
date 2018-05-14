@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nova</title>
+
+  <link rel="stylesheet" href="vendor/css/datatables.min.css">
+  <link rel="stylesheet" href="nova/css/nova.css">
+  <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+</head>
+
+<body>
+  <div class="sidebar"></div>
+
+  <div class="page-container">
+
+    <div class="page-container__wrapper">
+
+
+
+      <ul class="breadcrumbs">
+        <li>
+          <a href="index.html">
+            <span class="pe-7s-home"></span>
+          </a>
+
+        </li>
+        <li>
+          <a href="tables.html">
+            Tables
+          </a>
+        </li>
+      </ul>
+
+      <div class="parallax-wrp" style="overflow: hidden">
+        <div class="parallax" data-0="opacity: 1; transform: translateY(0px)" data-500="opacity:0; transform: translateY(100px)">
+          <div class="columns">
+            <div class="column u-center-text">
+              <img src="./nova/img/wireframes/table.svg" alt="table wireframe" style="height:30rem">
+            </div>
+
+            <div class="column">
+              <h2>Nova Tables</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A cumque possimus provident libero, id officiis tempore
+                repudiandae totam quisquam laudantium magni suscipit consequuntur sit eaque minus! Cum molestias explicabo
+                vel!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                All Tasks
+              </div>
+            </div>
+            <div class="card-content">
+              <table id="table" class="display" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Assign to</th>
+                    <th>Messages</th>
+                    <th>Call to Action</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Do theLaundry
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-up-arrow text-success" style="font-size: 2rem; margin-right: 1rem"></span>
+                        High Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge success">
+                          <span>10</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      App Redesign
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-bottom-arrow text-danger" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Low Priority
+                      </div>
+                    </td>
+                    <td>
+                      George Moller
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge danger">
+                          <span>2</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Walk the dog and have some coffee
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-right-arrow text-warning" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Medium Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge warning">
+                          <span>8</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Video editing
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-up-arrow text-success" style="font-size: 2rem; margin-right: 1rem"></span>
+                        High Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge success">
+                          <span>10</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Go out and have some dinner
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-bottom-arrow text-danger" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Low Priority
+                      </div>
+                    </td>
+                    <td>
+                      George Moller
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge danger">
+                          <span>2</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Play some nintendo
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-right-arrow text-warning" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Medium Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge warning">
+                          <span>8</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      UI/UX redesign
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-up-arrow text-success" style="font-size: 2rem; margin-right: 1rem"></span>
+                        High Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge success">
+                          <span>10</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Resto Food App
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-bottom-arrow text-danger" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Low Priority
+                      </div>
+                    </td>
+                    <td>
+                      George Moller
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge danger">
+                          <span>2</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Complete admin dashboard
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-right-arrow text-warning" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Medium Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge warning">
+                          <span>8</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      UI/UX redesign
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-up-arrow text-success" style="font-size: 2rem; margin-right: 1rem"></span>
+                        High Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge success">
+                          <span>10</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Resto Food App
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-bottom-arrow text-danger" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Low Priority
+                      </div>
+                    </td>
+                    <td>
+                      George Moller
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge danger">
+                          <span>2</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Complete admin dashboard
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-right-arrow text-warning" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Medium Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge warning">
+                          <span>8</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      UI/UX redesign
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-up-arrow text-success" style="font-size: 2rem; margin-right: 1rem"></span>
+                        High Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge success">
+                          <span>10</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Resto Food App
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-bottom-arrow text-danger" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Low Priority
+                      </div>
+                    </td>
+                    <td>
+                      George Moller
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge danger">
+                          <span>2</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Complete admin dashboard
+                    </td>
+                    <td>
+                      <div style="display: flex;">
+                        <span class="pe-7s-right-arrow text-warning" style="font-size: 2rem; margin-right: 1rem"></span>
+                        Medium Priority
+                      </div>
+                    </td>
+                    <td>
+                      John Snow
+                    </td>
+                    <td>
+                      <span class="pe-7s-bell" style="position: relative; font-size: 2rem;">
+                        <div class="badge warning">
+                          <span>8</span>
+                        </div>
+                      </span>
+
+                    </td>
+                    <td>
+                      <button class="btn btn--secondary btn--rounded">Edit Task</button>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Assign to</th>
+                    <th>Messages</th>
+                    <th>Call to Action</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Table with child table</div>
+            </div>
+            <div class="card-content">
+                <table id="table2" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/js/jquery-3.3.1.min.js"></script>
+  <script src="nova/js/nova.js"></script>
+  <script src="vendor/js/datatables.min.js"></script>
+  <script src="vendor/js/dataTables.responsive.min.js"></script>
+  <script src="vendor/js/skrollr.min.js"></script>
+  <script src="nova/js/tables.js"></script>
+
+</body>
+
+</html>

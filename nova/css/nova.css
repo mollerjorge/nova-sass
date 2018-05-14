@@ -5931,7 +5931,9 @@ progress[value] {
   height: 1.5rem;
   border-radius: 10rem;
   display: flex;
-  padding-top: .2rem; }
+  padding-top: .2rem;
+  color: white;
+  font-family: 'Open Sans', sans-serif; }
   .badge span {
     align-self: center;
     font-size: 1rem;
@@ -6354,6 +6356,74 @@ progress[value] {
 .n-warning {
   background: #f8c51c;
   color: #141001; }
+
+table.dataTable tbody th,
+table.dataTable tbody td,
+table.dataTable thead th,
+table.dataTable thead td {
+  padding: 2rem 1rem;
+  font-size: 1.3rem;
+  background-color: #ffffff; }
+
+table.dataTable thead th {
+  border-bottom: 0.1rem solid #C6CACF; }
+
+table.dataTable.display tbody tr.odd > .sorting_1,
+table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+  background-color: #f7f7f7; }
+
+table.dataTable.display tbody tr.even > .sorting_1,
+table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+  background-color: #f7f7f7; }
+
+table.dataTable thead .sorting {
+  background-image: url("../img/table/sort_both.png");
+  background-size: 1.5rem; }
+
+table.dataTable thead .sorting_asc {
+  background-image: url("../img/table/sort_asc.png");
+  background-size: 1.5rem; }
+
+table.dataTable thead .sorting_desc {
+  background-image: url("../img/table/sort_desc.png");
+  background-size: 1.5rem; }
+
+table.dataTable.hover tbody tr:hover td,
+table.dataTable.display tbody tr:hover td {
+  background-color: #ECEDEF !important;
+  cursor: pointer; }
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_filter input:focus {
+  border: none;
+  border-bottom: 0.1rem solid #C6CACF;
+  height: 3rem;
+  outline: none; }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: transparent;
+  border: 1px solid #C6CACF;
+  transition: all .3s ease-in-out; }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: #ECEDEF;
+  color: #474B4F !important;
+  border: 1px solid #C6CACF; }
+
+td.details-control,
+td.details-control:focus {
+  background: url("../img/table/plus.png") no-repeat center center;
+  background-size: 3rem;
+  cursor: pointer;
+  outline: none; }
+
+tr.shown td.details-control,
+tr.shown td.details-control:focus {
+  background: url("../img/table/minus.png") no-repeat center center;
+  background-size: 3rem;
+  cursor: pointer;
+  outline: none; }
 
 .svc {
   padding: 3rem;
