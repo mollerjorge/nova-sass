@@ -74,8 +74,11 @@
 
   &--default {
     color: $color-grey-6;
-    //border: 1px solid $color-grey-3;
 
+    &:hover {
+      color: $color-grey-6;
+      background: $color-grey-2;
+    }
     
 
     &:disabled {

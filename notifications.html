@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <link rel="stylesheet" href="nova/css/nova.css">
+  <link rel="stylesheet" href="vendor/css/animate.css">
+  <link rel="stylesheet" href="vendor/css/select2.min.css">
+  <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <title> Nova </title>
+</head>
+
+<body>
+  <div class="sidebar"></div>
+
+  <div class="page-container">
+
+    <div class="page-container__wrapper">
+      <ul class="breadcrumbs">
+        <li>
+          <a href="index.html">
+            <span class="pe-7s-home"></span>
+          </a>
+
+        </li>
+        <li>
+          <a href="notifications.html">
+            UI Elements
+          </a>
+        </li>
+        <li>
+          <a href="notifications.html">
+            notifications
+          </a>
+        </li>
+      </ul>
+
+
+      <div class="columns">
+        <div class="column ">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">Notification Builder</div>
+            </div>
+            <div class="card-content">
+
+              <form action="">
+
+                <div class="form__group">
+                  <label class="form__label" for="position">Type</label>
+                  <select id="type">
+                    <option value="simple">Simple</option>
+                    <option value="bar">Bar</option>
+                    <option value="image">Image</option>
+                    
+                  </select>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="position">Position</label>
+                  <select id="position">
+                    <option value="top-right">Top Right</option>
+                    <option value="top-left">Top Left</option>
+                    <option value="bottom-left">Bottom Left</option>
+                    <option value="bottom-right">Bottom Right</option>
+                  </select>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="type">Style</label>
+                  <select id="style">
+                    <option value="success">Success</option>
+                    <option value="danger">Danger</option>
+                    <option value="info">Info</option>
+                    <option value="warning">Warning</option>
+                  </select>
+                </div>
+
+                <div class="form__group">
+                  <div class="form__label">Message</div>
+                  <div class="form__input">
+                    <input id="message" type="text" class="form__control " placeholder="Please type your message" />
+
+                  </div>
+                </div>
+
+                <div class="form__group">
+                    <div class="form__label">Timeout in ms</div>
+                    <div class="form__input">
+                      <input id="timeout" type="text" class="form__control " placeholder="Ex 3000" />
+  
+                    </div>
+                  </div>
+                <div class="form__group u-fe">
+                  <button id="showNotif" class="btn--primary btn">Show Notification</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="column"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="vendor/js/jquery-3.3.1.min.js"></script>
+  <script src="nova/js/nova.js"></script>
+  <script src="vendor/js/select2.min.js"></script>
+  <script src="nova/js/notification.js"></script>
+</body>
+
+</html>

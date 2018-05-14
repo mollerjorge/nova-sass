@@ -6289,6 +6289,72 @@ progress[value] {
     .visa-bg-image img {
       height: 20rem; }
 
+.notify {
+  display: flex;
+  padding: 2rem 4rem 2rem 2rem;
+  position: relative;
+  justify-content: space-between;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem; }
+  .notify__img {
+    clip-path: circle(45% at center);
+    margin-right: 1rem; }
+    .notify__img img {
+      height: 6rem; }
+  .notify a {
+    font-size: 2.3rem;
+    position: absolute;
+    top: 0rem;
+    right: 0.5rem; }
+  .notify-wrp {
+    position: fixed;
+    z-index: 1000; }
+    .notify-wrp.bar {
+      width: 100%; }
+      .notify-wrp.bar .notify {
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 0; }
+      .notify-wrp.bar.top {
+        top: 0;
+        left: 0; }
+      .notify-wrp.bar.bottom {
+        bottom: 0;
+        left: 0; }
+
+.top-right {
+  top: 3rem;
+  right: 3rem; }
+
+.top-left {
+  top: 3rem;
+  left: 3rem; }
+
+.bottom-right {
+  bottom: 3rem;
+  right: 3rem; }
+
+.bottom-left {
+  bottom: 3rem;
+  left: 3rem; }
+
+.n-success {
+  background: #1DE9B6;
+  color: #0e9271; }
+
+.n-info {
+  background: #04A9F5;
+  color: black; }
+
+.n-danger {
+  background: #fa2f31;
+  color: #290101; }
+
+.n-warning {
+  background: #f8c51c;
+  color: #141001; }
+
 .svc {
   padding: 3rem;
   background: #ffffff;
@@ -6771,6 +6837,9 @@ input {
     box-shadow: none; }
   .btn--default {
     color: #474B4F; }
+    .btn--default:hover {
+      color: #474B4F;
+      background: #EBEBEB; }
     .btn--default:disabled {
       background: linear-gradient(to left, white, white);
       box-shadow: none;

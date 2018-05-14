@@ -1,0 +1,87 @@
+.notify {
+  display: flex;
+  padding: 2rem 4rem 2rem 2rem;
+  position: relative;
+  justify-content: space-between;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+  &__img {
+    clip-path: circle(45% at center);
+    margin-right: 1rem;
+    img {
+      height: 6rem;
+    }
+  }
+
+  a {
+    font-size: 2.3rem;
+    position: absolute;
+    top: 0rem;
+    right: 0.5rem;
+  }
+
+  &-wrp {
+    position: fixed;
+    z-index: 1000;
+
+    &.bar {
+      width: 100%;
+      .notify {
+        width: 100%;
+        border-radius: 0;
+        margin-bottom: 0;
+      }
+
+      &.top {
+        top: 0;
+        left: 0;
+      }
+      &.bottom {
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.top-right {
+  top: 3rem;
+  right: 3rem;
+}
+
+.top-left {
+  top: 3rem;
+  left: 3rem;
+}
+
+.bottom-right {
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.bottom-left {
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.n-success {
+  background: $color-primary-0;
+  color: darken($color-primary-0, 20%);
+}
+
+.n-info {
+  background: $color-info-0;
+  color: darken($color-info-0, 50%);
+}
+
+.n-danger {
+  background: $color-danger-0;
+  color: darken($color-danger-0, 50%);
+}
+
+.n-warning {
+  background: $color-warning-0;
+  color: darken($color-warning-0, 50%);
+}

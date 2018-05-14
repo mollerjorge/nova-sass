@@ -128,6 +128,71 @@
 })(window.jQuery);
 
 (function($) {
+
+  var Notification = function(container, options) {
+    
+    var self = this;
+    
+    self.container = $(container);
+    self.options = $.extend(true, {}, $.fn.notify.defaults, options);
+    var isThereNotifWrp = $('.notify-wrp.'+ self.options.position).length ? true : false;
+
+    self.notifWrp = !isThereNotifWrp ? $('<div class="notify-wrp '+ self.options.position +'">') : $('.notify-wrp.' + self.options.position);
+    self.notification = $('<div class="notify n-'+ self.options.style +' animated '+ self.options.animationIn +'">');
+    self.message = $('<p>' + self.options.message + '</p>');
+    self.closeButton = $('<a><span class="pe-7s-close"></span></a>');
+    self.closeButton.on('click', closeNotification);
+    self.notification.append(self.message);
+    self.notification.append(self.closeButton);
+
+    self.notifWrp.append(self.notification);
+
+    if (self.options.type === "bar" && self.options.position === 'top') {
+     self.notifWrp.addClass('bar' + ' top'); 
+    }  else if (self.options.type === "bar" && self.options.position === 'bottom') {
+      self.notifWrp.addClass('bar' + ' bottom'); 
+    } else if (self.options.type === 'image') {
+      self.imageWrp = '<figure class="notify__img"><img src="https://www.ienglishstatus.com/wp-content/uploads/2018/04/Anonymous-Whatsapp-profile-picture.jpg" alt="image notification"/></figure>';
+      self.notification.prepend(self.imageWrp);
+    }
+
+    if (self.options.timeOut && self.options.timeOut !== '') {
+      setTimeout(function() {
+        closeNotification();
+      }, self.options.timeOut);
+    }
+
+    if (!isThereNotifWrp) {
+      $(container).append(self.notifWrp);
+    }
+
+    function closeNotification() {      
+      self.notification.removeClass(self.options.animationIn).animateCss(self.options.animationOut, function() {
+        self.notification.remove();
+      });
+    }
+  }
+
+  
+
+$.fn.notify = function(options) {
+  return new Notification(this, options);
+}
+
+$.fn.notify.defaults = {
+  type: 'simple',
+  style: 'success',
+  position: 'top-right',
+  animationIn: 'fadeIn',
+  animationOut: "fadeOut",
+  showClose: true,
+  message: null,
+  timeOut: null
+}
+
+}(window.jQuery));
+
+(function($) {
   $(document).ready(function() {
     $.Nova.init();
   });
