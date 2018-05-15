@@ -6,8 +6,8 @@
 
   <link rel="stylesheet" href="nova/css/nova.css">
   <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
 </head>
 
 <body>
@@ -16,24 +16,40 @@
 
   <div class="page-container">
     <div class="page-container__wrapper">
-        <ul class="breadcrumbs">
-            <li>
-              <a href="index.html">
-                  <span class="pe-7s-home"></span>
-              </a>
-              
-            </li>
-            <li>
-                <a href="inputs.html">
-                  UI Elements
-                </a>
-              </li>
-            <li>
-              <a href="inputs.html">
-                inputs
-              </a>
-            </li>
-          </ul>
+      <ul class="breadcrumbs">
+        <li>
+          <a href="index.html">
+            <span class="pe-7s-home"></span>
+          </a>
+
+        </li>
+        <li>
+          <a href="inputs.html">
+            UI Elements
+          </a>
+        </li>
+        <li>
+          <a href="inputs.html">
+            inputs
+          </a>
+        </li>
+      </ul>
+
+      <div class="parallax-wrp">
+        <div class="parallax" data-0="opacity: 1; transform: translateY(0px)" data-500="opacity:0; transform: translateY(100px)">
+          <div class="columns">
+            <div class="column">
+              <img src="./nova/img/wireframes/inputs.svg" alt="button wireframe">
+            </div>
+            <div class="column">
+              <h2>Nova Inputs</h2>
+              <p>Elgant and simple inputs were designed keeping the end user in mind. With icons or no icons, inline or block nova follows form best practices to make the proccess of filling out a form much easier.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="columns">
         <div class="column ">
           <div class="card card-full-height">
@@ -251,7 +267,7 @@
             <div class="card-content">
 
               <div class="form__group">
-                
+
                 <span class="form__switch">
                   <input id="switch1" type="checkbox" class="form__input-switch">
 
@@ -275,6 +291,13 @@
 
   <script src="vendor/js/jquery-3.3.1.min.js"></script>
   <script src="nova/js/nova.js"></script>
+  <script src="vendor/js/skrollr.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Init parallax effect
+      var s = skrollr.init();
+    });
+  </script>
 </body>
 
 </html>

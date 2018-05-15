@@ -40,14 +40,19 @@ $(document).ready(function() {
       style = $("#style").val(),
       position = $("#position").val(),
       message = $("#message").val(),
-      timeOut = $('#timeout').val();
+      timeOut = $('#timeout').val(),
+      animationIn = $('#animationIn').val(),
+      animationOut = $('#animationOut').val();
+
 
     $(".page-container__wrapper").notify({
-      message: message,
+      message: message != "" ? message : " This is a default message!",
       style: style,
       position: position,
       type: type,
-      timeOut: timeOut
+      timeOut: timeOut,
+      animationIn: animationIn,
+      animationOut: animationOut
     });
   });
 });

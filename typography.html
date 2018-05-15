@@ -18,6 +18,22 @@
 
     <div class="page-container__wrapper">
 
+
+        <div class="parallax-wrp">
+            <div class="parallax" data-0="opacity: 1; transform: translateY(0px)" data-500="opacity:0; transform: translateY(100px)">
+              <div class="columns">
+                <div class="column">
+                  <img src="./nova/img/wireframes/typography.svg" alt="progress wireframe">
+                </div>
+                <div class="column">
+                  <h2>Nova Typography</h2>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+    
+
       <div class="columns">
         <div class="column">
           <div class="card card-full-height">
@@ -72,6 +88,14 @@
 
   <script src="vendor/js/jquery-3.3.1.min.js"></script>
   <script src="nova/js/nova.js"></script>
+  <script src="vendor/js/skrollr.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Init parallax effect
+      var s = skrollr.init();
+
+    })
+  </script>
 </body>
 
 </html>

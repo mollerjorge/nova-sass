@@ -4,8 +4,10 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="stylesheet" href="vendor/css/datatables.min.css">
   <link rel="stylesheet" href="nova/css/nova.css">
   <link rel="stylesheet" href="vendor/css/animate.css">
+  <link rel="stylesheet" href="vendor/css/select2.min.css">
   <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
@@ -38,91 +40,406 @@
         </li>
       </ul>
 
-      <div class="columns">
-        <div class="column">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">
-                Modal Directions
-              </div>
+      <div class="parallax-wrp">
+        <div class="parallax" data-0="opacity: 1; transform: translateY(0px)" data-500="opacity:0; transform: translateY(100px)">
+          <div class="columns">
+            <div class="column">
+              <img src="./nova/img/wireframes/modals.svg" alt="buttons wireframe">
             </div>
-            <div class="card-content">
-              <button id="btn-default" class="btn btn--default">
-                Up
-              </button>
-              <button id="btn-down" class="btn btn--default">
-                Down
-              </button>
-              <button id="btn-right" class="btn btn--default">
-                Right
-              </button>
-              <button id="btn-left" class="btn btn--default">
-                Left
-              </button>
+            <div class="column">
+              <h2>Nova Modals</h2>
+              <p>Enrich the user experience with elegant modals, nova lets you choose from a variaty of styles and animations
+                you just need to pick the one that fit you the most.</p>
             </div>
           </div>
         </div>
-
-        <div class="column">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">
-                Modal Types
-              </div>
-            </div>
-            <div class="card-content">
-              <button id="btn-success" class="btn btn--primary">
-                Warning
-              </button>
-              <button id="btn-warning" class="btn btn--warning">
-                Warning
-              </button>
-              <button id="btn-danger" class="btn btn--danger">
-                Danger
-              </button>
-
-            </div>
-          </div>
-        </div>
-
-
-
       </div>
 
       <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                Modal Builder
+              </div>
+            </div>
+            <div class="card-content">
+              <form action="" class="form">
+                <div class="form__group">
+                  <label class="form__label" for="position">Style</label>
+                  <select id="style">
+                    <option value="default">default</option>
+                    <option value="success">success</option>
+                    <option value="warning">warning</option>
+                    <option value="danger">danger</option>
+
+                  </select>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="animationIn">Animation In</label>
+                  <select id="animationIn">
+                    <option value="bounce">bounce</option>
+                    <option value="shake">shake</option>
+                    <option value="bounceInLeft">bounceInLeft</option>
+                    <option value="bounceInRight">bounceInRight</option>
+                    <option value="bounceInUp">bounceInUp</option>
+                    <option value="bounceInDown">bounceInDown</option>
+                    <option value="bounceOutDown">bounceOutDown</option>
+                    <option value="bounceOutLeft">bounceOutLeft</option>
+                    <option value="bounceOutRight">bounceOutRight</option>
+                    <option value="bounceOutUp">bounceOutUp</option>
+                    <option value="fadeIn">fadeIn</option>
+                    <option value="fadeInDown">fadeInDown</option>
+                    <option value="fadeInUp">fadeInUp</option>
+                    <option value="fadeInLeft">fadeInLeft</option>
+                    <option value="fadeInRight">fadeInRight</option>
+                    <option value="fadeOut">fadeOut</option>
+                    <option value="fadeOutUp">fadeOutUp</option>
+                    <option value="fadeOutLeft">fadeOutLeft</option>
+                    <option value="fadeOutRight">fadeOutRight</option>
+                    <option value="flipInX">flipInX</option>
+                    <option value="flipOutY">flipOutY</option>
+                    <option value="lightSpeedIn">lightSpeedIn</option>
+                    <option value="lightSpeedOut">lightSpeedOut</option>
+                    <option value="rotateIn">rotateIn</option>
+                    <option value="rotateOut">rotateOut</option>
+
+                  </select>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="animationOut">Animation Out</label>
+                  <select id="animationOut">
+                    <option value="bounce">bounce</option>
+                    <option value="shake">shake</option>
+                    <option value="bounceInLeft">bounceInLeft</option>
+                    <option value="bounceInRight">bounceInRight</option>
+                    <option value="bounceInUp">bounceInUp</option>
+                    <option value="bounceInDown">bounceInDown</option>
+                    <option value="bounceOutDown">bounceOutDown</option>
+                    <option value="bounceOutLeft">bounceOutLeft</option>
+                    <option value="bounceOutRight">bounceOutRight</option>
+                    <option value="bounceOutUp">bounceOutUp</option>
+                    <option value="fadeIn">fadeIn</option>
+                    <option value="fadeInDown">fadeInDown</option>
+                    <option value="fadeInUp">fadeInUp</option>
+                    <option value="fadeInLeft">fadeInLeft</option>
+                    <option value="fadeInRight">fadeInRight</option>
+                    <option value="fadeOut">fadeOut</option>
+                    <option value="fadeOutUp">fadeOutUp</option>
+                    <option value="fadeOutLeft">fadeOutLeft</option>
+                    <option value="fadeOutRight">fadeOutRight</option>
+                    <option value="flipInX">flipInX</option>
+                    <option value="flipOutY">flipOutY</option>
+                    <option value="lightSpeedIn">lightSpeedIn</option>
+                    <option value="lightSpeedOut">lightSpeedOut</option>
+                    <option value="rotateIn">rotateIn</option>
+                    <option value="rotateOut">rotateOut</option>
+
+                  </select>
+                </div>
+                <div class="form__group u-fe">
+                  <button id="showModal" class="btn btn--primary">Show me the modal!</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
         <div class="column">
             <div class="card">
                 <div class="card-header">
                   <div class="card-title">
-                    Modal Animations
+                    Animations
                   </div>
                 </div>
                 <div class="card-content">
-                  <button id="btn-default" class="btn btn--default">
-                    Up
-                  </button>
-                  <button id="btn-down" class="btn btn--default">
-                    Down
-                  </button>
-                  <button id="btn-right" class="btn btn--default">
-                    Right
-                  </button>
-                  <button id="btn-left" class="btn btn--default">
-                    Left
-                  </button>
+                  <table id="animations">
+                    <thead>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <code>bounce</code>
+                        </td>
+                        <td>
+                          <code>flash</code>
+                        </td>
+                        <td>
+                          <code>pulse</code>
+                        </td>
+                        <td>
+                          <code>rubberBand</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>shake</code>
+                        </td>
+                        <td>
+                          <code>headShake</code>
+                        </td>
+                        <td>
+                          <code>swing</code>
+                        </td>
+                        <td>
+                          <code>tada</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>wobble</code>
+                        </td>
+                        <td>
+                          <code>jello</code>
+                        </td>
+                        <td>
+                          <code>bounceIn</code>
+                        </td>
+                        <td>
+                          <code>bounceInDown</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>bounceInLeft</code>
+                        </td>
+                        <td>
+                          <code>bounceInRight</code>
+                        </td>
+                        <td>
+                          <code>bounceInUp</code>
+                        </td>
+                        <td>
+                          <code>bounceOut</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>bounceOutDown</code>
+                        </td>
+                        <td>
+                          <code>bounceOutLeft</code>
+                        </td>
+                        <td>
+                          <code>bounceOutRight</code>
+                        </td>
+                        <td>
+                          <code>bounceOutUp</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>fadeIn</code>
+                        </td>
+                        <td>
+                          <code>fadeInDown</code>
+                        </td>
+                        <td>
+                          <code>fadeInDownBig</code>
+                        </td>
+                        <td>
+                          <code>fadeInLeft</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>fadeInLeftBig</code>
+                        </td>
+                        <td>
+                          <code>fadeInRight</code>
+                        </td>
+                        <td>
+                          <code>fadeInRightBig</code>
+                        </td>
+                        <td>
+                          <code>fadeInUp</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>fadeInUpBig</code>
+                        </td>
+                        <td>
+                          <code>fadeOut</code>
+                        </td>
+                        <td>
+                          <code>fadeOutDown</code>
+                        </td>
+                        <td>
+                          <code>fadeOutDownBig</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>fadeOutLeft</code>
+                        </td>
+                        <td>
+                          <code>fadeOutLeftBig</code>
+                        </td>
+                        <td>
+                          <code>fadeOutRight</code>
+                        </td>
+                        <td>
+                          <code>fadeOutRightBig</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>fadeOutUp</code>
+                        </td>
+                        <td>
+                          <code>fadeOutUpBig</code>
+                        </td>
+                        <td>
+                          <code>flipInX</code>
+                        </td>
+                        <td>
+                          <code>flipInY</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>flipOutX</code>
+                        </td>
+                        <td>
+                          <code>flipOutY</code>
+                        </td>
+                        <td>
+                          <code>lightSpeedIn</code>
+                        </td>
+                        <td>
+                          <code>lightSpeedOut</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>rotateIn</code>
+                        </td>
+                        <td>
+                          <code>rotateInDownLeft</code>
+                        </td>
+                        <td>
+                          <code>rotateInDownRight</code>
+                        </td>
+                        <td>
+                          <code>rotateInUpLeft</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>rotateInUpRight</code>
+                        </td>
+                        <td>
+                          <code>rotateOut</code>
+                        </td>
+                        <td>
+                          <code>rotateOutDownLeft</code>
+                        </td>
+                        <td>
+                          <code>rotateOutDownRight</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>rotateOutUpLeft</code>
+                        </td>
+                        <td>
+                          <code>rotateOutUpRight</code>
+                        </td>
+                        <td>
+                          <code>hinge</code>
+                        </td>
+                        <td>
+                          <code>jackInTheBox</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>rollIn</code>
+                        </td>
+                        <td>
+                          <code>rollOut</code>
+                        </td>
+                        <td>
+                          <code>zoomIn</code>
+                        </td>
+                        <td>
+                          <code>zoomInDown</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>zoomInLeft</code>
+                        </td>
+                        <td>
+                          <code>zoomInRight</code>
+                        </td>
+                        <td>
+                          <code>zoomInUp</code>
+                        </td>
+                        <td>
+                          <code>zoomOut</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>zoomOutDown</code>
+                        </td>
+                        <td>
+                          <code>zoomOutLeft</code>
+                        </td>
+                        <td>
+                          <code>zoomOutRight</code>
+                        </td>
+                        <td>
+                          <code>zoomOutUp</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>slideInDown</code>
+                        </td>
+                        <td>
+                          <code>slideInLeft</code>
+                        </td>
+                        <td>
+                          <code>slideInRight</code>
+                        </td>
+                        <td>
+                          <code>slideInUp</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <code>slideOutDown</code>
+                        </td>
+                        <td>
+                          <code>slideOutLeft</code>
+                        </td>
+                        <td>
+                          <code>slideOutRight</code>
+                        </td>
+                        <td>
+                          <code>slideOutUp</code>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
         </div>
+
+
       </div>
 
-
-
-
-
-
-
       <div id="modal-default" class="modal__backdrop ">
-        <div class="modal modal--stick-up">
+        <div class="modal ">
           <div class="modal__header">
             <div class="modal__title">
               <h2>
@@ -150,7 +467,7 @@
       </div>
 
       <div id="modal-down" class="modal__backdrop  ">
-        <div class="modal modal--stick-down">
+        <div class="modal ">
           <div class="modal__header">
             <div class="modal__title">
               <h2>
@@ -178,7 +495,7 @@
       </div>
 
       <div id="modal-right" class="modal__backdrop ">
-        <div class="modal modal--stick-right">
+        <div class="modal ">
           <div class="modal__header">
             <div class="modal__title">
               <h2>
@@ -206,7 +523,7 @@
       </div>
 
       <div id="modal-left" class="modal__backdrop">
-        <div class="modal modal--stick-left">
+        <div class="modal ">
           <div class="modal__header">
             <div class="modal__title">
               <h2>
@@ -232,7 +549,7 @@
       </div>
 
       <div id="modal-success" class="modal__backdrop ">
-        <div class="modal modal--success modal--stick-up">
+        <div class="modal modal--success ">
           <div class="modal__header">
             <div class="modal__title">
               <div class="icon-checkmark"></div>
@@ -253,7 +570,7 @@
 
 
     <div id="modal-danger" class="modal__backdrop ">
-      <div class="modal modal--danger modal--stick-up">
+      <div class="modal modal--danger ">
         <div class="modal__header">
           <div class="modal__title">
             <div class="icon-checkmark"></div>
@@ -272,7 +589,7 @@
     </div>
 
     <div id="modal-warning" class="modal__backdrop ">
-        <div class="modal modal--warning modal--stick-up">
+      <div class="modal modal--warning ">
         <div class="modal__header">
           <div class="modal__title">
             <div class="icon-checkmark"></div>
@@ -283,7 +600,7 @@
           <h1>Warning</h1>
           <p>Dringking too much coffee may lead to crazyness</p>
         </div>
-        <div class="modal__footer">
+        <div class="modal__footer ">
 
           <button class="btn btn--transparent">Confirm</button>
         </div>
@@ -296,6 +613,10 @@
   <script src="vendor/js/jquery-3.3.1.min.js"></script>
   <script src="nova/js/nova.js"></script>
   <script src="nova/js/modal.js"></script>
+  <script src="vendor/js/skrollr.min.js"></script>
+  <script src="vendor/js/select2.min.js"></script>
+  <script src="vendor/js/datatables.min.js"></script>
+  <script src="vendor/js/dataTables.responsive.min.js"></script>
 </body>
 
 </html>

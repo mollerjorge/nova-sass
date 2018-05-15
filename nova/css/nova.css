@@ -4993,7 +4993,7 @@ h5 {
   font-size: 1rem; }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: .02rem; }
 
 b {
@@ -5010,7 +5010,8 @@ b {
     .page-container {
       padding-left: 0rem; } }
   .page-container__wrapper {
-    padding: 8.5rem 2.5rem; }
+    padding: 8.5rem 2.5rem;
+    background: #f9f9f9; }
 
 label {
   font-size: 1.3rem; }
@@ -5025,6 +5026,10 @@ hr {
   display: block;
   height: .1rem;
   margin: 1.5rem 0; }
+
+.parallax-wrp {
+  overflow: hidden;
+  margin-bottom: 1rem; }
 
 .flex-column {
   flex-direction: column; }
@@ -5134,8 +5139,16 @@ hr {
 .u-info-bg-g {
   background: linear-gradient(-45deg, #04A9F5, #049DF5) !important; }
 
+.u-bold {
+  font-weight: 800; }
+
 .semi-bold {
   font-weight: 400; }
+
+code {
+  background-color: whitesmoke;
+  font-size: 1.3rem;
+  color: #202224; }
 
 .form__group {
   position: relative;
@@ -5330,19 +5343,33 @@ hr {
   background: #ffffff;
   margin-bottom: 1rem;
   border: 0.1rem solid rgba(230, 230, 230, 0.7); }
+  .card--image-bg {
+    padding: 0; }
+    .card--image-bg .card-header {
+      padding: 0; }
   .card-full-height {
     height: 100%; }
-  .card-header:after {
-    content: "";
-    display: block;
-    height: .1rem;
-    background: #ECEDEF;
-    width: 100%;
-    margin-top: 1rem; }
+  .card-header {
+    border-bottom: 0.1rem solid #C6CACF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem; }
+    .card-header-icon {
+      font-size: 2rem; }
+    .card-header figure {
+      clip-path: circle(45% at center);
+      width: fit-content; }
+      .card-header figure img {
+        max-height: 7rem; }
   .card-title {
     font-size: 1.2rem;
     text-transform: uppercase;
-    font-weight: 600; }
+    font-weight: 600;
+    display: flex;
+    flex-direction: column; }
+    .card-title small {
+      font-weight: 400; }
   .card-content {
     padding: 2rem; }
 
@@ -5506,10 +5533,11 @@ hr {
 
 .modal {
   align-self: center;
+  position: relative;
   background: #ffffff;
   border-radius: 0.3rem;
   padding: 3rem 4rem;
-  z-index: 100; }
+  z-index: 100000; }
   @media (max-width: 37.5em) {
     .modal {
       min-width: 80%;
@@ -5527,8 +5555,7 @@ hr {
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    justify-content: center;
-    transition: all .8s linear; }
+    justify-content: center; }
   .modal__header {
     padding-bottom: 2rem; }
     .modal__header p {
@@ -5547,10 +5574,6 @@ hr {
     padding: 2rem 0; }
   .modal__footer {
     text-align: right; }
-  .modal--default {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
   .modal--stick-up {
     left: 0;
     top: 0;
@@ -6365,7 +6388,8 @@ table.dataTable thead td {
   font-size: 1.3rem;
   background-color: #ffffff; }
 
-table.dataTable thead th {
+table.dataTable thead th,
+table.dataTable thead td {
   border-bottom: 0.1rem solid #C6CACF; }
 
 table.dataTable.display tbody tr.odd > .sorting_1,

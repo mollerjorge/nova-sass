@@ -10,7 +10,8 @@ table.dataTable thead td {
 }
 
 // Header border bottom
-table.dataTable thead th {
+table.dataTable thead th,
+table.dataTable thead td {
   border-bottom: $border-bottom-head;
 }
 

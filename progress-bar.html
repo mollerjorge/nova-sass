@@ -36,6 +36,22 @@
         </li>
       </ul>
 
+      <div class="parallax-wrp">
+        <div class="parallax" data-0="opacity: 1; transform: translateY(0px)" data-500="opacity:0; transform: translateY(100px)">
+          <div class="columns">
+            <div class="column">
+              <img src="./nova/img/wireframes/progress.svg" alt="progress wireframe">
+            </div>
+            <div class="column">
+              <h2>Nova Progress Bar</h2>
+              <p>Buttons are an important part of every ui/ux design process. With Nova we apply the latests design trends using
+                gradients and animations in buttons to give the user a one of a kind experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="columns">
         <div class="column">
           <div class="card">
@@ -109,6 +125,14 @@
 
   <script src="vendor/js/jquery-3.3.1.min.js"></script>
   <script src="nova/js/nova.js"></script>
+  <script src="vendor/js/skrollr.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Init parallax effect
+      var s = skrollr.init();
+
+    })
+  </script>
 </body>
 
 </html>

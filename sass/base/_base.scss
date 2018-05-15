@@ -41,7 +41,7 @@ h5 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: .02rem;
 }
 
@@ -63,6 +63,7 @@ b {
 
   &__wrapper {
     padding: 8.5rem 2.5rem;
+    background:$color-body-bg;
   }
 }
 
@@ -82,4 +83,9 @@ hr {
   display: block;
   height: .1rem;
   margin: 1.5rem 0;
+}
+
+.parallax-wrp {
+  overflow: hidden;
+  margin-bottom: 1rem;
 }

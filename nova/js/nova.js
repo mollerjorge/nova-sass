@@ -82,7 +82,7 @@
     $('#'+ accId +' .accordion__section-header').click(function(e) {
       e.preventDefault();
       var visibleAccordion = $('#'+ accId + ' .show');
-      debugger;
+      
       if ($(this).next()[0] == visibleAccordion[0]) {
         $(this).next().slideToggle();
         $(this).next().removeClass('show');
@@ -191,6 +191,50 @@ $.fn.notify.defaults = {
 }
 
 }(window.jQuery));
+
+(function($) { 
+  var Modal = function(options, modal) {
+  
+    var self = this;
+    this.options = $.extend(true, {}, $.fn.modal.defaults, options);
+    this.modal = modal;
+    
+    modal.find('.modal').addClass('modal--' + this.options.style);
+    modal.on('click', this.hide.bind(this));
+    modal.find('.modal__close').on('click', this.hide.bind(this));
+    modal.find('.modal').on('click', function(e) {
+      e.stopPropagation();
+    })
+  }
+
+  Modal.prototype.show = function () {
+    
+    this.modal.addClass("is-visible");
+    this.modal.find('.modal').animateCss(this.options.animationIn);
+  }
+
+  Modal.prototype.hide = function () {
+    var self = this;
+    
+    this.modal.find('.modal').animateCss(this.options.animationOut, function() {
+      self.modal.removeClass("is-visible");
+    });
+  }
+
+  $.fn.modal = function(options) {
+    if (typeof options === 'object') {
+      // Initializing the modal
+      return new Modal(options, this)
+    }
+  }
+
+  $.fn.modal.defaults = {
+    style: 'default',
+    animationIn: 'bounceInDown',
+    animationOut: 'bounceOutUp'
+  }
+
+})(window.jQuery);
 
 (function($) {
   $(document).ready(function() {
