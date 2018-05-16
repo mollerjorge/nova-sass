@@ -5195,6 +5195,10 @@ code {
     text-indent: 2rem; }
   .form__control--icon.u-center-text {
     text-indent: 0rem; }
+  .form__control--transparent {
+    background: transparent; }
+  .form__control--rounded {
+    border-radius: 10rem; }
 
 .form .flex-column label {
   align-self: flex-start;
@@ -7076,6 +7080,34 @@ tr.shown td.details-control:focus {
     outline: none; }
   .email__btn-compose span:last-child {
     margin-left: 1rem; }
+
+.login {
+  background-image: url(../img/login-bg-2.svg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+  .login-wrp {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: #ffffff;
+    max-width: 30rem; }
+    @media (max-width: 37.5em) {
+      .login-wrp {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30rem; } }
+  .login .form__group {
+    margin-bottom: 3rem; }
+    .login .form__group .form__control:focus {
+      border: 0.05rem solid #ffffff; }
+    .login .form__group .form__control:focus ~ span {
+      color: #ffffff; }
 
 input {
   height: 4rem; }

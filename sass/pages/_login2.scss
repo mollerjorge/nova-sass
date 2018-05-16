@@ -1,0 +1,37 @@
+.login {
+  background-image: url(../img/login-bg-2.svg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  
+  &-wrp {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: $color-grey-0;
+    max-width: 30rem;
+
+    @include respond(phone) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 30rem;
+    }
+  }
+
+  .form__group  {
+    margin-bottom: 3rem;
+
+    .form__control:focus {
+      border: 0.05rem solid $color-grey-0;
+    }
+
+    .form__control:focus ~ span {
+      color: $color-grey-0;
+    }
+  }
+}

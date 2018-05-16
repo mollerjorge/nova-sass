@@ -63,6 +63,14 @@
     &--icon.u-center-text {
       text-indent: 0rem;
     }
+
+    &--transparent {
+      background: transparent;
+    }
+
+    &--rounded {
+      border-radius: 10rem;
+    }
   }
 
   .flex-column {
@@ -119,10 +127,11 @@
   &__checkbox-input {
     display: none;
 
+
     &:checked + label > span {
       width: 2.2rem;
       height: 2.2rem;
-      border: 0rem;
+      border: 0rem;      
       background-image: linear-gradient(
         to right bottom,
         $color-primary-0,
