@@ -8,7 +8,7 @@
 
 html {
   font-size: 62.5%;
-
+  
 }
 
 body {
@@ -64,6 +64,11 @@ b {
   &__wrapper {
     padding: 8.5rem 2.5rem;
     background:$color-body-bg;
+
+    &-email {
+      padding: 6rem 0rem 0rem 0rem;
+      height: 100vh;
+    }
   }
 }
 
@@ -88,4 +93,8 @@ hr {
 .parallax-wrp {
   overflow: hidden;
   margin-bottom: 1rem;
+
+  @include respond(phone) {
+    display: none;
+  }
 }
