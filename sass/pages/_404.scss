@@ -1,0 +1,35 @@
+.bg-img {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('../img/login-bg.jpg');
+  background-size: cover;
+  position: relative;
+  background-position-y: -10rem;
+  .bg-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/404.svg');
+    background-size: cover;
+
+    @include respond(phone) {
+      background-image: url('../img/404mobile.svg');
+      background-size: contain;
+    }
+  }
+
+  .box {
+    background: transparent;
+    border: none !important;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    box-shadow: none;
+
+  }
+}
+
