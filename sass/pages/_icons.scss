@@ -1,0 +1,48 @@
+.icon-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  
+
+  > div {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  > span {
+    font-size: 3.5rem !important;
+    margin-right: 1rem;
+  }
+
+  input {
+    vertical-align: bottom;
+  }
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+fieldset {
+  display: none;
+}
+
+.clearfix.bshadow0.pbs > span:first-child {
+  font-size: 3rem;
+}
+
+.clearfix.bshadow0.pbs {
+  padding: 1rem;
+}
+
+
+.fs0.bshadow0{
+  display: none;
+}

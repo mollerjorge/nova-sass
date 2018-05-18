@@ -14,7 +14,7 @@
 
   Nova.prototype.injectNavbar = function() {
     var navbar =
-      '<nav class="nav"> <div class="nav__menu"> <div class="nav__menu-icon"> <span></span> </div></div><div class="nav__logo"> <img src="./nova/img/nova-logo.svg" alt="logo nova nav"/> </div><div class="nav__search-box"> <form class="form" action=""> <div class="form--group"> <div class="form__input"> <input type="text" placeholder="Begin typing to search anything!" class="form__control form__control--icon search"> <span class="pe-7s-search"></span> </div></div></form> </div><div class="nav__profile"> <div class="nav__profile-notifications"> <div class="nav__profile-icon"> <span class="pe-7s-bell"><div class="badge info"> <span>10</span> </div></span> </div><div class="nav__profile-icon"> <span class="pe-7s-mail"><div class="badge warning"> <span>8</span> </div></span> </div><div class="nav__profile-icon"> <span class="pe-7s-drawer"> <div class="badge danger"> <span>4</span> </div></span> </div></div><div class="nav__profile-user"> <figure class="nav__profile-shape"> <img src="./nova/img/profile-woman.jpg" alt="profile picture"/> </figure> <a class="nav__profile-link" href="#"> John Smith</a> <span class="pe-7s-angle-down"></span> </div></div></nav>';
+      '<nav class="nav"> <div class="nav__menu"> <div class="nav__menu-icon"> <span></span> </div></div><div class="nav__logo"> <img src="./nova/img/nova-logo.svg" alt="logo nova nav"/> </div><div class="nav__search-box"> <form class="form" action=""> <div class="form--group"> <div class="form__input"> <input type="text" placeholder="Begin typing to search anything!" class="form__control form__control--icon search"> <span class="pe-7s-search"></span> </div></div></form> </div><div class="nav__profile"> <div class="nav__profile-notifications"> <div class="nav__profile-icon"> <span class="pe-7s-bell"><div class="badge success"> <span>10</span> </div></span> </div><div class="nav__profile-icon"> <span class="pe-7s-mail"><div class="badge secondary"> <span>8</span> </div></span> </div><div class="nav__profile-icon"> <span class="pe-7s-drawer"> <div class="badge danger"> <span>4</span> </div></span> </div></div><div class="nav__profile-user"> <figure class="nav__profile-shape"> <img src="./nova/img/profile-woman.jpg" alt="profile picture"/> </figure> <a class="nav__profile-link" href="#"> John Smith</a> <span class="pe-7s-angle-down"></span> </div></div></nav>';
     $(".page-container").prepend(navbar);
   };
 
@@ -30,6 +30,7 @@
       var islinkActive = $(this).hasClass('active'),
           hasSubMenu = $(this).next().hasClass("sidebar__sub-menu");
 
+      var height = $(this).next().children().length * 40 + 120;
 
       if (hasSubMenu) {
         // This link has a sub menu hence we prevent default behaviour
@@ -38,12 +39,15 @@
 
       if (islinkActive) {
         // If link already has active class we only remove it from itself
-        $(this).removeClass('active');  
+        $(this).removeClass('active');    
+        $(this).next().css('max-height', '0px');
       } else {
         // Otherwise we remove active class from every other submenu element
         // and add it tot he one that was clicked
         $(".sidebar__menu-items-link").removeClass("active");
         $(this).addClass('active');  
+        $(this).next().css('max-height', height + 'px');
+        
       }
       
     });

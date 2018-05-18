@@ -119,6 +119,10 @@
         flex-wrap: wrap;
       }
 
+      &-icon {
+        overflow: hidden;
+      }
+
       &-link {
         font-size: 1.4rem;
         letter-spacing: 0.01em;
@@ -163,7 +167,7 @@
 
       &-link.active > span.sidebar__menu-items-icon {
         @include gradientBackground($color-primary-0, $color-primary-1, 45deg);
-
+        
         i {
           color: $color-grey-0;
         }
@@ -175,7 +179,7 @@
         ~ ul {
           margin-top: 1rem;
           padding: 2rem 0rem;
-          max-height: 800px;
+          
         }
 
         .caret {
@@ -211,6 +215,7 @@
     transition: all 0.3s linear;
     overflow: hidden;
 
+
     li > a > span {
       background: $color-sb-menu;
       text-align: center;
@@ -229,4 +234,67 @@
 
 .sidebar.visible ~ .page-container {
   padding-left: 27rem;
+}
+
+
+.sidebar__menu-items-icon > i.pe-7s-mail {
+  animation: animateEmail2 10s ease-in-out infinite;
+  
+}
+
+.sidebar__menu-items-icon > span {
+  animation: animateEmail 10s ease-in-out infinite ;
+  
+}
+
+@keyframes animateEmail2 {
+  0% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  40% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  60% {
+    left: -100%;
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    left: -100%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+}
+
+@keyframes animateEmail {
+  0% {
+    left: 100%;
+    transform: translate(-0%, -50%);
+  }
+  40% {
+    left: 100%;
+    transform: translate(-0%, -50%);
+    
+  }
+  60% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  80% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  100% {
+    left: 100%;
+    transform: translate(-0%, -50%);
+    
+  }
 }
