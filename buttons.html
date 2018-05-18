@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
-
+  <title>Nova Admin Dashboard Theme</title>
 </head>
 
 <body>
@@ -64,12 +64,19 @@
             </div>
             <div class="card-content">
 
-              <button class="btn btn--primary">Primary</button>
-              <button class="btn btn--primary-flat  ">Primary Flat</button>
-              <div class="u-mt-small">
-                <button class="btn btn--primary" disabled>Primary Disabled</button>
+              <div class="column">
 
+                <div class="flex-row flex-align-center">
+                  <button class="btn btn--primary u-margin-small">Primary</button>
+                  <code>btn--primary</code>
+                </div>
+                <div class="flex-row flex-align-center">
+                  <button class="btn btn--primary-flat  u-margin-small">Primary Flat</button>
+                  <code>btn--primary-flat</code>
+                </div>
+                <button class="btn btn--primary u-margin-small" disabled>Primary Disabled</button>
               </div>
+
             </div>
           </div>
         </div>
@@ -80,10 +87,17 @@
 
             </div>
             <div class="card-content">
-              <button class="btn btn--secondary">Secondary</button>
-              <button class="btn btn--secondary-flat ">Secondary Flat</button>
+
+              <div class="flex-row flex-align-center">
+                <button class="btn btn--secondary u-margin-small">Secondary</button>
+                <code>btn--secondary</code>
+              </div>
+              <div class="flex-row flex-align-center">
+                <button class="btn btn--secondary-flat  u-margin-small">Secondary Flat</button>
+                <code>btn--secondary-flat</code>
+              </div>
               <div class="u-mt-small">
-                <button class="btn btn--secondary" disabled>Secondary Disabled</button>
+                <button class="btn btn--secondary u-margin-small" disabled>Secondary Disabled</button>
 
               </div>
             </div>
@@ -96,10 +110,16 @@
 
             </div>
             <div class="card-content">
-              <button class="btn btn--danger">Danger</button>
-              <button class="btn btn--danger-flat">Danger Flat</button>
+              <div class="flex-row flex-align-center">
+                <button class="btn btn--danger u-margin-small">Danger</button>
+                <code>btn--danger</code>
+              </div>
+              <div class="flex-row flex-align-center">
+                <button class="btn btn--danger-flat u-margin-small">Danger Flat</button>
+                <code>btn--danger-flat</code>
+              </div>
               <div class="u-mt-small">
-                <button class="btn btn--danger" disabled>Danger Disabled</button>
+                <button class="btn btn--danger u-margin-small" disabled>Danger Disabled</button>
 
               </div>
             </div>
@@ -116,10 +136,13 @@
 
             </div>
             <div class="card-content">
-              <button class="btn btn--warning">Warning</button>
-              <button class="btn btn--warning-flat">Warning Flat</button>
+              <div class="flex-row flex-align-center">
+                <button class="btn btn--warning u-margin-small">Warning</button>
+                <code>btn--warning</code>
+              </div>
+              <button class="btn btn--warning-flat u-margin-small">Warning Flat</button>
               <div class="u-mt-small">
-                <button class="btn btn--warning" disabled>Warning Disabled</button>
+                <button class="btn btn--warning u-margin-small" disabled>Warning Disabled</button>
 
               </div>
             </div>
@@ -133,15 +156,24 @@
 
             </div>
             <div class="card-content">
-              <button class="btn btn--info">Info</button>
-              <button class="btn btn--info-flat">Info Flat</button>
-              <div class="u-mt-small">
-                <button class="btn btn--info" disabled>Info Disabled</button>
 
+              <div class="flex-row flex-align-center">
+                <button class="btn btn--info u-margin-small">Info</button>
+                <code>btn--info</code>
               </div>
+
+              <div class="flex-row flex-align-center">
+                <button class="btn btn--info-flat u-margin-small">Info Flat</button>
+                <code>btn--info-flat</code>
+              </div>
+
+
+              <button class="btn btn--info u-margin-small" disabled>Info Disabled</button>
             </div>
+
           </div>
         </div>
+
         <div class="column">
           <div class="card">
             <div class="card-header">
@@ -149,94 +181,114 @@
 
             </div>
             <div class="card-content" style="background: #f7f7f7">
-              <button class="btn btn--default">default</button>
-              <button class="btn btn--default-flat">default</button>
-              <div class="u-mt-small">
-                <button class="btn btn--default" disabled>default</button>
-                <button class="btn btn--default-flat" disabled>default Flat</button>
+
+              <div class="flex-row flex-align-center">
+                <button class="btn btn--default u-margin-small">default</button>
+                <code>btn--default</code>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">BLOCK BUTTONS (FULL WIDTH)</div>
-            </div>
-            <div class="card-content">
-              <button class="btn btn--primary btn--block">Block Button</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">Sizes</div>
-            </div>
-            <div class="card-content">
-              <button class="btn btn--primary btn--sm u-mb-small">Small Button</button>
-              <br>
-              <button class="btn btn--primary u-mb-small">Default Button</button>
-              <br>
-              <button class="btn btn--primary btn--lg">Large Button</button>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">Icons</div>
-            </div>
-            <div class="card-content">
-              <button class="btn btn--primary u-mb-small">
-                <span class="pe-7s-map"></span>
-                <span>Icon Button</span>
-              </button>
-              <br>
-              <button class="btn btn--secondary u-mb-small">
-                <span class="pe-7s-user"></span>
-                <span>Icon Button</span>
-              </button>
-              <br>
-              <button class="btn btn--warning u-mb-small">
-                <span class="pe-7s-check"></span>
-                <span>Icon Button</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <div class="card-header">
-              <div class="card-title">Rounded</div>
-            </div>
-            <div class="card-content">
-              <button class="btn btn--rounded btn--primary u-mb-small">
-                <span class="pe-7s-map"></span>
-                <span>Rounded Button</span>
-              </button>
-              <br>
-              <button class="btn btn--rounded btn--secondary u-mb-small">
-                <span class="pe-7s-user"></span>
-                <span>Rounded Button</span>
-              </button>
-              <br>
-              <button class="btn btn--rounded btn--warning u-mb-small">
-                <span class="pe-7s-check"></span>
-                <span>Rounded Button</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+              <div class="flex-row flex-align-center">
+                <button class="btn btn--default-flat u-margin-small">default flat</button>
+                <code>btn--default-flat</code>
+              </div>
+
+              <button class="btn btn--default u-margin-small" disabled>default</button>
 
 
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">BLOCK BUTTONS (FULL WIDTH)</div>
+
+          </div>
+          <div class="card-content">
+            <div class="flex-column">
+              <button class="btn btn--primary btn--block u-margin-small">Block Button</button>
+              <code class="u-margin-small">btn--block</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Sizes</div>
+          </div>
+          <div class="card-content">
+            <div class="flex-row flex-align-center">
+              <button class="btn btn--primary btn--sm u-margin-small">Small Button</button>
+              <code>btn--sm</code>
+            </div>
+            <div class="flex-row flex-align-center">
+              <button class="btn btn--primary u-margin-small">Default Button</button>
+            </div>
+            <div class="flex-row flex-align-center">
+              <button class="btn btn--primary btn--lg u-margin-small">Large Button</button>
+              <code>btn--lg</code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Icons</div>
+          </div>
+          <div class="card-content">
+            <button class="btn btn--primary u-mb-small">
+              <span class="pe-7s-map"></span>
+              <span>Icon Button</span>
+            </button>
+            <br>
+            <button class="btn btn--secondary u-mb-small">
+              <span class="pe-7s-user"></span>
+              <span>Icon Button</span>
+            </button>
+            <br>
+            <button class="btn btn--warning u-mb-small">
+              <span class="pe-7s-check"></span>
+              <span>Icon Button</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Rounded</div>
+            <code>btn--rounded</code>
+          </div>
+          <div class="card-content">
+            <button class="btn btn--rounded btn--primary u-mb-small">
+              <span class="pe-7s-map"></span>
+              <span>Rounded Button</span>
+            </button>
+            <br>
+            <button class="btn btn--rounded btn--secondary u-mb-small">
+              <span class="pe-7s-user"></span>
+              <span>Rounded Button</span>
+            </button>
+            <br>
+            <button class="btn btn--rounded btn--warning u-mb-small">
+              <span class="pe-7s-check"></span>
+              <span>Rounded Button</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
   </div>
 
 
@@ -247,8 +299,9 @@
   <script src="vendor/js/skrollr.min.js"></script>
   <script>
     $(document).ready(function () {
+
       // Init parallax effect
-      var s = skrollr.init();
+      $.Nova.initSkroll();
 
     })
   </script>

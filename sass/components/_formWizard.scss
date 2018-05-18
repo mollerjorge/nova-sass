@@ -12,6 +12,11 @@
     h2 {
       flex: 1;
       text-align: center;
+
+      @include respond(phone) {
+
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -102,6 +107,10 @@
   &__content {
 
     padding: 5rem 10rem;
+
+    @include respond(phone) {
+      padding: 5rem 0rem;
+    }
 
     form {
       opacity: 0;

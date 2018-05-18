@@ -42,6 +42,21 @@
         </li>
       </ul>
 
+      <div class="parallax-wrp">
+          <div class="parallax" data-0="opacity: 1; transform: translateY(0px)" data-500="opacity:0; transform: translateY(100px)">
+            <div class="columns">
+              <div class="column">
+                <img src="./nova/img/wireframes/formsInputs.svg" alt="buttons wireframe">
+              </div>
+              <div class="column">
+                <h2>Nova Forms</h2>
+                <p>Buttons are an important part of every ui/ux design process. With Nova we apply the latests design trends using
+                  gradients and animations in buttons to give the user a one of a kind experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       <div class="columns">
         <div class="column">
           <div class="card card-full-height">
@@ -55,7 +70,7 @@
                   <div class="form__label u-mb-small">First Name</div>
                   <div class="form__input-wrp">
                     <div class="form__input required">
-                      <input type="text" placeholder="Please type your first name" class="form__control form__control--icon u-center-text">
+                      <input type="text" placeholder="Please type your first name" class="form__control  form__control--icon ">
                       <span class="pe-7s-user"></span>
                     </div>
 
@@ -530,6 +545,15 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   <script src="nova/js/datepicker.js"></script>
   <script src="vendor/js/dropzone.js"></script>
+  <script src="vendor/js/skrollr.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      // Init parallax effect
+      $.Nova.initSkroll();
+
+    })
+  </script>
 </body>
 
 </html>

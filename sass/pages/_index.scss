@@ -3,8 +3,7 @@
   /* Set the colour of this series line */
   stroke: $color-primary-0 !important;
   /* Control the thikness of your lines */
-  stroke-width: .2rem;
-  
+  stroke-width: 0.2rem;
 }
 
 /* Use this selector to override the line style on a given series */
@@ -12,8 +11,7 @@
   /* Set the colour of this series line */
   stroke: $color-secondary-0 !important;
   /* Control the thikness of your lines */
-  stroke-width: .2rem;
-  
+  stroke-width: 0.2rem;
 }
 
 /* Use this selector to override the line style on a given series */
@@ -21,8 +19,7 @@
   /* Set the colour of this series line */
   stroke: $color-danger-0 !important;
   /* Control the thikness of your lines */
-  stroke-width: .2rem;
-  
+  stroke-width: 0.2rem;
 }
 
 /* Use this selector to override the line style on a given series */
@@ -30,18 +27,15 @@
   /* Set the colour of this series line */
   stroke: $color-info-0 !important;
   /* Control the thikness of your lines */
-  stroke-width: .2rem;
-  
+  stroke-width: 0.2rem;
 }
-
 
 /* This selector overrides the points style on line charts. Points on line charts are actually just very short strokes. This allows you to customize even the point size in CSS */
 .ct-series-a .ct-point {
   /* Colour of your points */
   stroke: $color-primary-0 !important;
-  
 }
-.ct-series-a  .ct-area {
+.ct-series-a .ct-area {
   fill: $color-primary-0 !important;
 }
 
@@ -75,17 +69,16 @@
 
 .ct-chart-2 .ct-labels span {
   color: $color-grey-0;
-  
 }
 
 .ct-chart-2 .ct-labels {
   transform: translateY(2rem);
 }
 
-.ct-chart-2  .ct-line,
+.ct-chart-2 .ct-line,
 .ct-chart-2 .ct-point {
   stroke: $color-grey-0 !important;
-  box-shadow:  2rem 2rem 2rem;
+  box-shadow: 2rem 2rem 2rem;
 }
 
 .gradient-graph > * {
@@ -119,36 +112,48 @@
 }
 
 .ct-chart-10 .ct-label {
-    fill: rgba(0,0,0,.4);
-    color: rgba(0,0,0,.4);
-    font-size: 2.75rem;
-    line-height: 1;
+  fill: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 2.75rem;
+  line-height: 1;
 }
 
-.ct-series-a .ct-slice-donut  {
+.ct-series-a .ct-slice-donut {
   stroke: $color-primary-0 !important;
 }
 
-.ct-series-b .ct-slice-donut  {
+.ct-series-b .ct-slice-donut {
   stroke: $color-secondary-0 !important;
 }
 
-.ct-series-c .ct-slice-donut  {
+.ct-series-c .ct-slice-donut {
   stroke: $color-info-0 !important;
 }
 
-.ct-series-d .ct-slice-donut  {
+.ct-series-d .ct-slice-donut {
   stroke: $color-warning-0 !important;
 }
 
-.ct-series-e .ct-slice-donut  {
+.ct-series-e .ct-slice-donut {
   stroke: $color-danger-0 !important;
 }
 
-.ct-series-f .ct-slice-donut  {
+.ct-series-f .ct-slice-donut {
   stroke: $color-secondary-1 !important;
 }
 
-.ct-series-g .ct-slice-donut  {
+.ct-series-g .ct-slice-donut {
   stroke: $color-primary-1 !important;
+}
+
+.statistics__filters {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 70%;
+
+  @include respond(phone) {
+    & > span {
+      display: none;
+    }
+  }
 }

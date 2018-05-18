@@ -5806,21 +5806,11 @@ progress[value] {
   background: -webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, red, #ba7448);
   background-size: 25px 14px, 100% 100%, 100% 100%; }
 
-.progress--anim::-webkit-progress-value {
+.progress--anim {
   /*This sets up the animation */
-  -webkit-animation: animate-stripes 5s linear 0 infinite;
-  -webkit-animation: animate-stripes 5s linear 0 infinite;
-  -moz-animation: animate-stripes 5s linear 0 infinite;
-  -o-animation: animate-stripes 5s linear 0 infinite;
-  animation: animate-stripes 5s linear 0 infinite; }
+  -webkit-animation: move 5s linear 0 infinite; }
 
-@-webkit-keyframes animate-stripes {
-  0% {
-    background-position: 0px 0px, 0 0, 0 0; }
-  100% {
-    background-position: -100px 0px, 0 0, 0 0; } }
-
-@keyframes animate-stripes {
+@-webkit-keyframes move {
   0% {
     background-position: 0px 0px, 0 0, 0 0; }
   100% {
@@ -6307,9 +6297,6 @@ progress[value] {
     .fw__legends h2 {
       flex: 1;
       text-align: center; }
-      @media (max-width: 37.5em) {
-        .fw__legends h2 {
-          font-size: 1.6rem; } }
   .fw__nav {
     display: flex;
     justify-content: space-around;
@@ -6362,9 +6349,6 @@ progress[value] {
       background: linear-gradient(45deg, #1DE9B6, #1DC5E9); }
   .fw__content {
     padding: 5rem 10rem; }
-    @media (max-width: 37.5em) {
-      .fw__content {
-        padding: 5rem 0rem; } }
     .fw__content form {
       opacity: 0;
       max-height: 0; }
@@ -6383,9 +6367,6 @@ progress[value] {
   flex-direction: column;
   justify-content: space-between;
   position: relative; }
-  @media (max-width: 37.5em) {
-    .visa {
-      height: 18rem; } }
   .visa-wrp {
     display: flex;
     justify-content: center; }
@@ -6400,9 +6381,6 @@ progress[value] {
     .visa-card-number p {
       font-size: 3rem;
       letter-spacing: .25rem; }
-      @media (max-width: 37.5em) {
-        .visa-card-number p {
-          font-size: 1.5rem; } }
   .visa-bg-image {
     position: absolute;
     bottom: -4rem;

@@ -24,14 +24,15 @@
     outline: none;
   }
 
-  &:active {
-    transform: translateY(0.5rem);
-  }
-
   &:hover:enabled {
     &:before {
       opacity: 1;
     }
+    transform: translateY(-.1rem);
+  }
+
+  &:active {
+    transform: translateY(.1rem) !important;
   }
 
   &:hover {
@@ -75,6 +76,7 @@
 
   &--default {
     color: $color-grey-6;
+    background: transparent;
 
     &:hover {
       color: $color-grey-6;

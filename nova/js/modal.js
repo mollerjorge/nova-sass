@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  // Init parallax effect
-  var s = skrollr.init();
+  $.Nova.initSkroll();
 
   // Init Selects
   $("select").select2({

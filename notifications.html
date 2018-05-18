@@ -196,7 +196,7 @@
               </div>
             </div>
             <div class="card-content">
-              <table id="animations">
+              <table id="animations" style="width: 100%"> 
                 <thead> 
                   <tr>
                     <td></td>
@@ -493,8 +493,8 @@
   <script>
     $(document).ready(function () {
       // Init parallax effect
-      var s = skrollr.init();
-
+      $.Nova.initSkroll();
+      
       // Init animations table
       $("#animations").DataTable({
         bLengthChange: false,

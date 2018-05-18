@@ -48,8 +48,9 @@
     display: flex;
     padding: 2rem 2rem 2rem 3rem;
     justify-content: space-between;
+    align-items: center;
     &-logo {
-      height: 100%;
+      height: 3rem;
     }
 
     &-button {
@@ -88,6 +89,7 @@
         background: $color-grey-5;
         width: 90%;
         transition: all .3s ease-in-out;
+        margin: 1rem 0;
       }
 
       &:hover > * {

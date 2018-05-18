@@ -51,6 +51,15 @@
       }
       
     });
+
+    // href = window.location.href.split('/').pop();
+    // var parent = $('.sidebar__menu a[href="'+href+'"]').parent().parent();
+    // if (parent.hasClass('sidebar__sub-menu')){
+    //   //Is a submenu item hence we active the parent element
+    //   parent.prev().trigger('click');
+    // } else {
+    //   $('.sidebar__menu a[href="'+href+'"]').click();
+    // }
   };
 
   Nova.prototype.init = function() {
@@ -193,7 +202,9 @@
     }
 
     function closeNotification() {      
-      self.notification.removeClass(self.options.animationIn).animateCss(self.options.animationOut, function() {
+      
+      self.notification.removeClass(self.options.animationIn);
+      self.notification.animateCss(self.options.animationOut, function() {
         self.notification.remove();
       });
     }

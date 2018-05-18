@@ -1,6 +1,15 @@
 
 .flex-column {
   flex-direction: column;
+  display: flex; 
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-align-center {
+  align-items: center;
 }
 
 .u-height-small {
@@ -32,6 +41,18 @@
 
 .u-mt-large {
   margin-top: 6rem !important;
+}
+
+.u-margin-small {
+  margin: 1.5rem !important;
+}
+
+.u-margin-medium {
+  margin: 3rem !important;
+}
+
+.u-margin-large {
+  margin: 6rem !important;
 }
 
 .u-center-text {
