@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="nova/css/nova.css">
+  <link rel="stylesheet" href="vendor/css/prism.css">
+  <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <title>Nova Docs</title>
+</head>
+
+<body>
+  <div class="page-wrp">
+    <div class="columns">
+      <div class="column is-one-quarter">
+        <aside class="menu">
+          <p class="menu-label">
+            Getting Started
+          </p>
+          <ul class="menu-list">
+            <li>
+              <a href="#">Folder structure</a>
+            </li>
+            <li>
+              <a>SASS</a>
+            </li>
+          </ul>
+          <p class="menu-label">
+            ui elements
+          </p>
+          <ul class="menu-list">
+            <li>
+              <a>Team Settings</a>
+            </li>
+            <li>
+              <a class="is-active">Manage Your Team</a>
+              <ul>
+                <li>
+                  <a>Members</a>
+                </li>
+                <li>
+                  <a>Plugins</a>
+                </li>
+                <li>
+                  <a>Add a member</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a>Invitations</a>
+            </li>
+            <li>
+              <a>Cloud Storage Environment Settings</a>
+            </li>
+            <li>
+              <a>Authentication</a>
+            </li>
+          </ul>
+
+        </aside>
+      </div>
+      <div class="column" style="overflow: auto">
+        <div class="doc">
+
+          <h1>Nova Documentation</h1>
+          <p>Nova is based on Bulma, an elegant and easy to use framework built using flexbox. It's modular, 100% responsive
+            and open source.</p>
+          <p>For more information please check the official documentation:
+            <a href="https://bulma.io/">https://bulma.io/</a>
+          </p>
+          <hr>
+
+
+
+
+
+          <h2>Getting Started</h2>
+
+          <p>
+            This part of the doc will help you to quick start your project and will give you a basic idea about how Nova works.
+          </p>
+
+
+
+          <h2>How to include Nova to your project</h2>
+          <p>In order to fully use nova compoenets you need to include the following files to your project:</p>
+
+
+          <ul>
+            <li>
+              <p>1.
+                <code>nova.css</code>: this file can be found under
+                <code>nova/css/nova.css</code>
+              </p>
+            </li>
+            <li>
+              <p>2.
+                <code>pe-icon-7-stroke.css</code>: this file is needed in order to use the Stroke 7 icons library</p>
+            </li>
+            <li>
+              <p>3. A reference to the Open Sans font</p>
+            </li>
+            <li>
+              <p>4.
+                <code>jquery-3.3.1.min.js</code>: this file can be found under
+                <code>vendor/js/jquery-3.3.1.min.js</code> </p>
+            </li>
+            <li>
+              <p>5.
+                <code>nova.js</code>: this file can be found under
+                <code>nova/js/nova.js</code> </p>
+            </li>
+            <li>6.
+              Copy the <code>img</code> folder and paste it so it's at the same level as your css and js folder
+            </li>
+          </ul>
+          <br>
+
+
+          <script type="text/plain" class="language-markup">
+                  <html>
+                    <head>
+                      ...
+                      <link rel="stylesheet" href="./nova/css/nova.css">
+                      <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
+                      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+                      ...
+                    </head>
+                    <body>
+                      ...
+                      <script src="./vendor/js/jquery-3.3.1.min.js">&lt;/script>
+                      <script src="./nova/js/nova.js">&lt;/script>
+                      ...
+                    </body>
+                  </html>
+                  </script>
+
+          
+
+          <p>That's it, by doing this you will have access to all the nova components. If you wish to customize your nova.css
+            please refer to the SASS section in the docs.</p>
+
+          <div class="doc__note">
+            <p>
+              Some nova components such as Tables, dropzones, selects require some additional javascript. In the complex components section
+              of the docs you can find more information about each component and which javscript is necesary in order to
+              make it work.
+            </p>
+          </div>
+
+
+          <div class="doc__box">
+            <h2>SASS</h2>
+            <p>
+              Nova is built using SASS. This allows you to customize you nova.css file, meaning you can include only the components (modules)
+              you are going to use and ommit the rest. In this section we will explain the folder structure of the SASS modules
+              and also how to build your own customized version of nova.
+            </p>
+
+            <h3>BEM</h3>
+            <p>Nova uses BEM as a name metodology. BEM stands fot Block Element Modifier.</p>
+            <p>Each element is name with the
+              <code>__</code> syntax</p>
+            <p>Each modifier is named with the
+              <code>--</code>syntax</p>
+              <p>Example</p>
+              <script type="text/plain" class="language-markup">
+                <!-- Modal is the block, header and footer are elements within the modal block -->
+                <div class="modal">
+                  <div class="modal__header">
+                    <p>Hello I'm the header!</p>
+                  </div>
+                  <div class="modal__footer">
+                      <p>Hello I'm the footer!</p>
+                  </div>
+                </div>
+                <!-- modal--success is a modifier class that gets applied on the modal block, maybe to change its background color to green for example -->
+                <div class="modal modal--success">
+                    <div class="modal__header">
+                      <p>Hello I'm the header!</p>
+                    </div>
+                    <div class="modal__footer">
+                        <p>Hello I'm the footer!</p>
+                    </div>
+                  </div>
+              </script>
+
+              <p>For more information on BEM please check this doc <a target="_blank" href="http://getbem.com/introduction/">get bem</a></p>
+
+
+              <h3>SASS Folder Structure</h3>
+
+              
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="vendor/js/jquery-3.3.1.min.js"></script>
+  <script src="nova/js/nova.js"></script>
+  <script src="vendor/js/prism.js"></script>
+  <script>
+    $(document).ready(function () {
+
+    });
+
+  </script>
+</body>
+
+</html>

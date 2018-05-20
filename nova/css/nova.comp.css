@@ -4956,6 +4956,43 @@ a.tag:hover {
   .tabs.is-large {
     font-size: 1.5rem; }
 
+.menu {
+  font-size: 1rem; }
+  .menu.is-small {
+    font-size: 0.75rem; }
+  .menu.is-medium {
+    font-size: 1.25rem; }
+  .menu.is-large {
+    font-size: 1.5rem; }
+
+.menu-list {
+  line-height: 1.25; }
+  .menu-list a {
+    border-radius: 2px;
+    color: #4a4a4a;
+    display: block;
+    padding: 0.5em 0.75em; }
+    .menu-list a:hover {
+      background-color: whitesmoke;
+      color: #363636; }
+    .menu-list a.is-active {
+      background-color: #3273dc;
+      color: #fff; }
+  .menu-list li ul {
+    border-left: 1px solid #dbdbdb;
+    margin: 0.75em;
+    padding-left: 0.75em; }
+
+.menu-label {
+  color: #7a7a7a;
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
+  .menu-label:not(:first-child) {
+    margin-top: 1em; }
+  .menu-label:not(:last-child) {
+    margin-bottom: 1em; }
+
 *,
 *::after,
 *::before {
@@ -4967,6 +5004,7 @@ html {
   font-size: 62.5%; }
 
 body {
+  min-height: 100vh;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -5806,11 +5844,21 @@ progress[value] {
   background: -webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, red, #ba7448);
   background-size: 25px 14px, 100% 100%, 100% 100%; }
 
-.progress--anim {
+.progress--anim::-webkit-progress-value {
   /*This sets up the animation */
-  -webkit-animation: move 5s linear 0 infinite; }
+  -webkit-animation: animate-stripes 5s linear 0 infinite;
+  -webkit-animation: animate-stripes 5s linear 0 infinite;
+  -moz-animation: animate-stripes 5s linear 0 infinite;
+  -o-animation: animate-stripes 5s linear 0 infinite;
+  animation: animate-stripes 5s linear 0 infinite; }
 
-@-webkit-keyframes move {
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0px 0px, 0 0, 0 0; }
+  100% {
+    background-position: -100px 0px, 0 0, 0 0; } }
+
+@keyframes animate-stripes {
   0% {
     background-position: 0px 0px, 0 0, 0 0; }
   100% {
@@ -6297,6 +6345,9 @@ progress[value] {
     .fw__legends h2 {
       flex: 1;
       text-align: center; }
+      @media (max-width: 37.5em) {
+        .fw__legends h2 {
+          font-size: 1.6rem; } }
   .fw__nav {
     display: flex;
     justify-content: space-around;
@@ -6349,6 +6400,9 @@ progress[value] {
       background: linear-gradient(45deg, #1DE9B6, #1DC5E9); }
   .fw__content {
     padding: 5rem 10rem; }
+    @media (max-width: 37.5em) {
+      .fw__content {
+        padding: 5rem 0rem; } }
     .fw__content form {
       opacity: 0;
       max-height: 0; }
@@ -6367,6 +6421,9 @@ progress[value] {
   flex-direction: column;
   justify-content: space-between;
   position: relative; }
+  @media (max-width: 37.5em) {
+    .visa {
+      height: 18rem; } }
   .visa-wrp {
     display: flex;
     justify-content: center; }
@@ -6381,6 +6438,9 @@ progress[value] {
     .visa-card-number p {
       font-size: 3rem;
       letter-spacing: .25rem; }
+      @media (max-width: 37.5em) {
+        .visa-card-number p {
+          font-size: 1.5rem; } }
   .visa-bg-image {
     position: absolute;
     bottom: -4rem;
@@ -7395,6 +7455,28 @@ fieldset {
   .color--grey-8 {
     background-color: #202224;
     color: #ffffff; }
+
+.page-wrp {
+  padding: 3rem; }
+
+.menu-list a {
+  font-size: 1.3rem; }
+
+.menu-label {
+  font-size: 2rem; }
+
+aside.menu {
+  position: relative; }
+
+aside.menu::after {
+  content: "";
+  display: inline-block;
+  width: .1rem;
+  height: 100%;
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  background: radial-gradient(#AAAEB3, rgba(170, 174, 179, 0) 80%); }
 
 input {
   height: 4rem; }

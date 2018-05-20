@@ -10,6 +10,7 @@
 @import "node_modules/bulma/sass/layout/all";
 @import "node_modules/bulma/sass/elements/all";
 @import "node_modules/bulma/sass/components/tabs";
+@import "node_modules/bulma/sass/components/menu";
 
 // base
 @import "base/base";
@@ -17,6 +18,9 @@
 @import "base/typography";
 
 // components
+@import "components/input";
+@import "components/button";
+@import "components/breadcrumbs";
 @import "components/form";
 @import "components/card";
 @import "components/alert";
@@ -55,10 +59,9 @@
 @import "pages/404";
 @import "pages/icons";
 @import "pages/colors";
+@import "pages/docs";
 
-// objects 
-@import "objects/input";
-@import "objects/button";
-@import "objects/breadcrumbs";
+
+
 
 
