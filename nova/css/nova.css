@@ -6197,7 +6197,8 @@ progress[value] {
         color: #ffffff; }
         .sidebar__menu-items-link.active ~ ul {
           margin-top: 1rem;
-          padding: 2rem 0rem; }
+          padding: 2rem 0rem;
+          max-height: 1000px; }
         .sidebar__menu-items-link.active .caret {
           color: #ffffff;
           transform: rotate(-90deg); }
@@ -6221,6 +6222,8 @@ progress[value] {
     max-height: 0;
     transition: all 0.3s linear;
     overflow: hidden; }
+    .sidebar__sub-menu li > a.active > span {
+      background: linear-gradient(45deg, #1DE9B6, #1DC5E9); }
     .sidebar__sub-menu li > a > span {
       background: #2b303b;
       text-align: center;

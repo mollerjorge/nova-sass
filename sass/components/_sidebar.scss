@@ -181,7 +181,7 @@
         ~ ul {
           margin-top: 1rem;
           padding: 2rem 0rem;
-          
+          max-height: 1000px;
         }
 
         .caret {
@@ -217,6 +217,9 @@
     transition: all 0.3s linear;
     overflow: hidden;
 
+    li > a.active > span {
+      background: linear-gradient(45deg, $color-primary-0, $color-primary-1);
+    }
 
     li > a > span {
       background: $color-sb-menu;
