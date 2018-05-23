@@ -7,12 +7,14 @@ table.dataTable thead td {
   padding: 2rem 1rem;
   font-size: 1.3rem;
   background-color: $color-grey-0;
+  color: $color-grey-6;
 }
 
 // Header border bottom
 table.dataTable thead th,
 table.dataTable thead td {
   border-bottom: $border-bottom-head;
+  
 }
 
 // Background color for highlighting sorting column for odd rows
@@ -92,4 +94,14 @@ tr.shown td.details-control:focus {
   background-size: 3rem;
   cursor: pointer;
   outline: none;
+}
+
+
+ p {
+  color: $color-grey-6;
+
+}
+
+tbody th {
+  font-weight: normal;
 }

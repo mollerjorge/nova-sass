@@ -6,9 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="stylesheet" href="vendor/css/datatables.min.css">
+  <link rel="stylesheet" href="vendor/css/animate.css">
   <link rel="stylesheet" href="nova/css/nova.css">
+  <link rel="stylesheet" href="vendor/css/select2.min.css">
   <link rel="stylesheet" href="vendor/css/prism.css">
   <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
+  <link rel="stylesheet" href="vendor/css/linear-icons.css">
+  <link rel="stylesheet" type="text/css" href="vendor/css/daterangepicker.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
   <title>Nova Docs</title>
@@ -20,54 +25,175 @@
       <div class="column is-one-quarter">
         <aside class="menu">
           <p class="menu-label">
-            Getting Started
+            <a href="#gettingStarted"> Getting Started</a>
           </p>
           <ul class="menu-list">
             <li>
-              <a href="#">Folder structure</a>
+              <a href="#htintyp">How to include nova to your project</a>
             </li>
             <li>
-              <a>SASS</a>
-            </li>
-          </ul>
-          <p class="menu-label">
-            ui elements
-          </p>
-          <ul class="menu-list">
-            <li>
-              <a>Team Settings</a>
-            </li>
-            <li>
-              <a class="is-active">Manage Your Team</a>
-              <ul>
+              <a href="#sass">SASS</a>
+
+              <ul class="menu-list">
                 <li>
-                  <a>Members</a>
+                  <a href="#bem">BEM</a>
                 </li>
                 <li>
-                  <a>Plugins</a>
+                  <a href="#sfs"> SASS folder structure</a>
                 </li>
                 <li>
-                  <a>Add a member</a>
+                  <a href="#bycnf"> Building your customized nova.css file</a>
                 </li>
               </ul>
             </li>
+          </ul>
+          <p class="menu-label">
+            <a href="#uielements"> ui elements</a>
+          </p>
+          <ul class="menu-list">
             <li>
-              <a>Invitations</a>
+              <a href="#inputs">Inputs</a>
+
+              <ul class="menu-list">
+                <li>
+                  <a href="#checkbox">checkbox</a>
+                </li>
+                <li>
+                  <a href="#radio">radio</a>
+                </li>
+                <li>
+                  <a href="#switch">switch</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#btn">Buttons</a>
+
+              <ul class="menu-list">
+                <li>
+                  <a href="#btnflat">flat</a>
+                </li>
+                <li>
+                  <a href="#btnicon">icon</a>
+                </li>
+                <li>
+                  <a href="#btnrounded">rounded</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#alerts">Alerts</a>
+
+              <ul class="menu-list">
+                <li>
+                  <a href="#atransparent">transparent</a>
+                </li>
+
+              </ul>
             </li>
             <li>
-              <a>Cloud Storage Environment Settings</a>
+              <a href="#cards">Cards</a>
             </li>
             <li>
-              <a>Authentication</a>
+              <a href="#tabs">Tabs</a>
+
+              <ul class="menu-list">
+                <li>
+                  <a href="#tIcons"> Tab with icons</a>
+                </li>
+                <li>
+                  <a href="#tToggle"> Tab Toggle</a>
+                </li>
+                <li>
+                  <a href="#tRounded"> Tab Rounded</a>
+                </li>
+
+              </ul>
+            </li>
+            <li>
+              <a href="#accordion">Accordions</a>
+            </li>
+
+          </ul>
+          <p class="menu-label">
+            <a href="#complexComponents">Complex Components</a>
+          </p>
+
+          <ul class="menu-list">
+            <li>
+              <a href="#notifications">Notifications</a>
+            </li>
+            <li>
+              <a href="#modals">Modals</a>
+            </li>
+            <li>
+              <a href="#selects"> Selects </a>
+            </li>
+            <li>
+              <a href="#datepicker"> Date Picker </a>
+            </li>
+            <li>
+                <a href="#tables"> Tables </a>
+              </li>
+          </ul>
+
+          <p class="menu-label">
+            <a href="#forms">Forms</a>
+          </p>
+
+          <ul class="menu-list">
+            <li>
+              <a href="#sform">Simple form</a>
+            </li>
+            <li>
+              <a href="#iform">Inline form</a>
+            </li>
+            <li>
+              <a href="#bform">Block form</a>
+            </li>
+            <li>
+              <a href="#lalignment">Label alignment</a>
+            </li>
+          </ul>
+
+          <p class="menu-label">
+            <a href="#icons">Icons</a>
+          </p>
+          <ul class="menu-list">
+            <li>
+              <a href="#stroke7">Stroke 7 icons</a>
+            </li>
+            <li>
+              <a href="#linearIcons">Linear icons</a>
             </li>
           </ul>
 
         </aside>
       </div>
       <div class="column" style="overflow: auto">
+
+        <h3 style="text-align: center;">Nova - Modern Bulma Admin and Dashboard Template by Jorge Moller v 1.0</h3>
+
         <div class="doc">
 
-          <h1>Nova Documentation</h1>
+          <h2>Nova Documentation</h2>
+          <div class="doc__intro">
+            <div style="flex-basis: 30%;">
+              <p>
+                <strong>Created:</strong> 05/21/2018</p>
+              <p>
+                <strong>By:</strong> Jorge Moller</p>
+              <p>
+                <strong>Email:</strong> jmoller2106@gmail.com</p>
+            </div>
+            <div style="flex-basis: .1%" class="doc__intro-vbreak"></div>
+            <div style="flex-basis: 98%">
+              <p>Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please
+                feel free to email via my user page contact. Thanks so much!</p>
+            </div>
+          </div>
           <p>Nova is based on Bulma, an elegant and easy to use framework built using flexbox. It's modular, 100% responsive
             and open source.</p>
           <p>For more information please check the official documentation:
@@ -79,7 +205,7 @@
 
 
 
-          <h2>Getting Started</h2>
+          <h2 id="gettingStarted">Getting Started</h2>
 
           <p>
             This part of the doc will help you to quick start your project and will give you a basic idea about how Nova works.
@@ -87,8 +213,8 @@
 
 
 
-          <h2>How to include Nova to your project</h2>
-          <p>In order to fully use nova compoenets you need to include the following files to your project:</p>
+          <h2 id="htintyp">How to include Nova to your project</h2>
+          <p>In order to fully use nova components you need to include the following files to your project:</p>
 
 
           <ul>
@@ -99,24 +225,32 @@
               </p>
             </li>
             <li>
-              <p>2.
+              <p>
+                2.
+                <code>animate.css</code>: this file can be found under
+                <code>vendor/css/animate.css</code>
+              </p>
+            </li>
+            <li>
+              <p>3.
                 <code>pe-icon-7-stroke.css</code>: this file is needed in order to use the Stroke 7 icons library</p>
             </li>
             <li>
-              <p>3. A reference to the Open Sans font</p>
+              <p>4. A reference to the Open Sans font</p>
             </li>
             <li>
-              <p>4.
+              <p>5.
                 <code>jquery-3.3.1.min.js</code>: this file can be found under
                 <code>vendor/js/jquery-3.3.1.min.js</code> </p>
             </li>
             <li>
-              <p>5.
+              <p>6.
                 <code>nova.js</code>: this file can be found under
                 <code>nova/js/nova.js</code> </p>
             </li>
-            <li>6.
-              Copy the <code>img</code> folder and paste it so it's at the same level as your css and js folder
+            <li>
+              <p>7. Copy the
+                <code>nova/img</code> folder and paste it so it's at the same level as your css and js folder</p>
             </li>
           </ul>
           <br>
@@ -126,7 +260,8 @@
                   <html>
                     <head>
                       ...
-                      <link rel="stylesheet" href="./nova/css/nova.css">
+                      <link rel="stylesheet" href="vendor/css/animate.css">
+                      <link rel="stylesheet" href="nova/css/nova.css">
                       <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
                       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
@@ -141,36 +276,36 @@
                   </html>
                   </script>
 
-          
 
-          <p>That's it, by doing this you will have access to all the nova components. If you wish to customize your nova.css
-            please refer to the SASS section in the docs.</p>
+
+          <p>That's the minimum required setup to used most of the nova components, If you wish to customize your nova.css please
+            refer to the SASS section in the docs.</p>
 
           <div class="doc__note">
             <p>
               Some nova components such as Tables, dropzones, selects require some additional javascript. In the complex components section
-              of the docs you can find more information about each component and which javscript is necesary in order to
+              of the docs you can find more information about each component and which javascript is necesary in order to
               make it work.
             </p>
           </div>
 
 
           <div class="doc__box">
-            <h2>SASS</h2>
+            <h2 id="sass">SASS</h2>
             <p>
               Nova is built using SASS. This allows you to customize you nova.css file, meaning you can include only the components (modules)
               you are going to use and ommit the rest. In this section we will explain the folder structure of the SASS modules
               and also how to build your own customized version of nova.
             </p>
 
-            <h3>BEM</h3>
+            <h3 id="bem">BEM</h3>
             <p>Nova uses BEM as a name metodology. BEM stands fot Block Element Modifier.</p>
-            <p>Each element is name with the
+            <p>Each element is named with the
               <code>__</code> syntax</p>
             <p>Each modifier is named with the
               <code>--</code>syntax</p>
-              <p>Example</p>
-              <script type="text/plain" class="language-markup">
+            <p>Example</p>
+            <script type="text/plain" class="language-markup">
                 <!-- Modal is the block, header and footer are elements within the modal block -->
                 <div class="modal">
                   <div class="modal__header">
@@ -191,16 +326,1832 @@
                   </div>
               </script>
 
-              <p>For more information on BEM please check this doc <a target="_blank" href="http://getbem.com/introduction/">get bem</a></p>
+            <p>For more information on BEM please check this doc
+              <a target="_blank" href="http://getbem.com/introduction/">get bem</a>
+            </p>
 
 
-              <h3>SASS Folder Structure</h3>
+            <h3 id="sfs">SASS Folder Structure</h3>
+            <br>
+            <img src="./nova/img/docs/sass-folder-structure.png" alt="sass folder structure" style="max-height: 20rem; margin: 2rem 0;">
+            <br>
 
-              
+            <h3>
+              <span class="u-bold u-italic">abstract folder</span>: in this folder you will find the
+              <code>_mixins.scss</code> file and the
+              <code>_variables.scss</code> file.
+            </h3>
+            <ul class="u-mt-small doc__list">
+              <li>
+                <code>_mixins.scss</code> :
+                <p>this file contains all the mixins used troughout the sass project. If you need to add some of your own this
+                  is the place to do so.</p>
+              </li>
+              <li>
+                <code>_variables.scss</code> :
+                <p>this file contains mainly the variables related to the nova color pallete. If you want to change a particular
+                  color you should do it here and that change will propagate to the entire proejct.</p>
+              </li>
+            </ul>
+
+
+            <h3>
+              <span class="u-bold u-italic">base folder</span>: this folder contains the
+              <code>_base.scss</code>,
+              <code>_typography</code>, and
+              <code>_utilities.scss</code> files.
+
+            </h3>
+
+            <ul class="u-mt-small doc__list">
+              <li>
+                <code>_base.scss:</code>:
+                <p>the css reset can be found here, also styles applied to the html and body tag</p>
+              </li>
+              <li>
+                <code>_typography.scss:</code>:
+                <p>this file contains all the styles for the html elements related to typography: headers, paragraphs, spans,
+                  labels etc.</p>
+              </li>
+              <li>
+                <code>_utilities.scass</code>:
+                <p>is where utilities-namespaced classes are written, like
+                  <code>u-text-center</code>,
+                  <code>u-bold</code>,
+                  <code>u-mt-small</code>
+                </p>
+              </li>
+            </ul>
+
+
+            <h3>
+              <span class="u-bold u-italic">components folder</span>
+            </h3>
+
+            <p>This folder contains all the heavy lifting logic.</p>
+            <p>It contains the styles related to every single nova component. If you need to customize any particular component
+              you can do it here, for example you can change a particular style of the alert in the file
+              <code>_alert.scss</code>.</p>
+
+
+            <h3>
+              <span class="u-bold u-italic">dashboardComponents folder</span>
+            </h3>
+
+            <p>This folder contains all the heavy lifting logic related to the dashboard components</p>
+            <p>All the styles associated with the dashboard components can be found here. The dashboard components are displayed
+              in the
+              <code>index.html</code> file.</p>
+
+
+            <h3>
+              <span class="u-bold u-italic">pages folder</span>
+            </h3>
+
+            <p>This folder has styles related particulary to some pages of the dashboard. Here you should write any style that
+              applies only to a particular page in your project.</p>
+
+
+            <h3>
+              <span class="u-bold u-italic">main.scss file</span>
+            </h3>
+
+            <p>This is the file that includes all the other files discussed above.</p>
+
+            <p>Here is where you can play around and only include those files you will end up using. For example if you know
+              that your proejct won't be using a modal, then there is no need to include the file
+              <code>_modal.scss</code>
+            </p>
+
+            <p>By doing this you can assure you only include those components you will end up using. This will result in an
+              even more light weighted nova.css file.</p>
+
+            <hr>
+            <h2 id="bycnf">Building your customized nova.css file</h2>
+
+            <p>Once you downloded the project make sure to run
+              <code>npm install</code> to install all the npm dependencies.</p>
+
+            <p>To build the final nova.css file you should run
+              <code>npm run build</code>. This will compile the sass files into css, concat, prefix and compress the final nova.css file.</p>
+
+            <p>You can find the build nova.css file under
+              <code>nova/css/nova.css</code>
+            </p>
           </div>
 
 
+          <section>
+            <h2 id="uielements">UI Elements</h2>
 
+            <h3 id="inputs">inputs</h3>
+
+            <p>Basic input</p>
+            <input type="text" class="form__control" />
+
+            <script class="language-markup" type="text/plain">
+            
+            <input type="text" class="form__control "/>
+            </script>
+
+            <p>Input with Icon</p>
+            <div class="form__input">
+              <input type="text" placeholder="Name" class="form__control form__control--icon">
+              <span class="pe-7s-user"></span>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+                <div class="form__input">
+                    <input type="text" placeholder="Name" class="form__control form__control--icon">
+                    <span class="pe-7s-user"></span>
+                </div>
+              </script>
+
+            <p>Required input displaying error</p>
+            <div class="form__group form__group--has-error">
+
+              <div class="form__input-wrp">
+                <div class="form__input required">
+                  <input type="text" placeholder="Username" class="form__control form__control--icon " required="">
+                  <span class="pe-7s-user"></span>
+                </div>
+
+                <small>Username is a required field</small>
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              <div class="form__group  form__group--has-error">
+                  <div class="form__input-wrp">
+                    <div class="form__input required">
+                      <input type="text" placeholder="Username" class="form__control form__control--icon" required>
+                      <span class="pe-7s-user"></span>
+                    </div>
+                    <small>Username is a required field</small>
+                  </div>
+                </div>
+            </script>
+
+            <p>Input sizes</p>
+
+            <input type="text" class="form__control form__control--icon u-height-small u-mb-small" placeholder="Please type the name of the company">
+            <input type="text" class="form__control form__control--icon u-mb-small" placeholder="Please type the name of the company">
+            <input type="text" class="form__control form__control--icon u-height-large u-mb-small" placeholder="Please type the name of the company">
+
+
+            <script class="language-markup" type="text/plain">
+              <input type="text" class="form__control form__control--icon u-height-small" placeholder="Please type the name of the company">
+              <input type="text" class="form__control form__control--icon" placeholder="Please type the name of the company">
+              <input type="text" class="form__control form__control--icon u-height-large" placeholder="Please type the name of the company">
+            </script>
+
+            <h3 id="checkbox">Chcekbox</h3>
+
+            <div class="form__group">
+              <input type="checkbox" id="olderThan18" class="form__checkbox-input">
+              <label for="olderThan18" class="form__cl">
+                <span class="form__cb"></span>
+
+                Older than 18</label>
+            </div>
+
+            <script type="text/plain" class="language-markup">
+                <div class="form__group">
+                    <input type="checkbox" id="olderThan18" class="form__checkbox-input">
+                    <label for="olderThan18" class="form__cl">
+                      <span class="form__cb"></span>Older than 18</label>
+                </div>
+              </script>
+
+            <h3 id="radio">Radio</h3>
+            <div class="form__group">
+              <input type="radio" id="uruguay" name="country" class="form__radio-input">
+              <label for="uruguay" class="form__radio-label">
+                <span class="form__radio-button"></span>
+
+                Male
+              </label>
+            </div>
+            <div class="form__group">
+              <input type="radio" id="argentina" name="country" class="form__radio-input">
+              <label for="argentina" class="form__radio-label">
+                <span class="form__radio-button"></span>
+
+                Female</label>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              <div class="form__group">
+                  <input type="radio" id="uruguay" name="country" class="form__radio-input">
+                  <label for="uruguay" class="form__radio-label">
+                    <span class="form__radio-button"></span>Male
+                  </label>
+                </div>
+                <div class="form__group">
+                  <input type="radio" id="argentina" name="country" class="form__radio-input">
+                  <label for="argentina" class="form__radio-label">
+                    <span class="form__radio-button"></span>Female</label>
+                </div>
+            </script>
+
+            <h3 id="switch">switch</h3>
+
+            <div class="form__group">
+
+              <span class="form__switch">
+                <input id="switch1" type="checkbox" class="form__input-switch">
+
+                <span class="form__switch-button"></span>
+              </span>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+                <div class="form__group">
+                    <span class="form__switch">
+                      <input id="switch1" type="checkbox" class="form__input-switch">
+                      <span class="form__switch-button"></span>
+                    </span>
+                </div>
+              </script>
+
+            <h2 id="btn"> Buttons</h2>
+
+            <h3>Primary Button</h3>
+
+            <button class="btn btn--primary u-margin-small">Primary</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--primary ">Primary</button>
+              </script>
+
+            <h3>Secondary Button</h3>
+
+            <button class="btn btn--secondary u-margin-small">Secondary</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--secondary ">Secondary</button>
+              </script>
+
+            <h3>Default Button</h3>
+
+            <button class="btn btn--default u-margin-small">Default</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--default ">Default</button>
+              </script>
+
+            <h3>Danger Button</h3>
+
+            <button class="btn btn--danger u-margin-small">Danger</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--danger ">Danger</button>
+              </script>
+
+            <h3>Warning Button</h3>
+
+            <button class="btn btn--warning u-margin-small">Warning</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--warning ">Warning</button>
+              </script>
+
+            <h3>Info Button</h3>
+
+            <button class="btn btn--info u-margin-small">Info</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--info ">Info</button>
+              </script>
+
+            <hr>
+
+            <h3 id="btnflat">Primary Button Flat</h3>
+
+            <button class="btn btn--primary-flat u-margin-small">Primary Flat</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--primary-flat ">Primary</button>
+              </script>
+
+            <h3>Secondary Button Flat</h3>
+
+            <button class="btn btn--secondary-flat u-margin-small">Secondary Flat</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--secondary-flat ">Secondary</button>
+              </script>
+
+            <h3>Default Button Flat</h3>
+
+            <button class="btn btn--default-flat u-margin-small">Default Flat</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--default-flat ">Default</button>
+              </script>
+
+            <h3>Danger Button Flat</h3>
+
+            <button class="btn btn--danger-flat u-margin-small">Danger Flat</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--danger-flat ">Danger</button>
+              </script>
+
+            <h3>Warning Button Flat</h3>
+
+            <button class="btn btn--warning-flat u-margin-small">Warning Flat</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--warning-flat ">Warning</button>
+              </script>
+
+            <h3>Info Button Flat</h3>
+
+            <button class="btn btn--info-flat u-margin-small">Info Flat</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--info-flat ">Info</button>
+              </script>
+
+            <h3>Block Buttons</h3>
+
+            <button class="btn btn--primary btn--block u-margin-small">Block</button>
+
+            <script class="language-markup" type="text/plain">
+                <button class="btn btn--primary btn--block ">Block</button>
+              </script>
+
+
+            <h3 id="btnicon">With Icon</h3>
+
+            <button class="btn btn--primary u-mb-small">
+              <span class="pe-7s-map"></span>
+              <span>Icon Button</span>
+            </button>
+
+            <script class="language-markup" type="text/plain">
+              <button class="btn btn--primary">
+                  <span class="pe-7s-map"></span>
+                  <span>Icon Button</span>
+              </button>
+            </script>
+
+            <h3 id="btnrounded">Rounded</h3>
+
+            <button class="btn btn--primary btn--rounded u-mb-small">
+              <span class="pe-7s-map"></span>
+              <span>Rounded Button</span>
+            </button>
+
+            <script class="language-markup" type="text/plain">
+              <button class="btn btn--primary btn--rounded">
+                  <span class="pe-7s-map"></span>
+                  <span>Rounded Button</span>
+              </button>
+            </script>
+
+            <h2 id="alerts">Alerts</h2>
+            <h3>With background</h3>
+            <p>Alerts can receive the following modifiers: </p>
+            <ul class="doc__list">
+              <li>
+                <code>alert--danger</code>
+              </li>
+              <li>
+                <code>alert--success</code>
+              </li>
+              <li>
+                <code>alert--info</code>
+              </li>
+              <li>
+                <code>alert--warning</code>
+              </li>
+
+            </ul>
+
+            <div class="alert alert--danger u-mb-small">
+              <button class="alert__button">
+                <span class="pe-7s-close"></span>
+              </button>
+              <strong>Danger:</strong>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui corporis quas unde asperiores fuga reprehenderit
+                dolores libero odit expedita corrupti repudiandae blanditiis magni, soluta, nihil, cumque provident impedit
+                ipsa ipsam?</p>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              
+                <div class="alert alert--danger ">
+                    <button class="alert__button">
+                      <span class="pe-7s-close"></span>
+                    </button>
+                    <strong>Danger:</strong>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui corporis quas unde asperiores fuga reprehenderit
+                      dolores libero odit expedita corrupti repudiandae blanditiis magni, soluta, nihil, cumque provident impedit
+                      ipsa ipsam?</p>
+                  </div>
+              </script>
+
+            <h3 id="atransparent">Transparent</h3>
+
+            <div class="alert  alert--transparent-info u-mb-small">
+              <button class="alert__button">
+                <span class="pe-7s-close"></span>
+              </button>
+              <strong>Danger:</strong>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui corporis quas unde asperiores fuga reprehenderit
+                dolores libero odit expedita corrupti repudiandae blanditiis magni, soluta, nihil, cumque provident impedit
+                ipsa ipsam?</p>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+                
+                  <div class="alert alert--transparent-info ">
+                      <button class="alert__button">
+                        <span class="pe-7s-close"></span>
+                      </button>
+                      <strong>Danger:</strong>
+                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui corporis quas unde asperiores fuga reprehenderit
+                        dolores libero odit expedita corrupti repudiandae blanditiis magni, soluta, nihil, cumque provident impedit
+                        ipsa ipsam?</p>
+                    </div>
+                </script>
+          </section>
+
+          <section>
+            <h2 id="cards">Cards</h2>
+            <div class="card ">
+              <div class="card__header">
+                <div class="card__title">
+                  <h3>
+                    <span class="u-bold">Card</span>
+                    Header
+                  </h3>
+                  <small>Cards can also have a subtitle</small>
+                </div>
+                <div class="card__header-icon">
+                  <span class="pe-7s-edit"></span>
+                </div>
+              </div>
+              <div class="card__content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At praesentium sed nisi perferendis totam alias,
+                  voluptate iste delectus distinctio incidunt nesciunt libero, obcaecati laborum fuga eum porro illo, amet
+                  maxime?
+                </p>
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              
+                <div class="card ">
+                    <div class="card__header">
+                      <div class="card__title">
+                        <h3>
+                          <span class="u-bold">Card</span>
+                          Header
+                        </h3>
+                        <small>Cards can also have a subtitle</small>
+                      </div>
+        
+                      <div class="card__header-icon">
+                        <span class="pe-7s-edit"></span>
+                      </div>
+                    </div>
+                    <div class="card__content">
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At praesentium sed nisi perferendis totam alias,
+                        voluptate iste delectus distinctio incidunt nesciunt libero, obcaecati laborum fuga eum porro illo, amet
+                        maxime?
+                      </p>
+                    </div>
+                  </div>
+              </script>
+          </section>
+
+          <section>
+            <h2 id="tabs">Tabs</h2>
+
+            <div id="one" class="tabs">
+              <ul>
+                <li>
+                  <a>Pictures</a>
+                </li>
+                <li class="is-active">
+                  <a>Music</a>
+                </li>
+                <li>
+                  <a>Videos</a>
+                </li>
+
+              </ul>
+              <div class="tabs__content">
+                <div class="tabs__pane">
+                  <p>Hello this is content from Pictures</p>
+                </div>
+                <div class="tabs__pane is-active">
+                  <p>Hello this is content from Music</p>
+                </div>
+                <div class="tabs__pane">
+                  <p>Hello this is content from Videos</p>
+                </div>
+
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              
+                <div id="one" class="tabs">
+                    <ul>
+                      <li>
+                        <a>Pictures</a>
+                      </li>
+                      <li class="is-active">
+                        <a>Music</a>
+                      </li>
+                      <li>
+                        <a>Videos</a>
+                      </li>
+                    </ul>
+                    <div class="tabs__content">
+                      <div class="tabs__pane">
+                        <p>Hello this is content from Pictures</p>
+                      </div>
+                      <div class="tabs__pane is-active">
+                        <p>Hello this is content from Music</p>
+                      </div>
+                      <div class="tabs__pane">
+                        <p>Hello this is content from Videos</p>
+                      </div>
+                    </div>
+                  </div>
+              </script>
+
+            <script class="language-javascript" type="text/plain">
+                //Init tab
+                $('#one').initTab();
+              </script>
+
+            <h2 id="tIcons">Tabs with icons</h2>
+
+            <div id="tabIcons" class="tabs is-large">
+              <ul>
+                <li>
+                  <a>
+                    <span class="pe-7s-photo"></span> Pictures</a>
+                </li>
+                <li class="is-active">
+                  <a>
+                    <span class="pe-7s-note"></span>Music</a>
+                </li>
+                <li>
+                  <a>
+                    <span class="pe-7s-video"></span>Videos</a>
+                </li>
+
+              </ul>
+              <div class="tabs__content">
+                <div class="tabs__pane">
+                  <p>Hello this is content from Pictures</p>
+                </div>
+                <div class="tabs__pane is-active">
+                  <p>Hello this is content from Music</p>
+                </div>
+                <div class="tabs__pane">
+                  <p>Hello this is content from Videos</p>
+                </div>
+
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+                  <div id="tabIcons" class="tabs is-large">
+                      <ul>
+                        <li>
+                          <a>
+                            <span class="pe-7s-photo"></span> Pictures</a>
+                        </li>
+                        <li class="is-active">
+                          <a>
+                            <span class="pe-7s-note"></span>Music</a>
+                        </li>
+                        <li>
+                          <a>
+                            <span class="pe-7s-video"></span>Videos</a>
+                        </li>
+                      </ul>
+                      <div class="tabs__content">
+                        <div class="tabs__pane">
+                          <p>Hello this is content from Pictures</p>
+                        </div>
+                        <div class="tabs__pane is-active">
+                          <p>Hello this is content from Music</p>
+                        </div>
+                        <div class="tabs__pane">
+                          <p>Hello this is content from Videos</p>
+                        </div>
+                      </div>
+                    </div>
+                </script>
+
+            <script type="text/plain" class="language-javascript">
+              // Init tab
+              $("#tabIcons").initTab();
+            </script>
+
+            <h2 id="tToggle">Tab Toggle</h2>
+
+            <div id="tabToggle" class="tabs is-toggle">
+              <ul>
+                <li>
+                  <a>
+                    <span class="pe-7s-photo"></span> Pictures</a>
+                </li>
+                <li class="is-active">
+                  <a>
+                    <span class="pe-7s-note"></span>Music</a>
+                </li>
+                <li class="">
+                  <a>
+                    <span class="pe-7s-video"></span>Videos</a>
+                </li>
+
+              </ul>
+              <div class="tabs__content">
+                <div class="tabs__pane">
+                  <p>Hello this is content from Pictures</p>
+                </div>
+                <div class="tabs__pane is-active">
+                  <p>Hello this is content from Music</p>
+                </div>
+                <div class="tabs__pane">
+                  <p>Hello this is content from Videos</p>
+                </div>
+
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+                <div id="tabToggle" class="tabs is-toggle">
+                    <ul>
+                      <li>
+                        <a>
+                          <span class="pe-7s-photo"></span> Pictures</a>
+                      </li>
+                      <li class="is-active">
+                        <a>
+                          <span class="pe-7s-note"></span>Music</a>
+                      </li>
+                      <li class="">
+                        <a>
+                          <span class="pe-7s-video"></span>Videos</a>
+                      </li>
+                      
+                    </ul>
+                    <div class="tabs__content">
+                      <div class="tabs__pane">
+                        <p>Hello this is content from Pictures</p>
+                      </div>
+                      <div class="tabs__pane is-active">
+                        <p>Hello this is content from Music</p>
+                      </div>
+                      <div class="tabs__pane">
+                        <p>Hello this is content from Videos</p>
+                      </div>
+                      
+                    </div>
+                  </div>
+              </script>
+
+            <script class="language-javascript" type="text/plain">
+                $('tabToggle').initTab();
+              </script>
+
+            <h2 id="tRounded">Tab Toggle Rounded</h2>
+            <div id="tabRounded" class="tabs is-toggle is-toggle-rounded">
+              <ul>
+                <li>
+                  <a>
+                    <span class="pe-7s-photo"></span> Pictures</a>
+                </li>
+                <li class="is-active">
+                  <a>
+                    <span class="pe-7s-note"></span>Music</a>
+                </li>
+                <li>
+                  <a>
+                    <span class="pe-7s-video"></span>Videos</a>
+                </li>
+
+              </ul>
+              <div class="tabs__content">
+                <div class="tabs__pane">
+                  <p>Hello this is content from Pictures</p>
+                </div>
+                <div class="tabs__pane is-active">
+                  <p>Hello this is content from Music</p>
+                </div>
+                <div class="tabs__pane">
+                  <p>Hello this is content from Videos</p>
+                </div>
+
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+                  <div id="tabRounded" class="tabs is-toggle is-toggle-rounded">
+                      <ul>
+                        <li>
+                          <a>
+                            <span class="pe-7s-photo"></span> Pictures</a>
+                        </li>
+                        <li class="is-active">
+                          <a>
+                            <span class="pe-7s-note"></span>Music</a>
+                        </li>
+                        <li>
+                          <a>
+                            <span class="pe-7s-video"></span>Videos</a>
+                        </li>
+                        
+                      </ul>
+                      <div class="tabs__content">
+                        <div class="tabs__pane">
+                          <p>Hello this is content from Pictures</p>
+                        </div>
+                        <div class="tabs__pane is-active">
+                          <p>Hello this is content from Music</p>
+                        </div>
+                        <div class="tabs__pane">
+                          <p>Hello this is content from Videos</p>
+                        </div>
+                        
+                      </div>
+                    </div>
+                </script>
+
+            <script class="language-javascript" type="text/plain">
+                  $('#tabRounded').initTab();
+                </script>
+          </section>
+
+          <section>
+            <h2 id="accordion">Accordions</h2>
+
+            <div id="accordion" class="accordion">
+              <div class="accordion__section">
+                <div class="accordion__section-header">
+                  <h4 class="accordion__section-title">
+                    <a href="">
+
+                      Collapse One
+                    </a>
+                  </h4>
+                </div>
+
+                <div class="accordion__section-content" style="display: none;">
+                  <p>This is my collapsable content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque nihil
+                    officia optio fuga harum, deserunt ut adipisci ipsa reiciendis, necessitatibus similique sapiente reprehenderit
+                    repudiandae voluptatum odio. Asperiores, eos et.</p>
+                </div>
+              </div>
+
+              <div class="accordion__section">
+                <div class="accordion__section-header">
+                  <h4 class="accordion__section-title">
+                    <a href="">
+
+                      Collapse Two
+                    </a>
+                  </h4>
+                </div>
+
+                <div class="accordion__section-content">
+                  <p>This is my collapsable content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque nihil
+                    officia optio fuga harum, deserunt ut adipisci ipsa reiciendis, necessitatibus similique sapiente reprehenderit
+                    repudiandae voluptatum odio. Asperiores, eos et.</p>
+                </div>
+              </div>
+
+              <div class="accordion__section">
+                <div class="accordion__section-header">
+                  <h4 class="accordion__section-title">
+                    <a href="">
+
+                      Collapse Three
+                    </a>
+                  </h4>
+                </div>
+
+                <div class="accordion__section-content">
+                  <p>This is my collapsable content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque nihil
+                    officia optio fuga harum, deserunt ut adipisci ipsa reiciendis, necessitatibus similique sapiente reprehenderit
+                    repudiandae voluptatum odio. Asperiores, eos et.</p>
+                </div>
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              <div id="accordion" class="accordion">
+                <div class="accordion__section">
+                  <div class="accordion__section-header">
+                    <h4 class="accordion__section-title">
+                      <a href="">
+    
+                        Collapse One
+                      </a>
+                    </h4>
+                  </div>
+    
+                  <div class="accordion__section-content" style="display: none;">
+                    <p>This is my collapsable content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque nihil
+                      officia optio fuga harum, deserunt ut adipisci ipsa reiciendis, necessitatibus similique sapiente reprehenderit
+                      repudiandae voluptatum odio. Asperiores, eos et.</p>
+                  </div>
+                </div>
+    
+                <div class="accordion__section">
+                  <div class="accordion__section-header">
+                    <h4 class="accordion__section-title">
+                      <a href="">
+    
+                        Collapse Two
+                      </a>
+                    </h4>
+                  </div>
+    
+                  <div class="accordion__section-content">
+                    <p>This is my collapsable content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque nihil
+                      officia optio fuga harum, deserunt ut adipisci ipsa reiciendis, necessitatibus similique sapiente reprehenderit
+                      repudiandae voluptatum odio. Asperiores, eos et.</p>
+                  </div>
+                </div>
+    
+                <div class="accordion__section">
+                  <div class="accordion__section-header">
+                    <h4 class="accordion__section-title">
+                      <a href="">
+    
+                        Collapse Three
+                      </a>
+                    </h4>
+                  </div>
+    
+                  <div class="accordion__section-content">
+                    <p>This is my collapsable content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque nihil
+                      officia optio fuga harum, deserunt ut adipisci ipsa reiciendis, necessitatibus similique sapiente reprehenderit
+                      repudiandae voluptatum odio. Asperiores, eos et.</p>
+                  </div>
+                </div>
+              </div>
+            </script>
+
+            <script class="language-javascript" type="text/plain">
+              $('#accordion').initAccordion();
+            </script>
+          </section>
+
+          <section>
+            <h2 id="complexComponents">Complex Components</h2>
+
+            <h3 id="notifications">Notifications</h3>
+
+            <p>Nova has it's own notification's api. You just need to pass the container you want the notification to be attached
+              to and then some options to configure it.</p>
+            <p>You can play around in the notification builder page to try out different examples.</p>
+
+
+            <p>Example:</p>
+
+            <script class="language-javascript" type="text/plain">
+              $(".container").notify({
+                message: "You have 10 new messages!",
+                style: "success",
+                position: "top-right",
+                type: "bar",
+                timeOut: 3000,
+                animationIn: "fadeIn",
+                animationOut: "fadeOut"
+              });
+            </script>
+
+            <p>Notification's API:</p>
+
+
+
+            <table id="notifTable">
+              <thead>
+                <tr>
+                  <th>
+                    options object properties
+                  </th>
+                  <th>description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    <p>
+                      <code>message</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:String</code> this is the message to display to the user.
+                    </p>
+                    <p>
+                      <span class="u-italic">Example: "You have 10 new messages"</span>
+                    </p>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <p>
+                      <code>style</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:String</code> The background color is determined by this property and this are the possible values:
+                      <code>success</code>,
+                      <code>danger</code>,
+                      <code>warning</code>,
+                      <code>info</code>
+                    </p>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <p>
+                      <code>position</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:String</code> The position that the final nofitication will have, this are the possible values:
+                      <code>top-right</code>,
+                      <code>top-left</code>,
+                      <code>bottom-left</code>,
+                      <code>bottom-right</code>
+                    </p>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <p>
+                      <code>type</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:String</code> There are three notification types:
+                      <code>simple</code>,
+                      <code>bar</code>,
+                      <code>image</code>.
+                    </p>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <p>
+                      <code>timeout</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:Number</code> The lifespan of the notification in ms. If a value is not providad then the notification will exist
+                      until user closes it.
+
+                    </p>
+                    <p>
+                      <span class="u-italic">Example: 3000</span>
+                    </p>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <p>
+                      <code>animationIn</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:String</code> The incoming animation the notification will have. You can choose from a wide variaty of animations.
+                      Please refer to the following link to see a full list of the available animations:
+                      <a href="https://daneden.github.io/animate.css/">animate.css</a>
+                    </p>
+                    <p>
+                      <span class="u-italic">Example: lightSpeedIn</span>
+                    </p>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <p>
+                      <code>animationOut</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:String</code> The outgoing animation the notification will have. You can choose from a wide variaty of animations.
+                      Please refer to the following link to see a full list of the available animations:
+                      <a href="https://daneden.github.io/animate.css/">animate.css</a>
+                    </p>
+                    <p>
+                      <span class="u-italic">Example: lightSpeedOut</span>
+                    </p>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2 id="modals">Modal</h2>
+
+            <button class="btn btn--secondary" id="showModal">Show me the modal</button>
+
+            <div id="modal-default" class="modal__backdrop ">
+              <div class="modal ">
+                <div class="modal__header">
+                  <div class="modal__title">
+                    <h2>
+                      Payment
+                      <span class="semi-bold">Information</span>
+                    </h2>
+                    <p>we need payment information in order to continue</p>
+                  </div>
+                  <button class="modal__close">
+                    <span class="pe-7s-close"></span>
+                  </button>
+                </div>
+                <div class="modal__content">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    <br> Quasi eligendi ut quaerat cum! Repellat exercitationem eos nostrum
+
+                  </p>
+                </div>
+                <div class="modal__footer">
+                  <button class="btn btn--default">Cancel</button>
+                  <button class="btn btn--primary">Save</button>
+                </div>
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              <div id="modal-default" class="modal__backdrop ">
+                  <div class="modal ">
+                    <div class="modal__header">
+                      <div class="modal__title">
+                        <h2>
+                          Payment
+                          <span class="semi-bold">Information</span>
+                        </h2>
+                        <p>we need payment information in order to continue</p>
+                      </div>
+                      <button class="modal__close">
+                        <span class="pe-7s-close"></span>
+                      </button>
+                    </div>
+                    <div class="modal__content">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <br> Quasi eligendi ut quaerat cum! Repellat exercitationem eos nostrum
+    
+                      </p>
+                    </div>
+                    <div class="modal__footer">
+                      <button class="btn btn--default">Cancel</button>
+                      <button class="btn btn--primary">Save</button>
+                    </div>
+                  </div>
+                </div>
+            </script>
+
+            <script class="language-javascript" type="text/plain">
+              var myModal = $("#modal-default").modal({
+                style: "default",
+                animationIn: "bounceInUp",
+                animationOut: "flipOutY"
+              });
+              myModal.show();
+            </script>
+
+            <table id="modalTable">
+              <thead>
+                <tr>
+                  <th>
+                    options object properties
+                  </th>
+                  <th>description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    <p>
+                      <code>style</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:String</code> The style (background color) of the modal. Values:
+                      <code>success</code>,
+                      <code>danger</code>,
+                      <code>warning</code>,
+                      <code>default</code>
+                    </p>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <p>
+                      <code>animationIn</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:String</code> The incoming animation the notification will have. You can choose from a wide variaty of animations.
+                      Please refer to the following link to see a full list of the available animations:
+                      <a href="https://daneden.github.io/animate.css/">animate.css</a>
+                    </p>
+                    <p>
+                      <span class="u-italic">Example: lightSpeedIn</span>
+                    </p>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <p>
+                      <code>animationOut</code>
+                    </p>
+                  </th>
+                  <th>
+                    <p>
+                      <code>:String</code> The outgoing animation the notification will have. You can choose from a wide variaty of animations.
+                      Please refer to the following link to see a full list of the available animations:
+                      <a href="https://daneden.github.io/animate.css/">animate.css</a>
+                    </p>
+                    <p>
+                      <span class="u-italic">Example: lightSpeedOut</span>
+                    </p>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 id="selects">Selects</h2>
+
+            <h3>Simple Selects</h3>
+            <p>Nova selects are built on top of the select2 library. If you want further information on how to use this component
+              please refer to the official docs:
+              <a href="https://select2.org/">https://select2.org/</a>
+            </p>
+
+            <p>We will explain how to implement basic usage of this component in the following section.</p>
+
+            <p>You have to include the css and js related to the select2 library</p>
+            <script class="language-markup" type="text/plain">
+                <link rel="stylesheet" href="vendor/css/select2.min.css">
+                ...
+                <script src="vendor/js/select2.min.js"> &lt;/script>
+              </script>
+
+
+            <label for="countrySelect">Select your country</label>
+            <select id="countrySelect" name="state">
+              <option value="AL">Alabama</option>
+              <option value="AL">New York</option>
+              <option value="AL">Texas</option>
+              <option value="WY">Wyoming</option>
+            </select>
+
+            <script class="language-markup" type="text/plain">
+              <label for="countrySelect">Select your country</label>
+              <select id="countrySelect"  >
+                <option value="AL">Alabama</option>
+                <option value="NY">New York</option>
+                <option value="TX">Texas</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </script>
+
+            <script class="language-javascript" type="text/plain">
+              $('#countrySelect').select2({
+                theme: "classic"
+              });
+            </script>
+
+            <h3>Multiple Selects</h3>
+            <div class="card__content">
+              <label for="m-select">Select your country</label>
+              <select multiple="multiple" id="m-select" class="js-example-basic-single" name="state">
+                <option value="AL">Alabama</option>
+                <option value="AL">New York</option>
+                <option value="AL">Texas</option>
+                <option value="WY">Wyoming</option>
+              </select>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+                
+                    <label for="m-select">Select your country</label>
+                    <select multiple="multiple" id="m-select" >
+                      <option value="AL">Alabama</option>
+                      <option value="NY">New York</option>
+                      <option value="u-left-text">Texas</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  
+              </script>
+
+            <script class="language-javascript" type="text/plain">
+                $('#m-select').select2({
+                  theme: "classic"
+                });
+              </script>
+
+            <h3>Select Groups</h3>
+
+            <select id="m-select-group" class="js-example-basic-single" name="state">
+              <optgroup label="Drinks">
+                <option value="AL">Cola</option>
+                <option value="AL">Mojito</option>
+                <option value="AL">Scotch</option>
+                <option value="WY">Monster</option>
+              </optgroup>
+              <optgroup label="Foods"></optgroup>
+              <option value="AL">Spaguetti</option>
+              <option value="AL">Meat</option>
+              <option value="AL">Fries</option>
+              <option value="WY">Chocolate</option>
+              </optgroup>
+            </select>
+
+            <script class="language-markup" type="text/plain">
+                  <select id="m-select-group" >
+                      <optgroup label="Drinks">
+                        <option value="cola">Cola</option>
+                        <option value="mojito">Mojito</option>
+                        <option value="scotch">Scotch</option>
+                        <option value="monster">Monster</option>
+                      </optgroup>
+                      <optgroup label="Foods"></optgroup>
+                        <option value="spaguetti">Spaguetti</option>
+                        <option value="meat">Meat</option>
+                        <option value="fries">Fries</option>
+                        <option value="chocolate">Chocolate</option>
+                      </optgroup>
+                    </select>
+                </script>
+
+            <script class="language-javascript" type="text/plain">
+                  $('#m-select-group').select2({
+                    theme: "classic"
+                  });
+                </script>
+
+            <h2 id="datepicker">Datepicker</h2>
+
+            <p>Datepicker is based on the date range picker library, you can find further information here
+              <a href="http://www.daterangepicker.com/">http://www.daterangepicker.com/</a>
+            </p>
+
+            <p>You first have to include the date picker and moment library</p>
+
+            <script class="language-markup" type="text/plain">
+                  <link rel="stylesheet" href="vendor/css/daterangepicker.css">
+                  ...
+                  <script src="vendor/js/moment.min.js"> &lt;/script>
+                  <script src="vendor/js/daterangepicker.min.js"> &lt;/script>
+                </script>
+
+
+            <h3>Simple Datepicker</h3>
+            <input class="form__control" type="text" name="simple-datepicker" />
+
+            <script class="language-markup" type="text/plain">
+                  <input class="form__control" type="text" name="simple-datepicker"/>
+                </script>
+
+            <script class="language-javascript" type="text/plain">
+                  $('input[name="simple-datepicker"').daterangepicker({
+                    singleDatePicker: true
+                  });
+                </script>
+
+            <h3>Date Range</h3>
+            <input class="form__control" type="text" name="dates" />
+
+            <script class="language-markup" type="text/plain">
+                  <input class="form__control" type="text" name="dates"/>
+                </script>
+
+            <script class="language-javascript" type="text/plain">
+                  $('input[name="dates"]').daterangepicker();
+                </script>
+
+            <h2 id="tables">Tables</h2>
+
+            <p>Nova tables are based on the famous jquery datatables plugin. You can check the official documentation in:
+              <a
+                href="https://datatables.net/">https://datatables.net/</a>
+            </p>
+
+            <p>The following section will explain the basic initialization of the table</p>
+
+            <p>You just need to include a valid html table tag, like this:</p>
+
+            <table id="simpleTable">
+              <thead>
+                <tr>
+                  <th>
+                    Name
+                  </th>
+                  <th>
+                    Last Name
+                  </th>
+                  <th>
+                    Notifications
+                  </th>
+                  <th>
+                    Profile
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    John
+                  </th>
+                  <th>
+                    Dow
+                  </th>
+                  <th>
+                    <span class="pe-7s-bell" style="position: relative; font-size: 2rem">
+                      <div class="badge info">
+                        <span>2</span>
+                      </div>
+                    </span>
+                  </th>
+                  <th>
+                    <button class="btn btn--secondary btn--rounded">Go to Profile</button>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    Camille
+                  </th>
+                  <th>
+                    Belle
+                  </th>
+                  <th>
+                    <span class="pe-7s-bell" style="position: relative; font-size: 2rem">
+                      <div class="badge warning">
+                        <span>8</span>
+                      </div>
+                    </span>
+                  </th>
+                  <th>
+                    <button class="btn btn--secondary btn--rounded">Go to Profile</button>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+
+            <script class="language-markup" type="text/plain">
+              <table id="simpleTable">
+                  <thead>
+                    <tr>
+                      <th>
+                        Name
+                      </th>
+                      <th>
+                        Last Name
+                      </th>
+                      <th>
+                        Notifications
+                      </th>
+                      <th>
+                        Profile
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>
+                        John
+                      </th>
+                      <th>
+                        Dow
+                      </th>
+                      <th>
+                        <span class="pe-7s-bell" style="position: relative; font-size: 2rem">
+                          <div class="badge info">
+                            <span>2</span>
+                          </div>
+                        </span>
+                      </th>
+                      <th>
+                        <button class="btn btn--secondary btn--rounded">Go to Profile</button>
+                      </th>
+                    </tr>
+                    <tr>
+                      <th>
+                        Camille
+                      </th>
+                      <th>
+                        Belle
+                      </th>
+                      <th>
+                        <span class="pe-7s-bell" style="position: relative; font-size: 2rem">
+                          <div class="badge warning">
+                            <span>8</span>
+                          </div>
+                        </span>
+                      </th>
+                      <th>
+                        <button class="btn btn--secondary btn--rounded">Go to Profile</button>
+                      </th>
+                    </tr>
+                  </tbody>
+                </table>
+            </script>
+
+            <script class="language-javascript" type="text/plain">
+              $('#simpleTable').DataTable();
+            </script>
+          </section>
+
+          <section>
+            <h2 id="forms">Forms</h2>
+
+            <h3 id="sform">Simple Form</h3>
+
+            <div class="card">
+              <div class="card__content">
+                <form action="" class="form">
+                  <div class="form__group ">
+                    <div class="form__label u-mb-small">First Name</div>
+                    <div class="form__input-wrp">
+                      <div class="form__input required">
+                        <input type="text" placeholder="Please type your first name" class="form__control  form__control--icon ">
+                        <span class="pe-7s-user"></span>
+                      </div>
+
+                      <small>First name is a required field</small>
+                    </div>
+                  </div>
+                  <div class="form__group form__group--has-error">
+                    <div class="form__label u-mb-small ">Last Name</div>
+                    <div class="form__input-wrp">
+                      <div class="form__input required">
+                        <input type="text" class="form__control form__control--icon" placeholder="Please type your last name">
+                        <span class="pe-7s-user"></span>
+                      </div>
+                      <small>There seems to be an error with this field</small>
+                    </div>
+                  </div>
+                  <div class="form__group">
+                    <div class="form__label">Company</div>
+                    <div class="form__input">
+                      <input type="text" class="form__control form__control--icon" placeholder="Please type the name of the company">
+                      <span class="pe-7s-portfolio"></span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              <form action="" class="form">
+                  <div class="form__group ">
+                    <div class="form__label u-mb-small">First Name</div>
+                    <div class="form__input-wrp">
+                      <div class="form__input required">
+                        <input type="text" placeholder="Please type your first name" class="form__control  form__control--icon ">
+                        <span class="pe-7s-user"></span>
+                      </div>
+    
+                      <small>First name is a required field</small>
+                    </div>
+                  </div>
+                  <div class="form__group form__group--has-error">
+                      <div class="form__label u-mb-small u-center-text">Last Name</div>
+                      <div class="form__input-wrp">
+                        <div class="form__input required">
+                          <input type="text" class="form__control form__control--icon" placeholder="Please type your last name">
+                          <span class="pe-7s-user"></span>
+                        </div>
+                        <small>There seems to be an error with this field</small>
+                      </div>
+                    </div>
+                  <div class="form__group">
+                    <div class="form__label">Company</div>
+                    <div class="form__input">
+                      <input type="text" class="form__control form__control--icon" placeholder="Please type the name of the company">
+                      <span class="pe-7s-portfolio"></span>
+                    </div>
+                  </div>
+                </form>
+            </script>
+
+
+
+
+
+            <h3 id="iform">Inline Form</h3>
+
+            <div class="card">
+              <div class="card__content">
+                <form action="" class="form ">
+                  <div class="columns">
+                    <div class="column">
+                      <div class="form__group">
+                        <div class="form__label u-mb-small">Name</div>
+                        <div class="form__input-wrp">
+                          <div class="form__input required">
+                            <input type="text" class="form__control form__control--icon" placeholder="Type your name">
+                            <span class="pe-7s-user"></span>
+                          </div>
+                          <small>As always... the name is required</small>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="form__group form__group--has-error">
+                        <div class="form__label u-mb-small">Surname</div>
+                        <div class="form__input-wrp">
+                          <div class="form__input required">
+                            <input type="text" class="form__control form__control--icon" placeholder="Type your name">
+                            <span class="pe-7s-user"></span>
+                          </div>
+                          <small>Ooops,there is something wrong</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columns">
+                    <div class="column">
+                      <div class="form__group">
+                        <div class="form__label">Location</div>
+                        <div class="form__input">
+                          <input type="text" class="form__control form__control--icon" placeholder="Type your name">
+                          <span class="pe-7s-map-marker"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="form__group">
+                        <div class="form__label">Telephone</div>
+                        <div class="form__input">
+                          <input type="text" class="form__control form__control--icon" placeholder="Type your name">
+                          <span class="pe-7s-phone"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              <form action="" class="form ">
+                  <div class="columns">
+                    <div class="column">
+                      <div class="form__group">
+                        <div class="form__label u-mb-small">Name</div>
+                        <div class="form__input-wrp">
+                          <div class="form__input required">
+                            <input type="text" class="form__control form__control--icon" placeholder="Type your name">
+                            <span class="pe-7s-user"></span>
+                          </div>
+                          <small>As always... the name is required</small>
+                        </div>
+  
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="form__group form__group--has-error">
+                        <div class="form__label u-mb-small">Surname</div>
+                        <div class="form__input-wrp">
+                          <div class="form__input required">
+                            <input type="text" class="form__control form__control--icon" placeholder="Type your name">
+                            <span class="pe-7s-user"></span>
+                          </div>
+                          <small>Ooops,there is something wrong</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="columns">
+                    <div class="column">
+                      <div class="form__group">
+                        <div class="form__label">Location</div>
+                        <div class="form__input">
+                          <input type="text" class="form__control form__control--icon" placeholder="Type your name">
+                          <span class="pe-7s-map-marker"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="form__group">
+                        <div class="form__label">Telephone</div>
+                        <div class="form__input">
+                          <input type="text" class="form__control form__control--icon" placeholder="Type your name">
+                          <span class="pe-7s-phone"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+            </script>
+
+            <h3 id="bform">Block Form</h3>
+
+            <div class="card">
+              <div class="card__content">
+                <form class="form" action="">
+                  <div class="form__group flex-column">
+                    <label class="form__label" for="name">Name</label>
+                    <div class="form__input">
+                      <input type="text" placeholder="Name" class="form__control form__control--icon">
+                      <span class="pe-7s-user"></span>
+                    </div>
+                  </div>
+
+                  <div class="form__group flex-column">
+                    <label class="form__label" for="name">Surname</label>
+                    <div class="form__input">
+                      <input type="text" placeholder="Name" class="form__control form__control--icon">
+                      <span class="pe-7s-user"></span>
+                    </div>
+                  </div>
+                  <div class="form__group flex-column ">
+                    <label class="form__label" for="name">Location and region</label>
+                    <div class="form__input-wrp">
+                      <div class="form__input">
+                        <input type="text" placeholder="Name" class="form__control form__control--icon ">
+                        <span class="pe-7s-map-marker"></span>
+                      </div>
+                      <small>this is a helper text for the input</small>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <script class="language-markup" type="text/plain">
+              <form class="form" action="">
+                  <div class="form__group flex-column">
+                    <label class="form__label" for="name">Name</label>
+                    <div class="form__input">
+                      <input type="text" placeholder="Name" class="form__control form__control--icon">
+                      <span class="pe-7s-user"></span>
+                    </div>
+                  </div>
+  
+                  <div class="form__group flex-column">
+                    <label class="form__label" for="name">Surname</label>
+                    <div class="form__input">
+                      <input type="text" placeholder="Surname" class="form__control form__control--icon">
+                      <span class="pe-7s-user"></span>
+                    </div>
+                  </div>
+                  <div class="form__group flex-column ">
+                    <label class="form__label" for="name">Location and region</label>
+                    <div class="form__input-wrp">
+                      <div class="form__input">
+                        <input type="text" placeholder="Location and region" class="form__control form__control--icon ">
+                        <span class="pe-7s-map-marker"></span>
+                      </div>
+                      <small>this is a helper text for the input</small>
+                    </div>
+                  </div>
+                </form>
+            </script>
+
+            <h2 id="lalignment">Label Alignment</h2>
+
+            <div class="card">
+              <div class="card__content">
+                <form action="" class="form">
+                  <div class="form__group ">
+                    <div class="form__label u-left-text u-mb-small">Left </div>
+                    <div class="form__input-wrp">
+                      <div class="form__input required">
+                        <input type="text" placeholder="Please type your first name" class="form__control form__control--icon u-center-text">
+                        <span class="pe-7s-user"></span>
+                      </div>
+
+                      <small>First name is a required field</small>
+                    </div>
+                  </div>
+
+                  <div class="form__group form__group--has-error">
+                    <div class="form__label u-mb-small">Right </div>
+                    <div class="form__input-wrp">
+                      <div class="form__input required">
+                        <input type="text" class="form__control form__control--icon" placeholder="Please type your last name">
+                        <span class="pe-7s-user"></span>
+                      </div>
+                      <small>There seems to be an error with this field</small>
+                    </div>
+                  </div>
+                  <div class="form__group">
+                    <div class="form__label u-center-text">Center </div>
+                    <div class="form__input">
+                      <input type="text" class="form__control form__control--icon" placeholder="Please type the name of the company">
+                      <span class="pe-7s-portfolio"></span>
+                    </div>
+                  </div>
+
+                  <div class="form__group u-fe">
+
+                    <div class="btn btn--secondary">Submit Form</div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+
+
+
+            <script class="language-markup" type="text/plain">
+                <form action="" class="form">
+                    <div class="form__group ">
+                      <div class="form__label u-left-text u-mb-small">Left </div>
+                      <div class="form__input-wrp">
+                        <div class="form__input required">
+                          <input type="text" placeholder="Please type your first name" class="form__control form__control--icon u-center-text">
+                          <span class="pe-7s-user"></span>
+                        </div>
+    
+                        <small>First name is a required field</small>
+                      </div>
+                    </div>
+    
+                    <div class="form__group form__group--has-error">
+                      <div class="form__label u-mb-small">Right </div>
+                      <div class="form__input-wrp">
+                        <div class="form__input required">
+                          <input type="text" class="form__control form__control--icon" placeholder="Please type your last name">
+                          <span class="pe-7s-user"></span>
+                        </div>
+                        <small>There seems to be an error with this field</small>
+                      </div>
+                    </div>
+                    <div class="form__group">
+                      <div class="form__label u-center-text">Center </div>
+                      <div class="form__input">
+                        <input type="text" class="form__control form__control--icon" placeholder="Please type the name of the company">
+                        <span class="pe-7s-portfolio"></span>
+                      </div>
+                    </div>
+    
+                    <div class="form__group u-fe">
+    
+                      <div class="btn btn--secondary">Submit Form</div>
+    
+                    </div>
+                  </form>
+              </script>
+
+
+          </section>
+
+          <section>
+            <h2 id="icons">Icons</h2>
+            <h3 id="stroke7">Stroke 7 Icons</h3>
+
+            <p>To start using stroke 7 icons just include the following css</p>
+
+            <script class="language-markup" type="text/plain">
+              <link rel="stylesheet" href="vendor/css/pe-icon-7-stroke.css">
+            </script>
+
+            <div class="doc__note">
+              <p>The fonts folder has to be at the same level of the
+                <code>pe-icon-7-stroke.css</code>
+              </p>
+              <p> file. See ./vendor/css/fonts folder for further reference</p>
+            </div>
+
+            <h3 id="linearIcons">Linear Icons</h3>
+
+            <p>To start using linear icons just include the following css</p>
+
+            <script class="language-markup" type="text/plain">
+              <link rel="stylesheet" href="vendor/css/linear-icons.css">
+            </script>
+
+            <div class="doc__note">
+              <p>The fonts folder has to be at the same level of the
+                <code>linear-icons.css</code> file. </p>
+              <p>See ./vendor/css/fonts folder for further reference </p>
+            </div>
+          </section>
         </div>
       </div>
 
@@ -210,9 +2161,91 @@
   <script src="vendor/js/jquery-3.3.1.min.js"></script>
   <script src="nova/js/nova.js"></script>
   <script src="vendor/js/prism.js"></script>
+  <script src="vendor/js/select2.min.js"></script>
+  <script src="vendor/js/datatables.min.js"></script>
+  <script src="vendor/js/dataTables.responsive.min.js"></script>
+  <script type="text/javascript" src="vendor/js/moment.min.js"></script>
+  <script type="text/javascript" src="vendor/js/daterangepicker.min.js"></script>
   <script>
     $(document).ready(function () {
+      $('#one').initTab();
+      $('#tabIcons').initTab();
+      $('#tabToggle').initTab();
+      $('#tabRounded').initTab();
+      $('#accordion').initAccordion();
 
+      $('#notifTable').DataTable({
+        bLengthChange: false,
+        responsive: true
+      });
+
+      $('#modalTable').DataTable({
+        bLengthChange: false,
+        responsive: true
+      });
+
+      $('#showModal').click(function () {
+        var myModal = $("#modal-default").modal({
+          style: "default",
+          animationIn: "bounceInUp",
+          animationOut: "flipOutY"
+        });
+        myModal.show();
+      });
+
+
+      $('#countrySelect, #m-select, #m-select-group').select2(
+        {
+          theme: "classic",
+          placeholder: "Start typing!"
+        }
+      );
+
+      $('input[name="dates"]').daterangepicker();
+      $('input[name="simple-datepicker"').daterangepicker({
+        singleDatePicker: true
+      });
+
+      $('#simpleTable').DataTable();
+
+      // Select all links with hashes
+      $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+          // On-page links
+          if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+          ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+              $('aside').find('a').removeClass('is-active');
+              $(this).addClass('is-active');
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000, function () {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                  return false;
+                } else {
+                  $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                  $target.focus(); // Set focus again
+                };
+              });
+            }
+          }
+        });
     });
 
   </script>

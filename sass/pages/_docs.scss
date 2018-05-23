@@ -11,7 +11,14 @@
 }
 
 aside.menu {
-  position: relative;
+  position: fixed;
+  max-height: 100vh;
+  overflow: scroll;
+  padding-bottom: 3rem;
+
+  @include respond(tab-port) {
+    position: relative;
+  }
 }
 
 aside.menu::after {
@@ -29,10 +36,41 @@ hr {
   width: 100%;
   height: 0.1rem;
   background: radial-gradient($color-grey-4, rgba($color-grey-4, 0) 80%);
+  margin: 4rem 0;
 }
 
 .doc {
   padding: 3rem;
+
+  &__list {
+    margin: 2rem 0;
+    li {
+      margin-bottom: 2rem;
+
+      p {
+        display: inline;
+      }
+    }
+  }
+
+  &__intro {
+    background: rgba($color-info-0, .3);
+    padding: 2rem;
+    display: flex;
+    
+    &-vbreak {
+      height: auto;
+      background: radial-gradient($color-grey-0, rgba($color-grey-0, .0));
+      width: .1rem;
+      margin: 0 2rem;
+    }
+
+    p {
+
+      color: $color-grey-7;
+    }
+
+  }
 
   &__body {
     padding: 3rem;
@@ -48,15 +86,12 @@ hr {
   }
 
   &__folder-list {
-    
     li:before {
       content: "\e653";
       display: inline-block;
       font-family: "Pe-icon-7-stroke";
       font-size: 3rem;
       vertical-align: middle;
-      
-      
     }
 
     li {
@@ -74,7 +109,6 @@ hr {
   &__subfolder {
     li {
       margin-left: 2rem;
-        
     }
   }
 }
@@ -82,7 +116,6 @@ hr {
 .menu-list a.is-active {
   background-color: $color-info-1;
 }
-
 
 .token.tag {
   font-size: 1.5rem !important;
@@ -109,10 +142,16 @@ hr {
 
 .doc__note {
   padding: 2rem;
-  background: rgba($color-warning-0 , .5);
-  border: .1rem solid $color-warning-1;
+  background: rgba($color-warning-0, 0.5);
+  border: 0.1rem solid $color-warning-1;
 }
 
-code.language-markup {
+code,
+code.language-markup,
+code.language-javascript {
   font-size: 1.5rem;
+}
+
+section {
+  margin-top: 3rem;
 }

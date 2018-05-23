@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
   <link rel="stylesheet" href="vendor/css/select2.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/css/daterangepicker.css" />
   <link rel="stylesheet" href="vendor/css/dropzone.css">
 </head>
 
@@ -50,8 +50,7 @@
               </div>
               <div class="column">
                 <h2>Nova Forms</h2>
-                <p>Buttons are an important part of every ui/ux design process. With Nova we apply the latests design trends using
-                  gradients and animations in buttons to give the user a one of a kind experience.</p>
+                <p>Nova follows form best practices to make the proccess of filling out a form much easier.</p>
               </div>
             </div>
           </div>
@@ -60,11 +59,11 @@
       <div class="columns">
         <div class="column">
           <div class="card card-full-height">
-            <div class="card-header">
-              <div class="card-title">Block Form with labels align right</div>
+            <div class="card__header">
+              <div class="card__title">Block Form with labels align right</div>
             </div>
 
-            <div class="card-content">
+            <div class="card__content">
               <form action="" class="form">
                 <div class="form__group ">
                   <div class="form__label u-mb-small">First Name</div>
@@ -122,11 +121,11 @@
 
         <div class="column">
           <div class="card card-full-height">
-            <div class="card-header">
-              <div class="card-title">Inline form</div>
+            <div class="card__header">
+              <div class="card__title">Inline form</div>
             </div>
 
-            <div class="card-content">
+            <div class="card__content">
               <form action="" class="form ">
                 <div class="columns">
                   <div class="column">
@@ -185,11 +184,11 @@
       <div class="columns">
         <div class="column">
           <div class="card">
-            <div class="card-header">
-              <div class="card-title">Label Alignment</div>
+            <div class="card__header">
+              <div class="card__title">Label Alignment</div>
             </div>
 
-            <div class="card-content">
+            <div class="card__content">
               <form action="" class="form">
                 <div class="form__group ">
                   <div class="form__label u-left-text u-mb-small">Left </div>
@@ -233,10 +232,10 @@
         </div>
         <div class="column">
           <div class="card card-full-height">
-            <div class="card-header">
-              <div class="card-title">Block Form</div>
+            <div class="card__header">
+              <div class="card__title">Block Form</div>
             </div>
-            <div class="card-content">
+            <div class="card__content">
               <form class="form" action="">
                 <div class="form__group flex-column">
                   <label class="form__label" for="name">Name</label>
@@ -249,7 +248,7 @@
                 <div class="form__group flex-column">
                   <label class="form__label" for="name">Surname</label>
                   <div class="form__input">
-                    <input type="text" placeholder="Name" class="form__control form__control--icon">
+                    <input type="text" placeholder="Surname" class="form__control form__control--icon">
                     <span class="pe-7s-user"></span>
                   </div>
                 </div>
@@ -257,7 +256,7 @@
                   <label class="form__label" for="name">Location and region</label>
                   <div class="form__input-wrp">
                     <div class="form__input">
-                      <input type="text" placeholder="Name" class="form__control form__control--icon ">
+                      <input type="text" placeholder="Location and region" class="form__control form__control--icon ">
                       <span class="pe-7s-map-marker"></span>
                     </div>
                     <small>this is a helper text for the input</small>
@@ -272,10 +271,10 @@
       <div class="columns">
         <div class="column">
           <div class="card card-full-height">
-            <div class="card-header">
-              <div class="card-title">Input sizes</div>
+            <div class="card__header">
+              <div class="card__title">Input sizes</div>
             </div>
-            <div class="card-content">
+            <div class="card__content">
               <form action="" class="form">
 
                 <div class="form__group">
@@ -310,10 +309,10 @@
         </div>
         <div class="column">
           <div class="card card-full-height">
-            <div class="card-header">
-              <div class="card-title">Checkbox</div>
+            <div class="card__header">
+              <div class="card__title">Checkbox</div>
             </div>
-            <div class="card-content">
+            <div class="card__content">
               <form action="" class="form">
                 <div class="form__group">
                   <input type="checkbox" id="olderThan18" class="form__checkbox-input" checked>
@@ -363,12 +362,12 @@
       <div class="columns">
         <div class="column">
           <div class="card">
-            <div class="card-header">
-              <div class="card-title">
+            <div class="card__header">
+              <div class="card__title">
                 Radio inputs
               </div>
             </div>
-            <div class="card-content">
+            <div class="card__content">
               <div class="u-mb-small">
                 <p>Plase select your country</p>
               </div>
@@ -391,10 +390,10 @@
         </div>
         <div class="column">
           <div class="card">
-            <div class="card-header">
-              <div class="card-title">Switch input</div>
+            <div class="card__header">
+              <div class="card__title">Switch input</div>
             </div>
-            <div class="card-content">
+            <div class="card__content">
               <div class="form__group">
                 <p style="margin-right: 1rem;" for="switch1"> Turn push notifications</p>
                 <span class="form__switch">
@@ -427,10 +426,10 @@
       <div class="columns">
         <div class="column">
           <div class="card">
-            <div class="card-header">
-              <div class="card-title">Simple Selects</div>
+            <div class="card__header">
+              <div class="card__title">Simple Selects</div>
             </div>
-            <div class="card-content">
+            <div class="card__content">
               <label for="countrySelect">Select your country</label>
               <select id="countrySelect" class="js-example-basic-single" name="state">
                 <option value="AL">Alabama</option>
@@ -443,10 +442,10 @@
         </div>
         <div class="column">
           <div class="card">
-            <div class="card-header">
-              <div class="card-title">Multiple Selects</div>
+            <div class="card__header">
+              <div class="card__title">Multiple Selects</div>
             </div>
-            <div class="card-content">
+            <div class="card__content">
               <label for="m-select">Select your country</label>
               <select multiple="multiple" id="m-select" class="js-example-basic-single" name="state">
                 <option value="AL">Alabama</option>
@@ -459,10 +458,10 @@
         </div>
         <div class="column">
           <div class="card">
-            <div class="card-header">
-              <div class="card-title">Select Groups</div>
+            <div class="card__header">
+              <div class="card__title">Select Groups</div>
             </div>
-            <div class="card-content">
+            <div class="card__content">
               <label for="m-select-group">Select your favourite food or drink</label>
               <select id="m-select-group" class="js-example-basic-single" name="state">
                 <optgroup label="Drinks">
@@ -486,22 +485,22 @@
       <div class="columns">
         <div class="column">
           <div class="card">
-            <div class="card-header">
-              <div class="card-title">Range Datepicker</div>
+            <div class="card__header">
+              <div class="card__title">Range Datepicker</div>
             </div>
 
-            <div class="card-content">
+            <div class="card__content">
                 <input class="form__control" type="text" name="simple-datepicker"/>
               </div>
           </div>
         </div>
         <div class="column">
             <div class="card">
-                <div class="card-header">
-                  <div class="card-title">Simple Datepicker</div>
+                <div class="card__header">
+                  <div class="card__title">Simple Datepicker</div>
                 </div>
     
-                <div class="card-content">
+                <div class="card__content">
                     <input class="form__control" type="text" name="dates"/>
                   </div>
               </div>
@@ -514,10 +513,10 @@
       <div class="columns">
         <div class="column">
           <div class="card">
-            <div class="card-header">
-              <div class="card-title">Dropzone</div>
+            <div class="card__header">
+              <div class="card__title">Dropzone</div>
             </div>
-            <div class="card-content">
+            <div class="card__content">
                 <form action="https://reqres.in/api/users" class="dropzone">
                   <div class="fallback">
                     <input name="file" type="file" multiple />
@@ -541,8 +540,8 @@
   <script src="nova/js/nova.js"></script>
   <script src="vendor/js/select2.min.js"></script>
   <script src="nova/js/select2.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script type="text/javascript" src="vendor/js/moment.min.js"></script>
+  <script type="text/javascript" src="vendor/js/daterangepicker.min.js"></script>
   <script src="nova/js/datepicker.js"></script>
   <script src="vendor/js/dropzone.js"></script>
   <script src="vendor/js/skrollr.min.js"></script>

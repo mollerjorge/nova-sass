@@ -104,6 +104,7 @@
       font-size: 2rem;
       border-left: 0.1rem solid $color-grey-1;
       position: relative;
+      cursor: pointer;
 
       &:last-child {
         border-right: 0.1rem solid $color-grey-1;

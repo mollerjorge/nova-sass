@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   font-size: 62.5%;
   
@@ -22,35 +23,41 @@ body {
   background:$color-body-bg;
 }
 
-h1,h2,h3,h4,h5 {
-  font-weight: 100;
+// Resets margins and paddings for headers, ul, ol and p
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  font-size: 4.4rem;
-}
-h2 {
-  font-size: 2.6rem;
-}
-h3 {
-  font-size: 1.8rem;
-}
-h4 {
-  font-size: 1.2rem;
-}
-h5 {
-  font-size: 1rem;
+// Completely resets form items
+// ----------------------------
+// Super hard reset that removes all borders
+// and radius of all form items.
+// ============================
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
 }
 
-p {
-  font-size: 1.3rem;
-  letter-spacing: .02rem;
-}
-
-b {
-  font-weight: 500;
-  color: $color-grey-6;
-}
 
 .page-container {
   width: 100%;
@@ -75,14 +82,8 @@ b {
 }
 
 
-label {
-  font-size: 1.3rem;
-}
 
-table th {
-  color: $color-grey-3;
-  font-weight: 100;
-}
+
 
 hr {
   background-color: $color-grey-2;
